@@ -1,10 +1,10 @@
 # Product Requirements Document
 # Landlord EPC Compliance Platform
 
-**Version:** 1.0  
-**Status:** Draft  
-**Created:** 29 January 2026  
-**Last Updated:** 29 January 2026
+**Version:** 2.0
+**Status:** Updated
+**Created:** 29 January 2026
+**Last Updated:** 30 January 2026
 
 ---
 
@@ -16,14 +16,16 @@
 4. [Product Principles](#4-product-principles)
 5. [Content Architecture](#5-content-architecture)
 6. [Interactive Tools](#6-interactive-tools)
-7. [Design Requirements](#7-design-requirements)
-8. [Technical Requirements](#8-technical-requirements)
-9. [Content Production](#9-content-production)
-10. [Phased Delivery Plan](#10-phased-delivery-plan)
-11. [Success Metrics](#11-success-metrics)
-12. [Risks and Mitigations](#12-risks-and-mitigations)
-13. [Open Decisions and Assumptions](#13-open-decisions-and-assumptions)
-14. [Appendices](#appendices)
+7. [Data Strategy](#7-data-strategy)
+8. [Design Requirements](#8-design-requirements)
+9. [Technical Requirements](#9-technical-requirements)
+10. [Content Production](#10-content-production)
+11. [Authority Building Strategy](#11-authority-building-strategy)
+12. [Phased Delivery Plan](#12-phased-delivery-plan)
+13. [Success Metrics](#13-success-metrics)
+14. [Risks and Mitigations](#14-risks-and-mitigations)
+15. [Open Decisions and Assumptions](#15-open-decisions-and-assumptions)
+16. [Appendices](#appendices)
 
 ---
 
@@ -45,9 +47,11 @@ The opportunity exists because of a specific combination of factors:
 
 - **The timing window is optimal.** RdSAP 10, the new EPC assessment methodology, launches in June 2025. This creates confusion about whether to get assessments now or wait, and whether existing EPCs remain valid. Clear guidance on this transition is scarce.
 
-- **Existing content is inadequate.** Competitor analysis reveals that most content is either too generic, outdated, behind paywalls, or written from a policy rather than practical perspective. Property-specific guidance is almost non-existent.
+- **Competitors exist but lack depth.** Competitors exist in this space but lack the interactive tools, data depth, and landlord-specific focus required to truly serve the market. We win through utility, not just content quality.
 
 - **The audience is underserved.** Small portfolio landlords, who represent 94% of all UK landlords, lack the resources to navigate regulatory complexity but are too sophisticated for basic consumer advice.
+
+**Our moat is built on three pillars:** interactive tools that deliver personalised recommendations, original data analysis from the EPC register, and the most comprehensive grant database for landlords in the UK.
 
 ### 1.3 Product Vision
 
@@ -81,7 +85,29 @@ The UK private rented sector comprises:
 
 The market is characterised by fragmentation. Most landlords own just one or two properties, often as accidental landlords or pension investments. They are time-poor, cost-conscious, and risk-averse. Professional landlords with larger portfolios have access to advisors and resources; small landlords do not.
 
-### 2.2 Regulatory Framework
+### 2.2 Competitive Analysis
+
+**Tier 1: Direct Competitors**
+
+- **The Independent Landlord (theindependentlandlord.com):** One-person operation with authentic first-person content. Strong on Victorian terrace upgrades. Weakness: no tools, limited scale, can't cover all property types.
+- **EPC Advisor (epcadvisor.co.uk):** Homeowner-focused EPC guidance with D-to-C content. Has basic calculator. Weakness: landlords are afterthought, no grant database, generic recommendations.
+
+**Tier 2: Institutional Players**
+
+- **NRLA:** Authority but content behind paywall, not SEO-focused.
+- **Landlord Studio:** SaaS content marketing, EPC is peripheral.
+- **LandlordZone:** News-focused, forums are valuable but unstructured.
+
+**Our Differentiation:**
+
+1. Landlord-first framing throughout (commercial reality, not environmental moralising)
+2. Property-type specific guides at depth competitors can't match
+3. Interactive tools that deliver personalised, actionable output
+4. Aggregated grant database nobody else maintains
+5. Original data analysis from EPC register
+6. Speed on regulatory updates (target: same-day coverage)
+
+### 2.3 Regulatory Framework
 
 The Minimum Energy Efficiency Standards (MEES) regulations establish the legal requirements for rental properties. Key provisions confirmed in January 2026:
 
@@ -96,7 +122,7 @@ The Minimum Energy Efficiency Standards (MEES) regulations establish the legal r
 
 The cost cap exemption allows landlords to register for exemption if the most cost-effective improvements would exceed £10,000 without achieving EPC C. However, landlords must first spend up to the cap on qualifying improvements before claiming exemption.
 
-### 2.3 RdSAP 10 Transition
+### 2.4 RdSAP 10 Transition
 
 The EPC assessment methodology is changing. RdSAP 10 launches in June 2025 with several significant changes:
 
@@ -106,17 +132,6 @@ The EPC assessment methodology is changing. RdSAP 10 launches in June 2025 with 
 - Potential for existing ratings to change under the new methodology
 
 This creates immediate confusion for landlords: should they get a new EPC now under the current methodology, or wait for RdSAP 10? Clear guidance on this transition represents a significant content opportunity.
-
-### 2.4 Competitive Landscape Summary
-
-| Competitor Type | Examples | Strengths | Weaknesses |
-|-----------------|----------|-----------|------------|
-| Specialist content creators | The Independent Landlord | Genuine expertise, trusted voice, active community | One-person operation, broader focus than just EPC, no tools |
-| SaaS content marketing | Landlord Studio, Goodlord | Professional design, well-written guides | Content supports software sales, not independent or specialist |
-| Trade associations | NRLA, RLA | Institutional authority, lobbying influence | Content often behind paywall, dry and policy-focused |
-| News and community sites | LandlordZone | Domain authority from decades online | News-focused not guide-focused, variable quality |
-| Letting agency blogs | Various | Local knowledge | Generic content, rarely updated, self-serving |
-| Government and institutional | GOV.UK, Energy Saving Trust | Authoritative on regulations | Dense, hard to navigate, not landlord-specific |
 
 ### 2.5 Content Gaps Identified
 
@@ -196,6 +211,14 @@ No jargon without immediate explanation. Short sentences and clear structure. We
 ### 4.5 Current and Maintained
 
 Outdated content destroys trust faster than no content. Publication dates are visible on all pages. "Last updated" timestamps are prominent. Content review schedules are built into production workflows. When users find errors, correction is fast and transparent.
+
+### 4.6 Tools Over Articles
+
+Where we can build a tool that answers a question better than an article, we build the tool. Articles explain; tools solve. Interactive tools that deliver personalised, actionable output create more value than static content and generate stronger user engagement and return visits.
+
+### 4.7 Original Data Creates Authority
+
+We analyse primary sources (EPC register, grant schemes, regulatory documents) and publish original findings. This makes us citable and linkable. Original data analysis establishes us as the authoritative source that others reference, creating natural backlinks and building domain authority.
 
 ---
 
@@ -282,16 +305,38 @@ Homepage
 | Target keywords | Long-tail terms with specific search intent |
 | Quantity | 30 to 40 cluster articles |
 
-#### Property Type Guides
+#### Property Type Guides (EXPANDED)
 
 | Attribute | Specification |
 |-----------|---------------|
 | Purpose | Property-specific upgrade guidance |
 | Word count | 1,500 to 2,500 words |
-| Required sections | Typical starting EPC; Common issues and challenges; Recommended upgrades in priority order; Realistic cost ranges; Example upgrade pathway |
+| Required sections | Typical starting EPC profile; Construction characteristics affecting upgrades; Prioritised improvement pathway with costs; Worked example with real numbers; Specific complications for this property type; Links to relevant tools; Internal links to related content |
 | Visual elements | Property archetype illustration, improvement priority diagram |
 | Target keywords | Property type plus EPC/upgrade terms |
-| Quantity | 8 to 10 property type guides |
+| Quantity | 12 to 15 property type guides |
+
+**Priority 1 (Launch):**
+- Victorian terrace (pre-1919) ✓ DONE
+- 1930s semi-detached ✓ DONE
+- Purpose-built flat ✓ DONE
+
+**Priority 2 (Month 2):**
+- 1960s-1970s houses (huge stock, cavity walls, good upgrade potential)
+- 1950s houses (mixed construction, transitional era)
+- Converted flats (leasehold complications, communal areas)
+
+**Priority 3 (Month 3):**
+- Edwardian houses (1901-1910, similar to Victorian but some differences)
+- 1980s-1990s houses (better baseline, fewer issues)
+- New build flats (often compliant, different challenges)
+- Pre-1919 semi-detached (not terraced, different heat loss profile)
+
+**Priority 4 (Month 4):**
+- HMOs (specific regulatory requirements, room-by-room considerations)
+- Maisonettes (part-house, part-flat complications)
+- Listed buildings (dedicated guide beyond subsections)
+- Park homes (different EPC regime)
 
 #### Local Guides
 
@@ -311,7 +356,24 @@ Homepage
 | Purpose | Interactive utility with supporting content |
 | Supporting content | 500 to 1,000 words explaining methodology and caveats |
 | Required elements | Clear input labels; Progress indication; Results explanation; Methodology disclosure; Limitation caveats; Links to related content |
-| Quantity | 4 interactive tools |
+| Quantity | 5 interactive tools |
+
+#### Original Research Content
+
+| Attribute | Specification |
+|-----------|---------------|
+| Purpose | Data-driven analysis establishing authority and generating backlinks |
+| Word count | 1,500 to 3,000 words |
+| Required elements | Headline statistics; Methodology transparency; Downloadable data (creates links); Embeddable charts (creates embeds and links); Press release version for journalists |
+| Format | Blog summary + full PDF + interactive data explorer |
+| Target keywords | Original research creates new keyword opportunities |
+| Frequency | Quarterly |
+
+**Quarterly data publications:**
+- Q2 2026: "State of Landlord EPC Compliance" (baseline report)
+- Q3 2026: "Regional EPC Performance" (city-by-city analysis)
+- Q4 2026: "What Upgrades Actually Work" (before/after EPC analysis)
+- Q1 2027: "Grant Uptake Report" (who's claiming, who's missing out)
 
 ### 5.3 Content Requirements per Article
 
@@ -340,13 +402,13 @@ Every piece of content must include the following metadata and elements:
 
 ## 6. Interactive Tools
 
-Four interactive tools differentiate the platform and provide genuine utility. Tools are designed to guide landlords toward informed decisions, not to replace professional advice.
+Five interactive tools differentiate the platform and provide genuine utility. Tools are designed to guide landlords toward informed decisions, not to replace professional advice. **Tools are a core differentiator—where we can build a tool that answers a question better than an article, we build the tool.**
 
-### 6.1 Upgrade Cost Calculator
+### 6.1 Upgrade Cost Calculator (ENHANCED)
 
 **Purpose:** Provide landlords with realistic cost estimates for improving their property from its current EPC rating to EPC C or above. The calculator acknowledges uncertainty while giving more specific guidance than generic ranges.
 
-**User inputs:**
+**Phase 1 (Launch):**
 
 | Input | Options | Required |
 |-------|---------|----------|
@@ -359,13 +421,30 @@ Four interactive tools differentiate the platform and provide genuine utility. T
 | Glazing type | Single / Double / Triple / Mixed / Don't know | No |
 | Region | Dropdown of UK regions for cost adjustment | Yes |
 
-**Outputs:**
+**Phase 1 Outputs:**
+- Prioritised improvement recommendations ranked by £ per EPC point
+- Regional cost adjustments (London +25%, Scotland -10%, etc.)
+- Cost cap exemption flag when projected spend exceeds £10,000
+- Exportable results (PDF) with email capture
 - Estimated total cost range (low, mid, high scenarios)
-- Recommended improvements listed in priority order
-- Estimated EPC point improvement per measure
-- Cost per EPC point for each measure (efficiency ranking)
-- Indication of whether cost cap exemption likely applies
 - Link to relevant property type guide for detailed information
+
+**Phase 2 (Month 2):**
+- EPC PDF upload and parsing
+- Extract actual recommendations from uploaded certificate
+- Identify assessor assumptions that may be incorrect
+- Compare uploaded EPC against typical ratings for property type
+- "Your EPC says X, but we think Y might be wrong because Z"
+
+**Phase 3 (Month 4):**
+- Integration with grant database
+- "Based on your property and location, you may be eligible for £X in grants"
+- Save/compare multiple properties (portfolio view)
+
+**Technical requirements:**
+- PDF parsing for EPC documents (standard format, should be feasible)
+- Database of typical EPC characteristics by property type/age/region
+- API connection to grant eligibility checker
 
 **Data sources:**
 - Energy Saving Trust benchmark costs
@@ -378,33 +457,63 @@ Four interactive tools differentiate the platform and provide genuine utility. T
 - "A professional EPC assessment is required for accurate recommendations."
 - "Prices based on [month/year] data and may have changed."
 
-### 6.2 Grant Eligibility Checker
+---
 
-**Purpose:** Help landlords understand what funding they might qualify for across national and local schemes. The funding landscape is fragmented and confusing; this tool provides a single starting point.
+### 6.2 Grant Eligibility Checker (PRIORITY)
+
+**This is now a core product, not a nice-to-have. This tool alone could justify the entire site.** Nobody aggregates this data comprehensively for landlords.
+
+**Purpose:** Answer "What grants can I get for my property?"
 
 **User inputs:**
 
 | Input | Options | Required |
 |-------|---------|----------|
-| Property postcode | Full UK postcode for local scheme lookup | Yes |
+| Postcode | Full UK postcode for local scheme lookup | Yes |
 | Property type | Dropdown matching property categories | Yes |
 | Current EPC rating | A through G, or "I don't know" | Yes |
-| Tenant status | Current tenant in place / Between tenancies / New purchase | Yes |
-| Tenant receives means-tested benefits | Yes / No / Don't know (for ECO4 eligibility) | No |
-| Property in conservation area | Yes / No / Don't know | No |
-| Listed building status | Grade I / Grade II / Not listed / Don't know | No |
+| Tenure | Freehold / Leasehold | Yes |
+| Tenant benefit status | Yes / No / Don't know (for ECO4 eligibility) | No |
+| Tenant income | Below £36,000 / Above £36,000 / Don't know (for Warm Homes: Local) | No |
+| Heating system type | Gas boiler / Electric / Oil / Heat pump / Other | Yes |
 
 **Outputs:**
-- List of potentially eligible schemes, each showing:
-  - Scheme name and administering body
-  - What improvements it covers
-  - Typical funding amount or percentage
-  - How to apply with direct link
-  - Key eligibility requirements
-- Schemes not eligible for, with clear explanation of why
-- Schemes requiring further investigation (edge cases)
+- List of eligible schemes with:
+  - Scheme name and administrator
+  - Maximum grant value
+  - What it covers
+  - Eligibility confidence (definite/likely/possible)
+  - Application link
+  - Deadline if applicable
+- Clear explanation of why ineligible schemes don't apply
+- "Last verified: [date]" for each scheme
 
-**Scope consideration:** Version 1.0 will focus on major national schemes (ECO4, Warm Homes: Local Grant, Boiler Upgrade Scheme, Great British Insulation Scheme) plus the top 20 local authority areas by rental stock. Full local authority coverage is a subsequent phase.
+**Data sources to aggregate:**
+
+**National schemes:**
+- **ECO4** (via obligated energy suppliers) - ends March 2026, properties D-G, tenant must meet income/benefit criteria
+- **Boiler Upgrade Scheme** - up to £7,500 for heat pumps, £5,000 for biomass, England and Wales
+- **Warm Homes: Local Grant** (from April 2025) - up to £30,000 first property, 50% contribution for additional properties, tenant income below £36,000 or on benefits
+
+**Local schemes (Phase 1 - top 20 councils by PRS stock):**
+1. Manchester
+2. Birmingham
+3. Leeds
+4. Liverpool
+5. Bristol
+6. Sheffield
+7. Newcastle
+8. Nottingham
+9. Leicester
+10. London boroughs: Camden, Hackney, Islington, Lambeth, Lewisham, Newham, Southwark, Tower Hamlets, Haringey, Waltham Forest
+
+**Maintenance requirement:**
+- Weekly check of scheme status
+- Alert system for scheme changes
+- Version history ("Last verified: [date]")
+- User notification when schemes change in their area
+
+---
 
 ### 6.3 Exemption Pathway Tool
 
@@ -427,6 +536,13 @@ Four interactive tools differentiate the platform and provide genuine utility. T
 - Exemption duration (5 years) and renewal requirements
 - What happens when exemption expires
 - Risks of relying on exemption (regulatory change, sale implications)
+
+**Enhanced features:**
+- Document checklist generator (what evidence you need)
+- Template letters for exemption registration
+- Timeline calculator ("If you start now, you can register by X")
+
+---
 
 ### 6.4 Upgrade Priority Recommender
 
@@ -451,11 +567,122 @@ Four interactive tools differentiate the platform and provide genuine utility. T
 - Warning if target EPC C unlikely achievable within budget
 - Link to relevant property type guide
 
+**Integration requirements:**
+- Pull data from Calculator results when available
+- Prioritise grant-funded improvements (from Grant Eligibility Checker)
+- Cross-reference with property type guide recommendations
+
 ---
 
-## 7. Design Requirements
+### 6.5 EPC Analyser (NEW)
 
-### 7.1 Design Principles
+**Purpose:** Let landlords understand their EPC better than the assessor explained it. Many landlords have EPCs but don't understand them, and assessors often make assumptions that are wrong. This positions us as the expert interpreter.
+
+**User inputs:**
+- EPC PDF upload OR manual entry of key fields:
+  - Current rating and score
+  - Property type
+  - Construction age
+  - Wall type noted on certificate
+  - Heating system
+  - Insulation levels (loft, walls, floor)
+  - Recommendations listed
+
+**Outputs:**
+- Plain English explanation of each rating component
+- "What's dragging your score down" analysis
+- Comparison to typical properties of same type
+- "Quick wins you might have missed"
+- Flag potential assessor errors or assumptions
+- "Your EPC says [X], but based on [property characteristics], this assumption may be incorrect"
+
+**Why this matters:**
+- Many landlords have EPCs but don't understand them
+- Assessors often make assumptions that are wrong (especially for older properties)
+- This positions us as the expert interpreter
+- Creates email capture opportunity (full analysis report)
+- Drives traffic to property type guides with specific recommendations
+
+---
+
+## 7. Data Strategy
+
+### 7.1 EPC Register Analysis
+
+The EPC register is public data containing millions of certificates. We will analyse this data to:
+
+**1. Create original research content**
+- "Average EPC rating by property type and construction era"
+- "Which UK cities have the highest concentration of sub-C rental stock?"
+- "Victorian terrace EPC performance: regional comparison"
+- "Year-on-year improvement rates: are landlords upgrading?"
+
+**2. Validate our cost estimates**
+- Track properties that improved ratings between assessments
+- Identify what changed (visible in EPC recommendations)
+- Build evidence base for "what actually works"
+
+**3. Generate PR-worthy statistics**
+- "Our analysis of 2 million EPCs shows..."
+- Pitchable to property press
+- Creates backlinks and citations
+
+**4. Power our tools**
+- Benchmark user's property against similar stock
+- "Your Victorian terrace scores 12 points below average for your area"
+
+**Technical requirements:**
+- EPC register API access or bulk download processing
+- Database to store and query analysed data
+- Automated refresh pipeline (monthly)
+- Analysis scripts for generating insights
+
+**Content outputs (quarterly):**
+- "State of Landlord EPC Compliance" report
+- Regional breakdowns
+- Property type deep dives
+
+---
+
+### 7.2 Grant Database Maintenance
+
+**Sources to monitor:**
+- GOV.UK scheme announcements
+- Ofgem ECO updates
+- Individual council websites (top 20 initially)
+- Energy supplier scheme pages
+
+**Process:**
+- Weekly review cycle
+- Change log maintained
+- User notification system for scheme changes in their area
+- "Last verified" dates visible on all grant information
+
+---
+
+### 7.3 Regulatory Monitoring
+
+**Goal:** Be first to publish on any EPC/MEES regulatory change.
+
+**Monitor:**
+- GOV.UK DLUHC publications
+- Parliament bills tracker
+- Consultation responses
+- Ministerial statements
+
+**Response protocol:**
+- Draft analysis within 2 hours of announcement
+- Publish within 4 hours
+- Update all affected pages within 24 hours
+- Email list notification same day
+
+**This speed creates authority.** When landlords Google "new EPC rules," we should already be ranking.
+
+---
+
+## 8. Design Requirements
+
+### 8.1 Design Principles
 
 **Trustworthy and professional:** The design must communicate authority and reliability. Landlords are making significant financial decisions based on this information. Visual design should feel like a trusted professional resource, not a startup, blog, or government website. Clean without being sterile, modern without being trendy.
 
@@ -519,9 +746,9 @@ The following components are required:
 
 ---
 
-## 8. Technical Requirements
+## 9. Technical Requirements
 
-### 8.1 Architecture Overview
+### 9.1 Architecture Overview
 
 Custom-built platform. No off-the-shelf CMS. Architecture should prioritise performance, SEO, and maintainability.
 
@@ -531,7 +758,7 @@ Custom-built platform. No off-the-shelf CMS. Architecture should prioritise perf
 - Headless CMS or structured content repository for editorial workflow
 - CDN delivery for all static assets
 
-### 8.2 Performance Requirements
+### 9.2 Performance Requirements
 
 | Metric | Target | Measurement |
 |--------|--------|-------------|
@@ -544,7 +771,7 @@ Custom-built platform. No off-the-shelf CMS. Architecture should prioritise perf
 
 Performance is a ranking factor. Tool pages with interactive elements must still meet Core Web Vitals. Lazy loading for below-fold content. Critical CSS inlined.
 
-### 8.3 SEO Technical Requirements
+### 9.3 SEO Technical Requirements
 
 **URL structure:**
 - Clean URLs without parameters
@@ -569,7 +796,7 @@ Performance is a ranking factor. Tool pages with interactive elements must still
 - Organisation schema on site
 - WebApplication schema on tool pages
 
-### 8.4 Content Management Requirements
+### 9.4 Content Management Requirements
 
 The editorial interface must support:
 
@@ -587,7 +814,7 @@ The editorial interface must support:
 - Image upload with required alt text
 - Preview before publish
 
-### 8.5 Analytics and Tracking
+### 9.5 Analytics and Tracking
 
 **Required integrations:**
 - Google Analytics 4
@@ -608,7 +835,7 @@ The editorial interface must support:
 - Tool usage analytics
 - Traffic source analysis
 
-### 8.6 Infrastructure
+### 9.6 Infrastructure
 
 | Component | Requirement |
 |-----------|-------------|
@@ -622,9 +849,9 @@ The editorial interface must support:
 
 ---
 
-## 9. Content Production
+## 10. Content Production
 
-### 9.1 AI-Assisted Workflow
+### 10.1 AI-Assisted Workflow
 
 Content production uses AI assistance with human oversight. AI processes primary sources and produces drafts; humans verify accuracy and add editorial judgment.
 
@@ -646,7 +873,7 @@ Content production uses AI assistance with human oversight. AI processes primary
 
 8. **Monitoring.** Track ranking performance, user engagement, feedback. Flag for update when needed.
 
-### 9.2 Quality Standards
+### 10.2 Quality Standards
 
 **Non-negotiable requirements:**
 - Every regulatory claim must cite primary source
@@ -665,7 +892,7 @@ Content production uses AI assistance with human oversight. AI processes primary
 - Currency: £X,XXX format
 - Dates: 1 October 2030 format
 
-### 9.3 Source Document Library
+### 10.3 Source Document Library
 
 Core source documents to acquire and maintain:
 
@@ -691,115 +918,254 @@ Core source documents to acquire and maintain:
 
 ---
 
-## 10. Phased Delivery Plan
+## 11. Authority Building Strategy
 
-### 10.1 Phase Overview
+### 11.1 Link Acquisition
 
-| Phase | Duration | Focus | Exit Criteria |
-|-------|----------|-------|---------------|
-| Phase 1: Foundation | Weeks 1-4 | Platform build, core content, first tool | Site live, 15+ pages published, cost calculator functional |
-| Phase 2: Content Expansion | Weeks 5-10 | Property guides, funding content, second tool | 40+ pages published, all property guides live, 2 tools live |
-| Phase 3: Local and Depth | Weeks 11-16 | Local guides, remaining tools, SEO refinement | 60+ pages, 10+ local guides, all tools live |
-| Phase 4: Optimisation | Weeks 17-24 | Performance tuning, content gaps, authority building | Traffic targets met, ranking for priority keywords |
+**Passive (content that earns links):**
+- Original data analysis (journalists cite statistics)
+- Embeddable tools and calculators
+- Comprehensive guides that become reference resources
+- Grant database (other sites link as resource)
 
-### 10.2 Phase 1: Foundation (Weeks 1-4)
+**Active (outreach):**
 
-**Platform development:**
-- Core site architecture and build
-- Design system and component library
-- Content management interface
-- Analytics integration
-- SEO technical foundation (sitemap, schema, etc.)
+**Forums and communities:**
+- LandlordZone forums (genuine participation, helpful answers)
+- Property Tribes
+- Reddit r/UKLandlords, r/HousingUK
+- Facebook landlord groups
 
-**Content deliverables:**
-- Homepage
-- Regulations pillar page
-- EPC C 2030 deadline article
-- MEES regulations guide
-- Cost cap and exemptions article
-- RdSAP 10 changes article
-- Warm Homes Plan summary
-- 3 priority property type guides (Victorian terrace, 1930s semi, purpose-built flat)
-- Costs pillar page
-- D to C upgrade costs article
-- FAQ page (initial)
-- Glossary (initial)
+**Rule:** Only link to GreenLord when genuinely helpful. Build reputation first, links follow.
 
-**Tool deliverables:**
-- Upgrade Cost Calculator (full functionality)
+**Guest content:**
+- Landlord accountancy blogs (tax implications of EPC upgrades)
+- Mortgage broker content (EPC requirements for BTL lending)
+- Property management software blogs
+- Local landlord association newsletters
 
-### 10.3 Phase 2: Content Expansion (Weeks 5-10)
+**PR and press:**
+- Property Industry Eye
+- LandlordZone news section
+- Mortgage Strategy
+- Local press (regional EPC data stories)
 
-**Content deliverables:**
-- Remaining property type guides (5-6 additional)
-- Property types pillar page
-- E to C upgrade costs article
-- Cheapest improvements ranked article
-- Warm Homes: Local Grant guide
-- ECO4 for landlords guide
-- Boiler Upgrade Scheme guide
-- Great British Insulation Scheme guide
-- Funding pillar page
-- Timeline article (what happens when)
-- Compliance checklist article
-
-**Tool deliverables:**
-- Exemption Pathway Tool
-
-### 10.4 Phase 3: Local and Depth (Weeks 11-16)
-
-**Content deliverables:**
-- Local guides for 10 priority cities: London, Birmingham, Manchester, Leeds, Liverpool, Bristol, Sheffield, Newcastle, Nottingham, Glasgow
-- Local pillar page
-- Additional cluster content based on Search Console data
-- FAQ expansion based on user questions
-- Glossary expansion
-
-**Tool deliverables:**
-- Grant Eligibility Checker (major schemes + priority councils)
-- Upgrade Priority Recommender
-
-### 10.5 Phase 4: Optimisation (Weeks 17-24)
-
-**Focus areas:**
-- Content gap analysis based on ranking and traffic data
-- Underperforming content refresh
-- Additional local guides (10 more cities)
-- Internal linking optimisation
-- Featured snippet targeting for high-value queries
-- Page speed optimisation
-- Tool refinement based on usage analytics
-- Authority building (PR, expert outreach, links)
+**Pitch angles:**
+- Original data ("Our analysis shows X")
+- Expert comment on regulatory changes
+- Case studies with real landlords
 
 ---
 
-## 11. Success Metrics
+### 11.2 Relationship Building
 
-### 11.1 Leading Indicators (Weekly Review)
+**The Independent Landlord:**
+- Direct outreach to Suzanne Smith
+- Offer: share data, collaborate on content, cross-promote
+- She has audience and credibility; we have tools and scale
+- Not a competitor to crush; a potential ally
 
-| Metric | Measurement | Target |
-|--------|-------------|--------|
-| Content velocity | Pages published vs. plan | On track or ahead |
-| Indexation | Pages indexed in Search Console | 95%+ of published pages |
-| Impressions | Total impressions in Search Console | Week-on-week growth |
-| Average position | Mean position for target keywords | Improvement trend |
-| Core Web Vitals | PageSpeed scores | Maintain 90+ mobile |
-| Tool completions | Calculator/tool completion rate | 60%+ of starts |
+**Industry bodies:**
+- NRLA (offer data for their reports)
+- Local landlord associations
+- Property Redress Scheme
+- Deposit protection schemes
 
-### 11.2 Primary Metrics (Monthly Review)
+**Trades and installers:**
+- Retrofit coordinators
+- EPC assessors
+- Insulation installers
+- Heating engineers
 
-| Metric | Measurement | Target (Month 3) | Target (Month 6) |
-|--------|-------------|------------------|------------------|
-| Organic sessions | GA4 | 1,000 | 5,000 |
-| Organic users | GA4 | 800 | 4,000 |
-| Pages per session | GA4 | 1.8 | 2.2 |
-| Average session duration | GA4 | 2 minutes | 3 minutes |
-| Bounce rate | GA4 | Under 70% | Under 60% |
-| Keywords ranking (top 20) | Tracking tool | 50 | 150 |
-| Keywords ranking (top 3) | Tracking tool | 5 | 25 |
-| Featured snippets | Tracking tool | 1 | 5 |
+**These relationships create:**
+- Expert quotes for content
+- Case studies
+- Referral traffic
+- Industry credibility
 
-### 11.3 Quality Metrics
+---
+
+### 11.3 Email List Strategy
+
+**Lead magnets:**
+
+**Launch:**
+- "EPC Compliance Checklist for Landlords" (PDF)
+- Calculator results emailed as report
+
+**Month 2:**
+- "2030 Deadline Action Plan Template" (editable doc)
+- "Grant Finder Results" emailed with updates when schemes change
+
+**Month 3:**
+- "[Property Type] Upgrade Planner" (spreadsheet)
+- "EPC Analysis Report" for uploaded certificates
+
+**Email sequences:**
+- Welcome sequence (what GreenLord offers, key resources)
+- Regulatory update alerts (immediate when changes happen)
+- Monthly digest (new content, tool updates, grant changes)
+
+**Goal:** 5,000 subscribers by month 6, 15,000 by month 12.
+
+**Why this matters:**
+- Owned audience independent of Google
+- Return traffic when we publish updates
+- Eventually monetisable
+- Survey audience for original research
+
+---
+
+## 12. Phased Delivery Plan
+
+### 12.1 Phase Overview
+
+| Phase | Duration | Focus | Exit Criteria |
+|-------|----------|-------|---------------|
+| Phase 1: Foundation | Weeks 1-4 | Platform, core content, calculator | Site live, calculator working, 20+ pages indexed |
+| Phase 2: Grant Database | Weeks 5-8 | Grant tool and content | Grant checker live with 4 national schemes + 10 councils |
+| Phase 3: Content Depth | Weeks 9-14 | Property guides, local guides, tools | 10+ property guides, 10 local guides, all tools functional |
+| Phase 4: Data and Authority | Weeks 15-20 | EPC data pipeline, research, outreach | First research report published, 10+ quality backlinks |
+| Phase 5: Scale and Optimise | Weeks 21-24 | Gap analysis, CRO, expansion | Traffic targets met, top 3 rankings for priority keywords |
+
+---
+
+### 12.2 Phase 1: Foundation (Weeks 1-4)
+
+**Deliverables:**
+- Platform infrastructure
+- Core content (15+ pages) ✓ MOSTLY DONE
+- Cost calculator (full functionality) ✓ IN PROGRESS
+- Fix all v1 issues (placeholders, bugs, broken links)
+- Email capture with basic lead magnet
+- Submit to Search Console, request indexing
+
+**EXIT CRITERIA:**
+- Site live on production domain
+- Calculator working end-to-end with PDF export
+- 20+ pages indexed
+- Email capture functional
+
+---
+
+### 12.3 Phase 2: Grant Database (Weeks 5-8)
+
+**This phase now focuses on the grant tool—a core differentiator.**
+
+**Deliverables:**
+- Build grant eligibility checker
+- Populate national schemes (ECO4, BUS, Warm Homes: Local)
+- Populate top 10 councils
+- Create grant-related content (guides for each scheme)
+- Integrate grant recommendations into calculator results
+
+**EXIT CRITERIA:**
+- Grant checker live with national schemes + 10 councils
+- Grant content published (10+ pages)
+- Calculator shows "you may be eligible for..." recommendations
+
+---
+
+### 12.4 Phase 3: Content Depth (Weeks 9-14)
+
+**Deliverables:**
+- Remaining property type guides (6-8 more)
+- Local guides (10 cities)
+- Exemption pathway tool
+- EPC PDF upload feature for calculator
+- Expand grant database to 20 councils
+
+**EXIT CRITERIA:**
+- 10+ property type guides live
+- 10 local guides live
+- 60+ total pages
+- All tools functional
+- 20 councils in grant database
+
+---
+
+### 12.5 Phase 4: Data and Authority (Weeks 15-20)
+
+**Deliverables:**
+- EPC register data pipeline
+- First original research publication
+- Outreach campaign (forums, guest posts, PR)
+- Expert interviews and case studies
+- EPC Analyser tool
+
+**EXIT CRITERIA:**
+- EPC data analysis capability operational
+- "State of Landlord EPC Compliance" report published
+- 10+ quality backlinks acquired
+- 3+ expert interviews published
+- EPC Analyser in beta
+
+---
+
+### 12.6 Phase 5: Scale and Optimise (Weeks 21-24)
+
+**Deliverables:**
+- Content gap analysis and fills
+- Internal linking optimisation
+- Featured snippet targeting
+- Conversion rate optimisation
+- Second research publication
+- Expand grant database to 30+ councils
+
+**EXIT CRITERIA:**
+- Traffic targets met (see metrics)
+- Top 3 rankings for priority keywords
+- 10+ featured snippets
+- Email list at 5,000+
+
+---
+
+## 13. Success Metrics
+
+### 13.1 Traffic Metrics
+
+| Metric | Month 3 | Month 6 | Month 12 |
+|--------|---------|---------|----------|
+| Organic sessions | 2,500 | 15,000 | 50,000 |
+| Keywords ranking (top 20) | 75 | 250 | 500+ |
+| Keywords ranking (top 3) | 10 | 50 | 100+ |
+| Featured snippets | 3 | 15 | 30+ |
+
+---
+
+### 13.2 Tool Usage Metrics
+
+| Metric | Month 3 | Month 6 | Month 12 |
+|--------|---------|---------|----------|
+| Calculator completions | 500 | 3,000 | 15,000/month |
+| Grant checker uses | 200 | 2,000 | 10,000/month |
+| PDF exports | 100 | 500 | 2,000/month |
+| EPC uploads | - | 500 | 2,000/month |
+
+---
+
+### 13.3 Authority Metrics
+
+| Metric | Month 3 | Month 6 | Month 12 |
+|--------|---------|---------|----------|
+| Referring domains | 5 | 25 | 75 |
+| Domain Rating | 10+ | 25+ | 40+ |
+| Press mentions | - | 1 | 5+ |
+| Cited in industry reports | - | - | Yes |
+
+---
+
+### 13.4 Email List Metrics
+
+| Metric | Month 3 | Month 6 | Month 12 |
+|--------|---------|---------|----------|
+| Subscribers | 1,000 | 5,000 | 15,000 |
+| Open rate target | 35%+ | 35%+ | 35%+ |
+| Click rate target | 5%+ | 5%+ | 5%+ |
+
+---
+
+### 13.5 Quality Metrics
 
 | Metric | Measurement | Target |
 |--------|-------------|--------|
@@ -808,7 +1174,9 @@ Core source documents to acquire and maintain:
 | Page speed | Core Web Vitals pass rate | 100% of pages |
 | Accessibility | WCAG 2.1 AA compliance | 100% of pages |
 
-### 11.4 Tool-Specific Metrics
+---
+
+### 13.6 Tool-Specific Metrics
 
 | Metric | Target |
 |--------|--------|
@@ -820,9 +1188,9 @@ Core source documents to acquire and maintain:
 
 ---
 
-## 12. Risks and Mitigations
+## 14. Risks and Mitigations
 
-### 12.1 Risk Register
+### 14.1 Risk Register
 
 | Risk | Likelihood | Impact | Mitigation |
 |------|------------|--------|------------|
@@ -834,7 +1202,54 @@ Core source documents to acquire and maintain:
 | Low engagement despite traffic | Medium | Medium | User feedback mechanisms, analytics-driven iteration, content testing |
 | Technical performance issues | Low | Medium | Performance monitoring, CDN, static generation where possible |
 
-### 12.2 Dependency Risks
+---
+
+### 14.2 New Risk: Competitor Response
+
+**Risk:** The Independent Landlord or EPC Advisor sees our traction and improves their offering.
+
+**Mitigation:**
+- Move fast; build tools they can't easily replicate
+- Build relationships (harder to compete with collaborators)
+- Create data moat (EPC register analysis, grant database)
+- Build email list (owned audience)
+
+**Likelihood:** Medium
+**Impact:** Medium
+
+---
+
+### 14.3 New Risk: Grant Scheme Changes
+
+**Risk:** Government changes or cancels key grant schemes, invalidating our database.
+
+**Mitigation:**
+- Monitoring and rapid update process
+- Version history and change tracking
+- Position as "always current" rather than static resource
+- Diversify value beyond just grants
+
+**Likelihood:** High (schemes change frequently)
+**Impact:** Low (if we update quickly, it's actually an opportunity)
+
+---
+
+### 14.4 New Risk: EPC Reform
+
+**Risk:** Government changes EPC methodology significantly, requiring content rewrites.
+
+**Mitigation:**
+- Monitor consultation and regulatory pipeline
+- Build content in modular way (easy to update sections)
+- Position as experts on the transition (opportunity, not just risk)
+- New metrics (HEM:EPC) will create confusion; we explain it
+
+**Likelihood:** High (confirmed for 2026)
+**Impact:** Medium (creates work but also opportunity)
+
+---
+
+### 14.5 Dependency Risks
 
 | Dependency | Risk | Mitigation |
 |------------|------|------------|
@@ -845,19 +1260,31 @@ Core source documents to acquire and maintain:
 
 ---
 
-## 13. Open Decisions and Assumptions
+## 15. Open Decisions and Assumptions
 
-### 13.1 Decisions Required
+### 15.1 Resolved Decisions
 
-| Decision | Options | Recommendation | Owner | Due |
-|----------|---------|----------------|-------|-----|
-| Brand name and domain | Various options TBD | Select short, memorable, keyword-relevant if possible | Product | Week 1 |
-| Author identity | Real person / Pseudonymous expert / Brand byline | Pseudonymous expert with credible bio; real person if available | Product | Week 1 |
-| Newsletter platform | Mailchimp / ConvertKit / Custom | ConvertKit for flexibility | Engineering | Week 2 |
-| Keyword tracking tool | SEMrush / Ahrefs / Custom | Ahrefs for data quality | Product | Week 2 |
-| Grant database scope v1 | Major national schemes only / +Top 20 councils | Major national + top 20 councils | Product | Week 4 |
+| Decision | Resolution |
+|----------|------------|
+| Brand name | GreenLord ✓ |
+| Domain | [production domain] ✓ |
+| Author persona | James Crawford ✓ |
 
-### 13.2 Assumptions Made
+---
+
+### 15.2 New Open Decisions
+
+| Decision | Options | Recommendation | Decision needed by |
+|----------|---------|----------------|-------------------|
+| EPC PDF parsing approach | Client-side JS parsing / Server-side processing / Third-party API | Server-side for reliability and data capture | Week 6 |
+| Grant database update process | Manual weekly review / Automated monitoring / Crowdsourced updates | Manual initially, build automation over time | Week 5 |
+| EPC register data access | Bulk download processing / API access / Partnership with existing provider | Bulk download initially (free), consider API for real-time | Week 12 |
+| Research report format | Blog post / Downloadable PDF / Interactive microsite | All three (blog summary, full PDF, interactive data explorer) | Week 15 |
+| Monetisation approach (future) | Affiliate (installer referrals) / Sponsored content / Premium tools / Lead gen | Defer decision until Month 6, focus on traffic first | Month 6 |
+
+---
+
+### 15.3 Assumptions
 
 This PRD assumes the following. Flag immediately if any assumption is incorrect:
 
