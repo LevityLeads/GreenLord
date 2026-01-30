@@ -53,6 +53,10 @@ export const MAIN_NAVIGATION: NavItem[] = [
     children: [
       { label: 'Complete Upgrade Cost Guide', href: '/costs' },
       { label: 'D to C Upgrade Costs', href: '/costs/d-to-c-upgrade' },
+      { label: 'Grants & Funding Guide', href: '/costs/grants' },
+      { label: 'ECO4 Scheme', href: '/costs/grants/eco4' },
+      { label: 'Boiler Upgrade Scheme', href: '/costs/grants/boiler-upgrade-scheme' },
+      { label: 'Warm Homes: Local', href: '/costs/grants/warm-homes-local' },
     ],
   },
   {
@@ -61,6 +65,7 @@ export const MAIN_NAVIGATION: NavItem[] = [
     description: 'Interactive calculators and planners',
     children: [
       { label: 'Upgrade Cost Calculator', href: '/tools/cost-calculator' },
+      { label: 'Grant Eligibility Checker', href: '/tools/grant-eligibility' },
     ],
   },
   {

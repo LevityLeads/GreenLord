@@ -140,12 +140,12 @@ export default function ToolsPage() {
         'Cost cap exemption indicator',
       ],
       status: 'available',
-      highlighted: true,
+      highlighted: false,
     },
     {
       title: 'Grant Eligibility Checker',
       description: 'Find out which government grants and schemes you may qualify for based on your property and tenant circumstances.',
-      href: '/tools/grant-checker',
+      href: '/tools/grant-eligibility',
       icon: PoundSterling,
       features: [
         'Check ECO4 eligibility',
@@ -154,7 +154,8 @@ export default function ToolsPage() {
         'Great British Insulation Scheme',
         'Local authority schemes by postcode',
       ],
-      status: 'coming-soon',
+      status: 'available',
+      highlighted: true,
     },
     {
       title: 'Exemption Pathway Tool',
@@ -316,13 +317,13 @@ export default function ToolsPage() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="secondary" size="md" className="px-4 py-2">
-              Grant Eligibility Checker - Q1 2026
-            </Badge>
-            <Badge variant="secondary" size="md" className="px-4 py-2">
               Exemption Pathway Tool - Q2 2026
             </Badge>
             <Badge variant="secondary" size="md" className="px-4 py-2">
               Upgrade Priority Planner - Q2 2026
+            </Badge>
+            <Badge variant="secondary" size="md" className="px-4 py-2">
+              EPC Analyser - Q3 2026
             </Badge>
           </div>
         </Container>

@@ -8,22 +8,23 @@ import {
   Download,
   RefreshCw,
   ExternalLink,
-  AlertTriangle,
   CheckCircle,
   Info,
   Lightbulb,
   ArrowRight,
   FileText,
+  Loader2,
+  PoundSterling,
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/Card';
 import { Alert } from '@/components/ui/Alert';
-import { Badge } from '@/components/ui/Badge';
 import { ImprovementCard } from './ImprovementCard';
 import { CostBreakdown } from './CostBreakdown';
-import { cn, formatCurrency, getPropertyTypeName } from '@/lib/utils';
+import { cn, getPropertyTypeName } from '@/lib/utils';
 import { getQuickWins, getHighImpactImprovements } from '@/lib/calculator';
 import { CALCULATOR_DISCLAIMER, CALCULATOR_METHODOLOGY } from '@/data/calculator-data';
+import { exportResultsToPDF } from '@/lib/pdf-export';
 import type { CalculatorResults as CalculatorResultsType, CalculatorInputs } from '@/lib/types';
 
 interface CalculatorResultsProps {
@@ -38,6 +39,7 @@ export function CalculatorResults({ results, inputs, onReset }: CalculatorResult
   const [showAllRecommendations, setShowAllRecommendations] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('all');
   const [showMethodology, setShowMethodology] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
 
   const quickWins = getQuickWins(results.recommendations);
   const highImpact = getHighImpactImprovements(results.recommendations);
@@ -246,6 +248,33 @@ export function CalculatorResults({ results, inputs, onReset }: CalculatorResult
         </div>
       </Card>
 
+      {/* Grant Eligibility Checker CTA */}
+      <Card variant="default" padding="md" className="border-accent-200 bg-accent-50">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <PoundSterling className="mt-1 h-6 w-6 flex-shrink-0 text-accent-600" aria-hidden="true" />
+            <div>
+              <h3 className="font-semibold text-accent-800">
+                You May Be Eligible for Funding
+              </h3>
+              <p className="text-sm text-accent-700">
+                Check if you qualify for ECO4, Boiler Upgrade Scheme, Warm Homes: Local Grant, or local council grants.
+                {results.recommendations.some(r => r.id.includes('heat-pump')) && (
+                  <span className="block mt-1 font-medium">
+                    Up to £7,500 available for heat pump installation!
+                  </span>
+                )}
+              </p>
+            </div>
+          </div>
+          <Link href="/tools/grant-eligibility" className="flex-shrink-0">
+            <Button variant="secondary" rightIcon={<ArrowRight className="h-4 w-4" />}>
+              Check Grant Eligibility
+            </Button>
+          </Link>
+        </div>
+      </Card>
+
       {/* Methodology Section */}
       <Card padding="md">
         <button
@@ -303,13 +332,32 @@ export function CalculatorResults({ results, inputs, onReset }: CalculatorResult
         </Button>
         <Button
           variant="primary"
-          onClick={() => {
-            // In a real implementation, this would generate and download a PDF
-            window.print();
+          onClick={async () => {
+            setIsExporting(true);
+            try {
+              await exportResultsToPDF({
+                results,
+                inputs,
+                filename: `GreenLord-EPC-Report-${inputs.propertyType}-${new Date().toISOString().split('T')[0]}.pdf`,
+              });
+            } catch (error) {
+              console.error('PDF export failed:', error);
+              // Fallback to print
+              window.print();
+            } finally {
+              setIsExporting(false);
+            }
           }}
-          leftIcon={<Download className="h-4 w-4" aria-hidden="true" />}
+          disabled={isExporting}
+          leftIcon={
+            isExporting ? (
+              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+            ) : (
+              <Download className="h-4 w-4" aria-hidden="true" />
+            )
+          }
         >
-          Download Report
+          {isExporting ? 'Generating PDF...' : 'Download Report'}
         </Button>
       </div>
 
