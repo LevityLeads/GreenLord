@@ -162,10 +162,11 @@ export function Footer({ className }: FooterProps) {
               </div>
             </div>
 
-            {/* Link columns - 4 columns on desktop */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:col-span-4">
+            {/* Link columns - 5 columns on desktop */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:col-span-4">
               <FooterLinkColumn title="Regulations" links={FOOTER_LINKS.regulations} />
               <FooterLinkColumn title="Property Guides" links={FOOTER_LINKS.propertyGuides} />
+              <FooterLinkColumn title="Costs & Funding" links={FOOTER_LINKS.costsAndFunding} />
               <FooterLinkColumn title="Tools" links={FOOTER_LINKS.tools} />
               <FooterLinkColumn title="Resources" links={FOOTER_LINKS.resources} />
             </div>
