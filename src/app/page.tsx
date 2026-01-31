@@ -19,7 +19,7 @@ import { Button } from '@/components/ui';
 import { Card, CardBody, CardTitle, CardDescription } from '@/components/ui';
 import { Badge } from '@/components/ui';
 import { Container, Section } from '@/components/layout';
-import { KeyFactBox, ImagePlaceholder, RelatedContentCard } from '@/components/content';
+import { KeyFactBox, GeneratedImage, RelatedContentCard } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
 import { daysUntilDeadline, formatCurrency, formatNumber } from '@/lib/utils';
 
@@ -81,7 +81,8 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:block">
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="homepage-hero-landlord"
                 alt="Professional landlord reviewing property documents with EPC certificate visible"
                 description="A professional-looking landlord in their 40s-50s reviewing property documents at a desk. An EPC certificate with a visible rating scale is prominently displayed. The setting is a home office or study with property-related materials visible."
                 width={600}
@@ -334,7 +335,8 @@ export default function HomePage() {
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="homepage-author-headshot"
                 alt="James Crawford - Property Compliance Specialist"
                 description="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context."
                 width={400}
