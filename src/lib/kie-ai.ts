@@ -21,8 +21,8 @@ export interface KieTaskStatusResponse {
   message: string;
   data: {
     taskId: string;
-    status: 'pending' | 'processing' | 'completed' | 'failed';
-    successFlag: -1 | 0 | 1; // -1 = failed, 0 = processing, 1 = success
+    status?: 'pending' | 'processing' | 'completed' | 'failed';
+    successFlag: 0 | 1 | 2 | 3; // 0 = processing, 1 = success, 2/3 = failed
     progress?: number;
     response?: {
       resultUrls?: string[];
@@ -178,8 +178,8 @@ export async function waitForTaskCompletion(
       }
     }
 
-    // Check if failed
-    if (status.successFlag === -1) {
+    // Check if failed (successFlag 2 or 3 means failure)
+    if (status.successFlag === 2 || status.successFlag === 3) {
       return {
         success: false,
         error: status.errorMessage || 'Image generation failed',

@@ -41,6 +41,9 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
     // Check task status
     const statusResult = await getTaskStatus(apiKey, taskId);
 
+    // Debug logging
+    console.log('Task status result:', JSON.stringify(statusResult));
+
     if ('error' in statusResult) {
       return NextResponse.json(
         {
@@ -82,8 +85,8 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
       }
     }
 
-    // Check if failed
-    if (statusResult.successFlag === -1) {
+    // Check if failed (successFlag 2 or 3 means failure)
+    if (statusResult.successFlag === 2 || statusResult.successFlag === 3) {
       return NextResponse.json({
         success: false,
         status: 'failed',
