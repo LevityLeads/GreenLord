@@ -25,3 +25,4 @@ export { ArticleMeta, type ArticleMetaProps, type SourceReference } from './Arti
 
 // Media placeholders
 export { ImagePlaceholder, type ImagePlaceholderProps } from './ImagePlaceholder';
+export { GeneratedImage, type GeneratedImageProps } from './GeneratedImage';

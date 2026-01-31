@@ -23,7 +23,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -85,7 +85,8 @@ export default function VictorianTerracePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="victorian-terrace-hero"
                 alt="Row of Victorian terrace houses in a typical UK street"
                 description="A photograph of a traditional Victorian terrace street showing the characteristic features: bay windows, tall sash windows, decorative brickwork, chimneys, and slate roofs. The image should show the uniform row of houses that typifies Victorian terrace development."
                 width={800}
@@ -198,7 +199,8 @@ export default function VictorianTerracePage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="victorian-terrace-wall-cross-section"
                   alt="Cross-section diagram showing Victorian terrace solid wall construction"
                   description="A technical illustration showing a cross-section of a typical Victorian terrace wall, clearly labelling the solid brick construction, internal plaster, and the absence of any cavity. Should also show the typical floor junction and how the suspended timber floor connects to the walls."
                   width={800}
@@ -594,7 +596,8 @@ export default function VictorianTerracePage() {
                   footerNote="Costs vary significantly by property size, access, and specification. Internal insulation is usually the only option for terraces in conservation areas."
                 />
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="victorian-terrace-iwi-before-after"
                   alt="Before and after internal wall insulation installation in a Victorian terrace room"
                   description="A side-by-side comparison showing a Victorian terrace room before and after internal wall insulation. The before image should show the bare brick or plaster wall, while the after shows the finished insulated wall with new plasterboard and skirting. Both should show how the room proportions are affected."
                   width={800}
@@ -732,7 +735,8 @@ export default function VictorianTerracePage() {
                   </CardBody>
                 </Card>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="victorian-terrace-epc-comparison"
                   alt="EPC certificate comparison showing before and after improvement"
                   description="A mock-up or real example showing two EPC certificates side by side - the original E-rated certificate on the left and the improved C-rated certificate on the right. The comparison should highlight the score improvement from 42 to 71 points."
                   width={800}
