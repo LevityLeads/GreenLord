@@ -224,30 +224,51 @@ export async function generateImage(
 }
 
 /**
- * Build a prompt for UK property images
+ * Build a photorealistic prompt for UK property/landlord images
+ * Uses photography terminology for realistic results (lens, lighting, composition)
  */
 export function buildPropertyImagePrompt(
   alt: string,
   description: string,
   instructions?: string[]
 ): string {
-  const parts = [
-    'Professional architectural photograph of UK property.',
-    description,
-  ];
+  // Build a narrative description, not keyword lists
+  // Formula: [Subject] + [Setting] + [Lighting] + [Technical Details]
 
+  const narrativeParts: string[] = [];
+
+  // Core scene description
+  narrativeParts.push(description);
+
+  // Add any specific instructions as natural language
   if (instructions && instructions.length > 0) {
-    parts.push('Additional requirements:');
-    parts.push(...instructions);
+    narrativeParts.push(instructions.join('. ') + '.');
   }
 
-  // Add quality modifiers
-  parts.push('High quality, professional real estate photography, natural daylight, sharp focus.');
+  // Photography style - be specific about camera and technique
+  const technicalDetails = [
+    'Shot on a Canon EOS R5 with a 35mm f/1.8 lens',
+    'shallow depth of field with creamy bokeh in the background',
+    'soft natural window light creating gentle shadows',
+    'the scene feels authentic and lived-in, not staged',
+    'subtle film grain for a documentary photography aesthetic',
+    'colors are natural and true-to-life, slightly desaturated',
+    'composition follows the rule of thirds',
+  ].join(', ') + '.';
 
-  // Add UK-specific context
-  parts.push('British architecture, UK property style.');
+  // Realism markers - avoid AI artifacts
+  const realismNotes = 'The image should look like an editorial photograph from a UK property magazine, capturing a genuine moment. Avoid anything that looks artificial, overly polished, or computer-generated. Show natural imperfections like slight wrinkles in fabric, realistic skin texture, and authentic wear on objects.';
 
-  return parts.join(' ');
+  // UK-specific context
+  const ukContext = 'British setting with authentic UK architectural details, furniture styles, and atmosphere typical of England.';
+
+  // Combine into flowing narrative
+  return [
+    narrativeParts.join(' '),
+    technicalDetails,
+    realismNotes,
+    ukContext,
+  ].join(' ');
 }
 
 /**

@@ -83,17 +83,15 @@ export default function HomePage() {
             <div className="hidden lg:block">
               <GeneratedImage
                 imageId="homepage-hero-landlord"
-                alt="Professional landlord reviewing property documents with EPC certificate visible"
-                description="A professional-looking landlord in their 40s-50s reviewing property documents at a desk. An EPC certificate with a visible rating scale is prominently displayed. The setting is a home office or study with property-related materials visible."
+                alt="Professional landlord reviewing EPC documents in home office"
+                description="A candid moment capturing a middle-aged British property landlord sat at their kitchen table on a weekday morning, reviewing an Energy Performance Certificate. Morning light streams through a nearby window, illuminating scattered paperwork and a laptop showing property listings. The landlord wears smart-casual clothes and reading glasses, pen in hand, with a thoughtful expression as they examine the EPC rating chart. A mug of tea sits nearby. The kitchen has typical British details - a kettle, tiled splashback, wooden cabinets."
                 width={600}
                 height={500}
                 priority
                 instructions={[
-                  'Show a realistic, professional UK landlord (diverse representation welcome)',
-                  'EPC certificate should be clearly visible with the A-G rating scale',
-                  'Include property documents, laptop, or tablet showing property details',
-                  'Warm, professional lighting - not stock photo style',
-                  'Could be a kitchen table or home office setting',
+                  'Focus on the authentic, relatable moment of a real person dealing with property paperwork',
+                  'The EPC document should be partially visible but not the main focus - this is about the human experience',
+                  'Capture the slight stress and concentration of someone figuring out compliance requirements',
                 ]}
               />
             </div>
