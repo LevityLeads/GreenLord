@@ -23,7 +23,7 @@ import { KeyFactBox } from '@/components/content/KeyFactBox';
 import { WarningBox } from '@/components/content/WarningBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { Card, CardContent } from '@/components/ui/Card';
 import { SITE_CONFIG } from '@/lib/constants';

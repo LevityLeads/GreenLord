@@ -8,7 +8,7 @@ import { Card, CardBody, CardFooter } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { KeyFactBox } from '@/components/content/KeyFactBox';
 import { TipBox } from '@/components/content/TipBox';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { SITE_CONFIG } from '@/lib/constants';
