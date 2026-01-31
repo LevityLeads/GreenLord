@@ -60,11 +60,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateI
     const aspectRatio = getAspectRatioFromDimensions(width, height);
 
     // Determine resolution based on dimensions
-    let resolution: '1k' | '2k' | '4k' = '2k';
+    let resolution: '1K' | '2K' | '4K' = '2K';
     if (width >= 3000 || height >= 3000) {
-      resolution = '4k';
+      resolution = '4K';
     } else if (width <= 1000 && height <= 1000) {
-      resolution = '1k';
+      resolution = '1K';
     }
 
     // Generate the image
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateI
       prompt,
       aspectRatio,
       resolution,
-      outputFormat: 'webp',
+      outputFormat: 'png',
     });
 
     if (result.success && result.imageUrl) {

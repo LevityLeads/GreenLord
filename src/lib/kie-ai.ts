@@ -3,9 +3,9 @@
 
 export interface KieImageGenerationRequest {
   prompt: string;
-  aspectRatio?: '1:1' | '16:9' | '9:16' | '4:3' | '3:4';
-  resolution?: '1k' | '2k' | '4k';
-  outputFormat?: 'png' | 'jpg' | 'webp';
+  aspectRatio?: '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | '3:2' | '2:3' | '4:5' | '5:4' | '21:9' | 'auto';
+  resolution?: '1K' | '2K' | '4K';
+  outputFormat?: 'png' | 'jpg';
 }
 
 export interface KieTaskResponse {
@@ -63,22 +63,35 @@ export async function createImageTask(
         input: {
           prompt: request.prompt,
           aspect_ratio: request.aspectRatio || '16:9',
-          resolution: request.resolution || '2k',
-          output_format: request.outputFormat || 'webp',
+          resolution: request.resolution || '2K',
+          output_format: request.outputFormat || 'png',
         },
       }),
     });
 
+    const responseText = await response.text();
+
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Kie.ai API error:', response.status, errorText);
-      return { error: `API request failed: ${response.status}` };
+      console.error('Kie.ai API error:', response.status, responseText);
+      return { error: `API request failed: ${response.status} - ${responseText}` };
     }
 
-    const data: KieTaskResponse = await response.json();
+    let data: KieTaskResponse;
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      console.error('Failed to parse Kie.ai response:', responseText);
+      return { error: 'Invalid JSON response from API' };
+    }
 
     if (data.code !== 200 && data.code !== 0) {
+      console.error('Kie.ai task creation failed:', data);
       return { error: data.message || 'Failed to create task' };
+    }
+
+    if (!data.data?.taskId) {
+      console.error('No taskId in response:', data);
+      return { error: 'No taskId returned from API' };
     }
 
     return { taskId: data.data.taskId };
@@ -230,12 +243,15 @@ export function buildPropertyImagePrompt(
 export function getAspectRatioFromDimensions(
   width: number,
   height: number
-): '1:1' | '16:9' | '9:16' | '4:3' | '3:4' {
+): '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | '3:2' | '2:3' {
   const ratio = width / height;
 
+  if (ratio > 2.0) return '21:9' as '16:9'; // Use 16:9 as fallback
   if (ratio > 1.7) return '16:9';
+  if (ratio > 1.4) return '3:2';
   if (ratio > 1.2) return '4:3';
   if (ratio > 0.9) return '1:1';
   if (ratio > 0.7) return '3:4';
+  if (ratio > 0.6) return '2:3';
   return '9:16';
 }
