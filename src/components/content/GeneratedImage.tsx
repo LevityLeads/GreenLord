@@ -95,6 +95,9 @@ export function GeneratedImage({
       const response = await fetch(`/api/check-image-status?taskId=${encodeURIComponent(taskId)}`);
       const data: CheckImageStatusResponse = await response.json();
 
+      // Debug logging - check browser console
+      console.log('Poll response:', data);
+
       if (data.status === 'completed' && data.imageUrl) {
         // Success!
         setImageUrl(data.imageUrl);

@@ -7,6 +7,7 @@ export interface CheckImageStatusResponse {
   imageUrl?: string;
   error?: string;
   progress?: number;
+  debug?: unknown; // Temporary for debugging
 }
 
 export async function GET(request: NextRequest): Promise<NextResponse<CheckImageStatusResponse>> {
@@ -50,6 +51,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
           success: false,
           status: 'failed',
           error: statusResult.error,
+          debug: { taskId, errorResult: statusResult },
         },
         { status: 500 }
       );
@@ -81,6 +83,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
           success: false,
           status: 'failed',
           error: 'No image URL in response',
+          debug: { statusResult },
         });
       }
     }
@@ -91,14 +94,20 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
         success: false,
         status: 'failed',
         error: statusResult.errorMessage || 'Image generation failed',
+        debug: { statusResult },
       });
     }
 
-    // Still processing
+    // Still processing - return debug info
     return NextResponse.json({
       success: true,
       status: statusResult.status || 'processing',
       progress: statusResult.progress,
+      debug: {
+        taskId,
+        successFlag: statusResult.successFlag,
+        rawStatus: statusResult,
+      },
     });
   } catch (error) {
     console.error('Check image status API error:', error);
@@ -107,6 +116,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
         success: false,
         status: 'failed',
         error: error instanceof Error ? error.message : 'Unknown error',
+        debug: { error: String(error) },
       },
       { status: 500 }
     );
