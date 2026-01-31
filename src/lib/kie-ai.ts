@@ -103,14 +103,16 @@ export async function createImageTask(
 
 /**
  * Check the status of an image generation task
+ * Note: Nano Banana uses /playground/recordInfo endpoint, not /jobs/recordInfo
  */
 export async function getTaskStatus(
   apiKey: string,
   taskId: string
 ): Promise<KieTaskStatusResponse['data'] | { error: string }> {
   try {
+    // Nano Banana Pro uses the playground endpoint for status checks
     const response = await fetch(
-      `${KIE_API_BASE}/jobs/recordInfo?taskId=${encodeURIComponent(taskId)}`,
+      `${KIE_API_BASE}/playground/recordInfo?taskId=${encodeURIComponent(taskId)}`,
       {
         method: 'GET',
         headers: {
