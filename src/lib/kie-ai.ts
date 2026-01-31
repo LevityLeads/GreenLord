@@ -21,12 +21,15 @@ export interface KieTaskStatusResponse {
   message: string;
   data: {
     taskId: string;
-    status?: 'pending' | 'processing' | 'completed' | 'failed';
-    successFlag: 0 | 1 | 2 | 3; // 0 = processing, 1 = success, 2/3 = failed
+    model?: string;
+    state?: 'pending' | 'processing' | 'success' | 'failed'; // Playground endpoint uses 'state'
+    status?: 'pending' | 'processing' | 'completed' | 'failed'; // Jobs endpoint uses 'status'
+    successFlag?: 0 | 1 | 2 | 3; // 0 = processing, 1 = success, 2/3 = failed
     progress?: number;
     response?: {
       resultUrls?: string[];
     };
+    resultUrls?: string[]; // Playground endpoint may have this at top level
     resultJson?: string; // Stringified JSON with resultUrls
     errorCode?: string;
     errorMessage?: string;
@@ -127,7 +130,15 @@ export async function getTaskStatus(
       return { error: `Status check failed: ${response.status}` };
     }
 
-    const data: KieTaskStatusResponse = await response.json();
+    const rawText = await response.text();
+    console.log('Raw Kie.ai response:', rawText);
+
+    let data: KieTaskStatusResponse;
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      return { error: 'Invalid JSON response: ' + rawText.substring(0, 200) };
+    }
 
     if (data.code !== 200 && data.code !== 0) {
       return { error: data.message || 'Failed to get task status' };

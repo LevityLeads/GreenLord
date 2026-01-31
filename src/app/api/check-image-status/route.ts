@@ -58,9 +58,14 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
     }
 
     // Check if completed successfully
-    if (statusResult.successFlag === 1) {
-      // Try to get URL from response.resultUrls first
-      let imageUrl = statusResult.response?.resultUrls?.[0];
+    // Playground endpoint uses state="success", Jobs endpoint uses successFlag=1
+    const isCompleted = statusResult.state === 'success' || statusResult.successFlag === 1;
+
+    if (isCompleted) {
+      // Try multiple places where the URL might be
+      let imageUrl =
+        statusResult.resultUrls?.[0] ||  // Top-level resultUrls (playground)
+        statusResult.response?.resultUrls?.[0];  // Nested in response (jobs)
 
       // Fall back to parsing resultJson
       if (!imageUrl && statusResult.resultJson) {
@@ -88,8 +93,13 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
       }
     }
 
-    // Check if failed (successFlag 2 or 3 means failure)
-    if (statusResult.successFlag === 2 || statusResult.successFlag === 3) {
+    // Check if failed
+    const isFailed =
+      statusResult.state === 'failed' ||
+      statusResult.successFlag === 2 ||
+      statusResult.successFlag === 3;
+
+    if (isFailed) {
       return NextResponse.json({
         success: false,
         status: 'failed',
@@ -101,10 +111,11 @@ export async function GET(request: NextRequest): Promise<NextResponse<CheckImage
     // Still processing - return debug info
     return NextResponse.json({
       success: true,
-      status: statusResult.status || 'processing',
+      status: 'processing',
       progress: statusResult.progress,
       debug: {
         taskId,
+        state: statusResult.state,
         successFlag: statusResult.successFlag,
         rawStatus: statusResult,
       },
