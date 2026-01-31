@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
-  generateImage,
+  createImageTask,
   buildPropertyImagePrompt,
   getAspectRatioFromDimensions,
 } from '@/lib/kie-ai';
@@ -16,9 +16,8 @@ export interface GenerateImageRequest {
 
 export interface GenerateImageResponse {
   success: boolean;
-  imageUrl?: string;
-  error?: string;
   taskId?: string;
+  error?: string;
   imageId: string;
 }
 
@@ -62,32 +61,31 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateI
     // Use 1K resolution for web images (cost-effective and sufficient quality)
     const resolution: '1K' | '2K' | '4K' = '1K';
 
-    // Generate the image
-    const result = await generateImage(apiKey, {
+    // Create the task (returns immediately, doesn't wait for completion)
+    const result = await createImageTask(apiKey, {
       prompt,
       aspectRatio,
       resolution,
       outputFormat: 'png',
     });
 
-    if (result.success && result.imageUrl) {
-      return NextResponse.json({
-        success: true,
-        imageUrl: result.imageUrl,
-        taskId: result.taskId,
-        imageId,
-      });
-    } else {
+    if ('error' in result) {
       return NextResponse.json(
         {
           success: false,
-          error: result.error || 'Image generation failed',
-          taskId: result.taskId,
+          error: result.error,
           imageId,
         },
         { status: 500 }
       );
     }
+
+    // Return taskId immediately - frontend will poll for completion
+    return NextResponse.json({
+      success: true,
+      taskId: result.taskId,
+      imageId,
+    });
   } catch (error) {
     console.error('Generate image API error:', error);
     return NextResponse.json(
