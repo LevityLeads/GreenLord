@@ -272,6 +272,121 @@ export function buildPropertyImagePrompt(
 }
 
 /**
+ * Build a prompt for UK property exterior photographs
+ * Optimized for architectural/real estate photography style
+ */
+export function buildPropertyExteriorPrompt(
+  propertyType: string,
+  description: string,
+  instructions?: string[]
+): string {
+  const narrativeParts: string[] = [];
+
+  narrativeParts.push(`A professional real estate photograph of a ${propertyType} in England.`);
+  narrativeParts.push(description);
+
+  if (instructions && instructions.length > 0) {
+    narrativeParts.push(instructions.join('. ') + '.');
+  }
+
+  const technicalDetails = [
+    'Shot on a Sony A7R IV with a 24mm wide-angle lens at f/8 for maximum sharpness',
+    'captured during the golden hour with warm, flattering light',
+    'slight wide-angle perspective to show the full property',
+    'sky has natural British clouds, not artificially blue',
+    'front garden and street context visible',
+  ].join(', ') + '.';
+
+  const realismNotes = 'This should look like a professional estate agent photograph. The property should look well-maintained but realistically lived-in. Show authentic British architectural details like sash windows, chimney pots, brick patterns, and slate or tile roofing. Avoid anything that looks computer-generated or too perfect.';
+
+  return [narrativeParts.join(' '), technicalDetails, realismNotes].join(' ');
+}
+
+/**
+ * Build a prompt for UK property interior photographs
+ */
+export function buildPropertyInteriorPrompt(
+  roomType: string,
+  description: string,
+  instructions?: string[]
+): string {
+  const narrativeParts: string[] = [];
+
+  narrativeParts.push(`An interior photograph of a ${roomType} in a British home.`);
+  narrativeParts.push(description);
+
+  if (instructions && instructions.length > 0) {
+    narrativeParts.push(instructions.join('. ') + '.');
+  }
+
+  const technicalDetails = [
+    'Shot on a Canon EOS R5 with a 16-35mm lens at f/5.6',
+    'natural daylight streaming through windows mixed with ambient room lighting',
+    'composition shows the room\'s best features while feeling inviting',
+    'colors are warm and natural, typical of UK interiors',
+  ].join(', ') + '.';
+
+  const realismNotes = 'The room should feel authentic and homely, not like a show home. Include realistic details like slightly rumpled cushions, a book left open, or a mug on a side table. British interior style with radiators, UK plug sockets, and typical furniture from UK stores.';
+
+  return [narrativeParts.join(' '), technicalDetails, realismNotes].join(' ');
+}
+
+/**
+ * Build a prompt for clean infographic/diagram style images
+ * Best for process flows, comparisons, and educational content
+ */
+export function buildInfographicPrompt(
+  topic: string,
+  description: string,
+  style: 'process' | 'comparison' | 'timeline' | 'icons' | 'diagram' = 'diagram'
+): string {
+  const styleGuides: Record<string, string> = {
+    process: 'A clean step-by-step process infographic flowing from top to bottom or left to right, with numbered steps connected by subtle arrows.',
+    comparison: 'A side-by-side comparison infographic with two columns showing differences clearly, using icons and short labels.',
+    timeline: 'A horizontal or vertical timeline infographic with milestone markers and brief descriptions at each point.',
+    icons: 'A set of clean, modern flat icons arranged in a grid, each representing a different concept with minimal detail.',
+    diagram: 'A clear explanatory diagram with labeled components, using lines and arrows to show relationships.',
+  };
+
+  const baseStyle = styleGuides[style];
+
+  return [
+    baseStyle,
+    `Topic: ${topic}.`,
+    description,
+    'Style: Clean, modern, professional infographic design.',
+    'Use a cohesive color palette with navy blue (#1e3a5f) as the primary color and amber/orange (#f59e0b) as the accent.',
+    'White or very light grey background for maximum readability.',
+    'Sans-serif typography, clear hierarchy.',
+    'Minimalist icons and simple geometric shapes.',
+    'Avoid clutter - use whitespace effectively.',
+    'Any text should be large, bold, and highly legible.',
+    'This should look like it belongs in a professional government or business publication.',
+  ].join(' ');
+}
+
+/**
+ * Build a prompt for conceptual/abstract imagery
+ * Good for hero sections and decorative backgrounds
+ */
+export function buildConceptualPrompt(
+  concept: string,
+  mood: string,
+  description: string
+): string {
+  return [
+    `A conceptual photograph representing "${concept}".`,
+    description,
+    `The overall mood should be ${mood}.`,
+    'Shot with artistic intent, using depth of field and lighting to create visual interest.',
+    'Colors should be sophisticated and muted, with a professional editorial feel.',
+    'Abstract enough to work as a background but with enough detail to be interesting.',
+    'Subtle film grain and natural color grading.',
+    'Should feel premium and trustworthy, appropriate for a professional services website.',
+  ].join(' ');
+}
+
+/**
  * Calculate aspect ratio from dimensions
  */
 export function getAspectRatioFromDimensions(
