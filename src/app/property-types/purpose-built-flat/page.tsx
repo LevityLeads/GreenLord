@@ -23,7 +23,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -87,18 +87,17 @@ export default function PurposeBuiltFlatPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="purpose-built-flat-exterior"
                 alt="Purpose-built flat block showing typical 1960s and modern examples"
-                description="A composite or split image showing two types of purpose-built flat blocks: a typical 1960s low-rise block with brick construction, and a more modern development. This illustrates the range of purpose-built flats covered by this guide."
+                description="A composite image showing the range of purpose-built flats in the UK rental market. On the left, a typical 1960s low-rise brick flat block of 3-4 storeys with characteristic small windows and shared entrance. On the right, a modern purpose-built development with larger windows, balconies, and contemporary cladding. Morning light illuminates both buildings, demonstrating the variety of flat types landlords may encounter when planning EPC improvements."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show two contrasting purpose-built flat blocks',
-                  'Left side: 1960s/70s low-rise brick block (3-4 storeys)',
-                  'Right side: Modern purpose-built block with larger windows',
-                  'Both should look like typical UK rental properties',
-                  'Avoid showing identifiable building names or locations',
+                  'Show two contrasting purpose-built flat blocks side by side',
+                  'Left: 1960s/70s low-rise brick block (3-4 storeys); Right: modern block with larger windows',
+                  'Morning light, both looking like typical UK rental properties',
                 ]}
               />
 
@@ -706,17 +705,16 @@ export default function PurposeBuiltFlatPage() {
                   </p>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="purpose-built-flat-secondary-glazing"
                   alt="Secondary glazing installation in a purpose-built flat"
-                  description="A photograph or diagram showing secondary glazing installed on the inside of an existing window in a flat. Should show how the secondary glazing panel sits on the inside of the window frame, with a clear gap between the original window and the secondary unit."
+                  description="An interior view of secondary glazing installed in a purpose-built flat, photographed from inside the living room. The image clearly shows the secondary glazing panel sitting on the inside of the window frame, with a visible gap between the original single-glazed window and the new secondary unit. The magnetic fixing mechanism allows the panel to be removed for cleaning, while the installation looks neat and unobtrusive within the modern flat interior with natural daylight streaming through."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show secondary glazing from inside the room',
-                    'Clear distinction between original window and secondary panel',
-                    'Show the fixing mechanism (magnetic, hinged, or sliding)',
-                    'Include a realistic flat interior setting',
-                    'Demonstrate how it looks neat and unobtrusive',
+                    'Show secondary glazing from inside a flat with clear gap between original and secondary panel',
+                    'Demonstrate the fixing mechanism (magnetic, hinged, or sliding)',
+                    'Include realistic flat interior with natural lighting, looking neat and unobtrusive',
                   ]}
                 />
 
@@ -888,17 +886,16 @@ export default function PurposeBuiltFlatPage() {
                   </CardBody>
                 </Card>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="purpose-built-flat-improvement-options"
                   alt="Typical purpose-built flat EPC improvement options"
-                  description="An infographic showing the range of EPC improvement options for purpose-built flats, organised by whether they require consent or not. Should show the typical point gains and costs for each option in a clear, visual format."
+                  description="An infographic displaying EPC improvement options for purpose-built flats, organised into two columns. The left column shows improvements requiring no consent: LED lighting, smart thermostat, draught-proofing, and secondary glazing, with point gains and costs for each. The right column shows consent-required options: window replacement, boiler upgrade, and internal wall insulation. Icons represent each improvement type, with GreenLord green brand colours emphasising that many flats can achieve compliance using only the no-consent options."
                   width={800}
                   height={350}
                   instructions={[
                     'Create two columns: No Consent Needed vs Consent Required',
-                    'Show improvements with their point gains and costs',
-                    'Use icons to represent each type of improvement',
-                    'Highlight that many flats only need the no-consent options',
-                    'Use GreenLord brand colours',
+                    'Show improvements with their point gains, costs, and representative icons',
+                    'Use GreenLord green brand colours, highlighting that no-consent options are often sufficient',
                   ]}
                 />
               </section>

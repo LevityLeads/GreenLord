@@ -24,7 +24,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -85,18 +85,17 @@ export default function Pre1919SemiPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="pre-1919-semi-exterior"
                 alt="Pre-1919 semi-detached house showing exposed side wall"
-                description="A photograph of a typical pre-1919 semi-detached house, clearly showing the exposed side wall that distinguishes it from terraced properties. The image should highlight the additional external wall area that increases heat loss."
+                description="A pre-1919 semi-detached house photographed from an angle that reveals both the front facade and the fully exposed side elevation. This Victorian or Edwardian property in a residential area shows typical period features including bay windows, decorative brickwork, and tall chimneys. The prominent side wall—absent in terraced properties—illustrates why these homes have higher heat loss and require more extensive insulation work."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK pre-1919 semi-detached house',
-                  'Angle the shot to clearly show the exposed side elevation',
-                  'Capture characteristic Victorian/Edwardian features',
-                  'Daylight conditions, showing the full facade and side',
-                  'Avoid showing house numbers or identifiable personal information',
+                  'Show a genuine UK pre-1919 semi-detached from an angle revealing the side wall',
+                  'Capture characteristic Victorian/Edwardian features and solid brick construction',
+                  'Clear daylight showing both front facade and exposed side elevation',
                 ]}
               />
 
@@ -245,17 +244,16 @@ export default function Pre1919SemiPage() {
                   </ul>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="pre-1919-semi-heat-loss-comparison"
                   alt="Diagram comparing heat loss in terrace vs semi-detached properties"
-                  description="A technical illustration showing two floor plans side by side - a mid-terrace and a semi-detached property. Heat loss arrows should clearly show how the semi-detached loses heat through three external walls versus only two for the terrace."
+                  description="A technical floor plan illustration comparing a mid-terrace house with a semi-detached property side by side. Red arrows of varying thickness indicate heat loss through external walls, clearly demonstrating how the semi-detached loses heat through three exposed walls compared to only two for the terrace. Party walls are labelled to show zero heat loss, with percentage annotations making the thermal disadvantage of semi-detached properties immediately apparent."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show clear floor plan outlines of both property types',
-                    'Use red arrows to indicate heat loss through external walls',
-                    'Label party walls clearly showing no heat loss',
-                    'Include approximate percentages of total heat loss per wall',
-                    'Make the visual comparison obvious at a glance',
+                    'Show clear floor plan outlines of terrace and semi-detached side by side',
+                    'Use red arrows to indicate heat loss, with labelled party walls showing no loss',
+                    'Include approximate percentages to quantify the difference in heat loss',
                   ]}
                   className="mt-8"
                 />

@@ -24,7 +24,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -85,18 +85,17 @@ export default function SixtiesSeventiesHousePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="1960s-1970s-house-exterior"
                 alt="Typical 1960s-1970s semi-detached house in a UK suburban street"
-                description="A photograph of a typical 1960s-1970s semi-detached or detached house showing characteristic features: flat-fronted design, large windows, integral garage, low-pitched roof with concrete tiles, and rendered or brick finish. The image should show a well-maintained example representative of this era."
+                description="A well-maintained 1960s-1970s detached house on a typical UK suburban estate. The property exhibits the era's distinctive features: a flat-fronted design with large picture windows, an integral garage, a low-pitched roof with grey concrete tiles, and a combination of brick and rendered finish. Late afternoon sunlight falls across the facade, revealing the straightforward construction that makes these homes relatively simple to upgrade for EPC compliance."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK 1960s-1970s house, preferably semi-detached or detached',
-                  'Capture characteristic features: large windows, simple lines, low-pitched roof',
-                  'Daylight conditions, showing the full facade',
-                  'Avoid showing house numbers or identifiable personal information',
-                  'A typical suburban setting demonstrates the housing stock',
+                  'Show a genuine UK 1960s-1970s semi or detached with flat front, large windows, and integral garage',
+                  'Capture the clean, simple lines and low-pitched roof typical of this era',
+                  'Late afternoon light, well-maintained property in suburban estate setting',
                 ]}
               />
 
@@ -253,17 +252,16 @@ export default function SixtiesSeventiesHousePage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="1960s-1970s-house-cavity-wall-cross-section"
                   alt="Cross-section diagram showing 1960s-1970s cavity wall construction"
-                  description="A technical illustration showing a cross-section of a typical 1960s-1970s cavity wall, clearly labelling the brick outer leaf, the cavity gap, and the block inner leaf. Should show how cavity wall insulation fills the gap."
+                  description="A technical cross-section illustration of typical 1960s-1970s cavity wall construction. The diagram clearly labels the brick outer leaf, the 50-75mm cavity gap, and the block inner leaf. An adjacent view shows the cavity filled with insulation material, with heat loss arrows demonstrating the dramatic reduction in thermal transfer once insulated. Measurements and component labels make the construction easy to understand."
                   width={800}
                   height={400}
                   instructions={[
-                    'Use a clean, technical illustration style',
-                    'Clearly label: brick outer leaf, cavity gap (50-75mm), block inner leaf',
-                    'Show the cavity being filled with insulation material',
-                    'Include measurements where helpful',
-                    'Consider showing heat loss arrows before and after insulation',
+                    'Show cross-section with brick outer leaf, 50-75mm cavity, and block inner leaf',
+                    'Illustrate cavity filled with insulation material',
+                    'Include heat loss arrows showing before and after insulation benefit',
                   ]}
                   className="mt-8"
                 />
@@ -699,17 +697,16 @@ export default function SixtiesSeventiesHousePage() {
                   </p>
                 </TipBox>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="1960s-1970s-house-epc-comparison"
                   alt="EPC certificate comparison showing before and after improvement"
-                  description="A side-by-side comparison showing two EPC certificates - the original D-rated certificate on the left and the improved C-rated certificate on the right. The comparison should highlight the score improvement from 58 to 79 points."
+                  description="A side-by-side comparison of two EPC certificates for a 1960s-1970s house. The left certificate shows the original D rating with 58 points and an orange energy bar, while the right certificate displays the improved C rating with 79 points and a green energy bar. Arrows or annotations highlight the significant 21-point improvement achieved through cavity wall insulation and other upgrades."
                   width={800}
                   height={350}
                   instructions={[
-                    'Show the official EPC certificate format',
-                    'Left side: D rating, 58 points, orange energy bar',
-                    'Right side: C rating, 79 points, green energy bar',
-                    'Highlight the improvement visually with arrows or annotations',
-                    'Ensure format matches current GOV.UK EPC certificate design',
+                    'Show official GOV.UK EPC certificate format side by side',
+                    'Left: D rating (58 points) with orange bar; Right: C rating (79 points) with green bar',
+                    'Use arrows or annotations to highlight the improvement journey',
                   ]}
                   className="mt-8"
                 />

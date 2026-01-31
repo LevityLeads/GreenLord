@@ -264,17 +264,16 @@ export default function EpcC2030DeadlinePage() {
                   between now and the deadline:
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="epc-c-2030-deadline-hero"
                   alt="Timeline showing key dates from January 2026 to October 2030 for EPC compliance"
-                  description="A visual timeline with key milestones: January 2026 (Warm Homes Plan published), June 2025 (RdSAP 10 launched), throughout 2026-2029 (recommended action period), and October 2030 (compliance deadline). The timeline should emphasize that earlier action gives more options."
+                  description="A close-up of official documents and paperwork spread across a desk, with an EPC certificate prominently visible alongside a wall calendar turned to October 2030. A red circle marks the deadline date, with government policy documents and a landlord's planning notes visible nearby."
                   width={800}
                   height={350}
                   instructions={[
-                    'Create a clean horizontal timeline design',
-                    'Use colour coding to show past events vs future deadlines',
-                    'Highlight the October 2030 deadline prominently',
-                    'Include a "You are here" marker for current date',
-                    'Show the recommended action window clearly',
+                    "Emphasise the urgency and importance of the deadline through visual composition",
+                    "Include authentic-looking UK property compliance documents",
+                    "Create a sense of organised planning and preparation"
                   ]}
                   priority
                 />

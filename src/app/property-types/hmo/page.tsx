@@ -26,7 +26,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -88,18 +88,17 @@ export default function HMOPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="hmo-property-exterior"
                 alt="Large HMO property with multiple rooms and shared facilities"
-                description="A photograph of a typical HMO property, showing a larger house that has been converted for multiple occupancy. The image should convey the scale and complexity of these properties without identifying specific individuals or locations."
+                description="A larger Victorian or Edwardian house converted for multiple occupancy on a residential street in a UK city. The property features multiple front-facing windows suggesting numerous bedrooms, a practical entrance area, and well-maintained exterior befitting professional landlord standards. Morning light illuminates the facade, showing the scale and character of this HMO property."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK HMO-style property (larger Victorian or Edwardian house)',
-                  'Capture the scale that suggests multiple occupancy',
-                  'Daylight conditions, showing the full facade',
-                  'Avoid showing individuals or identifiable personal information',
-                  'Property should look well-maintained to represent professional landlord standards',
+                  'Show a genuine UK HMO-style property (larger Victorian or Edwardian house) with multiple windows',
+                  'Capture the scale that suggests multiple occupancy without showing individuals',
+                  'Morning or afternoon daylight, professional landlord standards evident',
                 ]}
               />
 

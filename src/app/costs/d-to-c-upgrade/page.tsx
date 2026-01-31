@@ -92,17 +92,16 @@ export default function DToCUpgradePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
-                alt="EPC certificate showing D rating with pathway to C"
-                description="An EPC certificate clearly showing a D rating (around 60 points), with visual indication of the journey to C. Could show the EPC scale with D highlighted and an arrow pointing toward C, or a certificate alongside improvement planning documents."
+              <GeneratedImage
+                imageId="d-to-c-upgrade-hero"
+                alt="Landlord reviewing EPC certificate showing D rating in a British rental property"
+                description="A landlord holds an EPC certificate in the living room of a 1970s semi-detached house, with the D rating band clearly visible on the document. Behind them, the property shows typical features of a D-rated home - double glazed windows, a gas boiler radiator, but also opportunities for improvement like thin curtains and an older thermostat on the wall. The scene conveys assessment and planning for upgrades."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Focus on the EPC rating scale/chart portion',
-                  'Show D rating clearly (yellow band)',
-                  'Indicate the goal of reaching C (green band)',
-                  'Professional, clean imagery',
-                  'Could include planning documents or calculator in frame',
+                  'EPC certificate document should be visible and readable',
+                  'Interior of typical British rental property from 1970s-80s era',
+                  'Person reviewing document in thoughtful, planning mode',
                 ]}
                 priority
               />
@@ -288,18 +287,17 @@ export default function DToCUpgradePage() {
                 </KeyFactBox>
               </section>
 
-              {/* Diagram Placeholder */}
-              <ImagePlaceholder
-                alt="Visual diagram showing the D to C improvement journey"
-                description="A clear visual showing a typical D-rated property on the left (score 58) and a C-rated property on the right (score 72), with the improvements in between. Could show icons for each improvement type (insulation, controls, etc.) with their point contributions adding up to reach the target."
+              {/* Improvement Journey Image */}
+              <GeneratedImage
+                imageId="d-to-c-upgrade-journey"
+                alt="Tradesperson installing smart heating controls in a British rental property"
+                description="A heating engineer installs a modern smart thermostat on the wall of a British home, replacing an old dial thermostat. The engineer wears professional workwear and uses appropriate tools. The living room setting shows a typical 1970s property with magnolia walls, a gas radiator below the thermostat, and patterned carpet - a property mid-way through its D to C upgrade journey."
                 width={1200}
                 height={600}
                 instructions={[
-                  'Show before (D, score 58) and after (C, score 72)',
-                  'Use the EPC colour bands as background',
-                  'Show 3-4 improvement icons with point values',
-                  'Indicate total cost (e.g., £1,800)',
-                  'Clean, infographic style',
+                  'Focus on smart thermostat installation - a key quick win',
+                  'Professional tradesperson doing quality work',
+                  'Typical British rental property interior from 1970s-80s',
                 ]}
               />
 
@@ -470,18 +468,17 @@ export default function DToCUpgradePage() {
                 </TipBox>
               </section>
 
-              {/* Before/After Placeholder */}
-              <ImagePlaceholder
-                alt="Before and after comparison of typical D to C improvements"
-                description="Split image or side-by-side comparison showing before (thin loft insulation, old thermostat) and after (thick insulation, smart controls). Should make the improvements tangible and relatable for landlords."
+              {/* Loft Insulation Image */}
+              <GeneratedImage
+                imageId="d-to-c-upgrade-loft-insulation"
+                alt="Professional loft insulation installation in a British home"
+                description="A loft space in a British home with freshly installed thick mineral wool insulation laid between and over the joists to the full 300mm depth. The yellow insulation is neatly fitted around pipes and cables, with the installer's work light illuminating the completed section. Rolls of unused insulation are stacked near the loft hatch, and the work represents a typical loft top-up that gains 4-8 EPC points."
                 width={1200}
                 height={500}
                 instructions={[
-                  'Split screen or side-by-side format',
-                  'Before: thin/patchy loft insulation, old dial thermostat',
-                  'After: thick neat insulation, modern smart thermostat',
-                  'Clear, high-quality images',
-                  'Avoid stock photo feel',
+                  'Realistic British loft space with proper insulation depth',
+                  'Professional quality installation - neat and complete',
+                  'Natural or work lighting showing the insulation clearly',
                 ]}
               />
 

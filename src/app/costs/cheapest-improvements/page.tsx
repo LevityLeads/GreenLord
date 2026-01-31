@@ -108,17 +108,16 @@ export default function CheapestImprovementsPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
-                alt="Infographic showing EPC improvements ranked by cost-effectiveness"
-                description="A clear visual ranking of common EPC improvements showing their cost per point, from most cost-effective (green) to least cost-effective (red). Should look like a leaderboard or ranking chart with improvement names, costs, and efficiency ratings."
+              <GeneratedImage
+                imageId="cheapest-improvements-hero"
+                alt="Affordable energy efficiency materials and quick-win improvements for landlords"
+                description="A selection of cost-effective energy efficiency products arranged on a workbench in a British home - LED bulbs, draught excluder strips, a hot water cylinder jacket, pipe lagging foam, and a smart thermostat in its packaging. A tradesperson's hands are visible arranging the materials, with tools and a notepad showing costs nearby. These represent the quick wins that offer the best value per EPC point."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Leaderboard or bar chart style visual',
-                  'Show 8-10 improvements ranked',
-                  'Use colour coding (green = best value, red = expensive)',
-                  'Include cost and points for each item',
-                  'Clear, scannable design',
+                  'Authentic workspace setting with real energy efficiency products',
+                  'Products should be recognisable UK brands where possible',
+                  'Documentary style, not a product catalogue shot',
                 ]}
                 priority
               />

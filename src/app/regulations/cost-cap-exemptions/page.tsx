@@ -188,18 +188,17 @@ export default function CostCapExemptionsPage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
-                  alt="Decision tree showing cost cap exemption eligibility"
-                  description="A flowchart decision tree showing: Does EPC meet minimum? If no, can improvements achieve it? If yes, what is the cost? If under GBP 10,000, must proceed. If over GBP 10,000, can claim exemption after spending up to cap."
+                <GeneratedImage
+                  imageId="cost-cap-exemptions-hero"
+                  alt="Cost cap exemption decision-making documentation"
+                  description="A landlord's desk showing the financial planning side of EPC compliance. Visible are contractor quotes and invoices for energy efficiency improvements, a calculator, an EPC certificate, and the PRS Exemptions Register guidance document. The scene suggests careful cost tracking and exemption eligibility assessment."
                   width={800}
                   height={450}
                   priority
                   instructions={[
-                    'Create a clear decision tree flowchart',
-                    'Use colour coding (green = compliant, amber = exemption path, red = non-compliant)',
-                    'Include the key cost threshold clearly',
-                    'Show both pathways (compliance vs exemption)',
-                    'Make it easy to follow from start to end',
+                    "Focus on authentic financial documentation and cost-related paperwork",
+                    "Include recognisable UK building contractor invoices or quotes",
+                    "Convey the careful record-keeping required for exemption claims"
                   ]}
                 />
               </section>

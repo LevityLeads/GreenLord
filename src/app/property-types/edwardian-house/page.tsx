@@ -24,7 +24,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -86,18 +86,17 @@ export default function EdwardianHousePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="edwardian-house-exterior"
                 alt="Elegant Edwardian house with characteristic bay windows and decorative features"
-                description="A photograph of a typical Edwardian house showing the characteristic features: large bay windows, decorative glazing, wide frontage, tall chimneys, and ornate brickwork. The image should show the larger proportions compared to Victorian terraces."
+                description="An elegant Edwardian semi-detached house on a tree-lined residential street in suburban London. The property displays the era's signature features: generous double-height bay windows with decorative stained glass panels, ornate brickwork and terracotta detailing, tall chimneys, and a wide frontage suggesting spacious rooms within. Late morning light accentuates the architectural grandeur that makes these 1901-1914 homes so distinctive."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK Edwardian house, ideally detached or semi-detached',
-                  'Capture characteristic features: large bay windows, decorative glazing, ornate details',
-                  'Daylight conditions, showing the full facade',
-                  'Avoid showing house numbers or identifiable personal information',
-                  'Demonstrate the larger proportions typical of the Edwardian era',
+                  'Show a genuine UK Edwardian semi-detached house with large bay windows and ornate details',
+                  'Capture the wider proportions and grander scale compared to Victorian terraces',
+                  'Late morning or afternoon light, emphasising decorative architectural features',
                 ]}
               />
 
@@ -200,17 +199,16 @@ export default function EdwardianHousePage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="edwardian-house-cross-section"
                   alt="Cross-section diagram showing Edwardian house construction with high ceilings"
-                  description="A technical illustration showing a cross-section of a typical Edwardian house, highlighting the solid brick construction, high ceiling heights (3m+), large bay window configuration, and suspended timber floors. Should contrast with Victorian proportions."
+                  description="A technical cross-section illustration of a typical Edwardian house revealing the internal construction. The diagram clearly shows the 225-340mm solid brick walls, impressive 3-metre ceiling heights, the deep bay window structure spanning both floors, and suspended timber ground floor. Measurements annotate key dimensions, highlighting the generous room volumes that characterise these period properties."
                   width={800}
                   height={400}
                   instructions={[
-                    'Use a clean, technical illustration style',
-                    'Clearly label: solid brick walls, high ceilings (3m+), bay window structure',
-                    'Show the larger room proportions compared to Victorian era',
-                    'Include measurements where helpful (wall thickness, ceiling height)',
-                    'Consider showing the increased volume that requires heating',
+                    'Clean technical illustration style with clear labels for walls, ceilings, and bay windows',
+                    'Show measurements: 3m+ ceiling heights, solid brick wall thickness',
+                    'Emphasise the larger room volumes that increase heating requirements',
                   ]}
                   className="mt-8"
                 />

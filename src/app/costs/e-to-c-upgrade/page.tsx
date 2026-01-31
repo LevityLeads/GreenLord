@@ -107,16 +107,16 @@ export default function EToCUpgradePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
-                alt="EPC certificate showing E rating with upgrade pathway to C"
-                description="An EPC certificate clearly showing an E rating (around 45 points) with visual indication of the significant journey to C. Could show the EPC scale with E highlighted in orange and the target C in green, demonstrating the substantial points gap."
+              <GeneratedImage
+                imageId="e-to-c-upgrade-hero"
+                alt="Victorian terraced house requiring major EPC upgrades to reach C rating"
+                description="A Victorian mid-terrace house on a typical British street, showing characteristics of an E-rated property - original sash windows, solid brick walls without external insulation, and an older boiler flue visible on the exterior. A surveyor with a clipboard examines the property from the pavement, assessing the scale of work needed. The neighbouring properties show similar period features common in UK rental stock."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Focus on the EPC rating scale showing E band',
-                  'Show the 25+ point gap to reach C clearly',
-                  'Include visual arrows or pathway indicators',
-                  'Professional, informative style',
+                  'Pre-1919 Victorian or Edwardian terraced property',
+                  'Visible energy efficiency challenges - old windows, solid walls',
+                  'Professional surveyor assessing the property exterior',
                 ]}
                 priority
               />

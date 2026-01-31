@@ -24,7 +24,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -84,18 +84,17 @@ export default function ModernHousePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="1980s-1990s-house-exterior"
                 alt="Typical 1980s-1990s house with cavity walls and double glazing"
-                description="A photograph of a typical 1980s or 1990s house showing characteristic features: brick and render exterior, uPVC double glazed windows, integral garage, and modern roof tiles. The image should show the more standardised construction of this era."
+                description="A well-maintained 1980s or 1990s semi-detached house on a quiet suburban street in the UK. The property showcases the era's characteristic features: red brick with rendered sections, original uPVC double-glazed windows, an integral garage, and concrete roof tiles. Afternoon sunlight highlights the standardised construction that makes these homes among the easiest to improve for EPC compliance."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK 1980s-1990s house, semi-detached or detached',
-                  'Capture characteristic features: uPVC windows, modern brickwork, integral garage',
-                  'Daylight conditions, showing the full facade',
-                  'Avoid showing house numbers or identifiable personal information',
-                  'Demonstrate the standardised construction typical of this era',
+                  'Show a genuine UK 1980s-1990s semi-detached house with uPVC windows and integral garage',
+                  'Capture the standardised modern construction with brick and render exterior',
+                  'Afternoon daylight showing the full facade in good condition',
                 ]}
               />
 

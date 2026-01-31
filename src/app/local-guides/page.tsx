@@ -152,18 +152,17 @@ export default function LocalGuidesPage() {
       {/* Hero Image */}
       <Section background="muted" padding="md">
         <Container>
-          <ImagePlaceholder
-            alt="Map of UK showing major cities with EPC compliance support"
-            description="An illustrated map of England showing the five major cities covered in these guides: Manchester, Birmingham, Leeds, Liverpool, and Bristol. Each city should be marked with a pin or icon, with the cities visually connected to suggest a network of support."
+          <GeneratedImage
+            imageId="local-guides-uk-map"
+            alt="Aerial view of UK cities representing regional landlord support networks"
+            description="An aerial or satellite-style view showing the UK landscape with major cities glowing softly to indicate coverage areas. The image conveys the nationwide scope of local landlord support, with urban centres connected across the country. The perspective emphasises the regional diversity of the UK rental market."
             width={1200}
             height={500}
             priority
             instructions={[
-              'Use a clean, modern illustration style consistent with the GreenLord brand',
-              'Show a simplified UK map with the five cities highlighted',
-              'Consider using colour coding to show regional EPC statistics',
-              'Make the map visually engaging while remaining informative',
-              'Ensure accessibility with clear labels for each city',
+              'Show an atmospheric aerial or map-style view of the UK with visible city locations',
+              'Use warm lighting or highlights to mark major urban centres like Manchester, Birmingham, Leeds',
+              'Create a sense of geographic scope and regional coverage across England',
             ]}
           />
         </Container>

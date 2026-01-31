@@ -130,17 +130,16 @@ export default function MEESRegulationsGuidePage() {
                   has been registered.
                 </p>
 
-                <ImagePlaceholder
-                  alt="MEES compliance flowchart showing decision process for landlords"
-                  description="A flowchart showing the MEES compliance process: Starting with 'Do you have an EPC?', branching to 'Does it meet minimum standard?', then either 'You can let the property' or 'Can you make improvements?', finally leading to either compliance or exemption registration."
+                <GeneratedImage
+                  imageId="mees-guide-hero"
+                  alt="MEES compliance documentation and decision-making process"
+                  description="A landlord's hands holding property documents and reviewing compliance requirements at a desk. Visible are official MEES guidance documents, an EPC certificate showing a rating band, and a checklist with some items ticked off, representing the decision-making process for regulatory compliance."
                   width={800}
                   height={450}
                   instructions={[
-                    'Create a clear flowchart with yes/no decision points',
-                    'Use colour coding (green for compliant paths, amber for exemption paths)',
-                    'Include the key thresholds (currently E, from 2030 C)',
-                    'Make it scannable and easy to follow',
-                    'Include a clear starting point and end points',
+                    "Capture the documentary feel of official compliance paperwork",
+                    "Show professional hands suggesting an active landlord reviewing materials",
+                    "Include recognisable UK property documentation elements"
                   ]}
                   priority
                 />

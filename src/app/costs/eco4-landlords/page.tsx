@@ -104,16 +104,16 @@ export default function ECO4LandlordsPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
-                alt="Professional installer fitting loft insulation under ECO4 scheme"
-                description="A professional installer fitting loft insulation in a rental property, with ECO4 or energy efficiency branding visible. Should convey professionalism, quality workmanship, and the free/subsidised nature of the scheme."
+              <GeneratedImage
+                imageId="eco4-landlords-hero"
+                alt="ECO4 installer fitting cavity wall insulation in a British rental property"
+                description="Two installers in high-visibility workwear operate cavity wall insulation injection equipment outside a 1960s British semi-detached house. One worker holds the injection lance while another monitors the pump equipment mounted in a branded van. Drilled holes in the brickwork are visible, showing the installation in progress. The scene captures the professional, government-backed nature of ECO4 funded work."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Show professional installer in branded workwear',
-                  'Loft insulation installation in progress',
-                  'Clean, professional environment',
-                  'Could include ECO4 or energy company branding',
+                  'Professional installers in branded hi-vis workwear',
+                  'Cavity wall insulation injection equipment visible',
+                  'Typical British residential property as backdrop',
                 ]}
                 priority
               />

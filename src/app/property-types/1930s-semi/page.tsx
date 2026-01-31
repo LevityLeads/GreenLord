@@ -21,7 +21,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -82,18 +82,17 @@ export default function ThirtiesSemiPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="1930s-semi-exterior"
                 alt="Typical 1930s semi-detached house showing characteristic features"
-                description="A photograph of a classic 1930s semi-detached house showing typical features: bay windows on ground and first floor, pebbledash or rendered finish, hipped roof, and small front garden. The image should show the archetypal style that most people would recognise."
+                description="A classic 1930s semi-detached house on a tree-lined suburban street in the English Midlands. The property displays the era's unmistakable character: rounded bay windows on both floors, cream pebbledash render, a hipped roof with red clay tiles, and a small front garden with low brick wall. Soft afternoon light highlights the craftsmanship of inter-war housing that makes these homes among the easiest to upgrade for EPC compliance."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK 1930s semi in good condition',
-                  'Capture characteristic features: bay windows, pebbledash, hipped roof',
-                  'Daylight conditions, showing the full front facade',
-                  'Include the driveway/garden typical of these properties',
-                  'Avoid showing house numbers or identifiable personal information',
+                  'Show a genuine UK 1930s semi with bay windows, pebbledash, and hipped roof',
+                  'Include typical front garden and driveway setting of suburban location',
+                  'Afternoon light, property in good condition reflecting maintainable housing stock',
                 ]}
               />
 
@@ -403,17 +402,16 @@ export default function ThirtiesSemiPage() {
                   </p>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="1930s-semi-cavity-wall-insulation"
                   alt="Diagram showing cavity wall insulation being injected into 1930s semi wall"
-                  description="A technical illustration showing a cross-section of a 1930s cavity wall during the insulation process. Show the drill holes in the outer brick layer, the injection gun, and the insulation material filling the cavity between the inner and outer leaves."
+                  description="A technical cross-section illustration depicting a 1930s cavity wall during the insulation injection process. The diagram clearly shows the brick outer leaf with small drilled holes, the injection equipment inserting insulation material, and the cavity between the two leaves gradually filling with EPS beads or mineral wool. Labels indicate the wall components and 50mm cavity width."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show a clear cross-section of cavity wall construction',
-                    'Label: outer brick leaf, cavity (50mm), inner leaf, plaster',
-                    'Show injection holes and the spray gun injecting material',
-                    'Include insulation beads or foam filling the cavity',
-                    'Consider showing before/after in split image',
+                    'Cross-section showing outer brick leaf, 50mm cavity, inner leaf, and plaster',
+                    'Show injection gun inserting insulation through drilled holes',
+                    'Label all components clearly with dimensions where appropriate',
                   ]}
                 />
 
@@ -718,17 +716,16 @@ export default function ThirtiesSemiPage() {
                   </CardBody>
                 </Card>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="1930s-semi-epc-journey-infographic"
                   alt="Typical 1930s semi EPC improvement journey from D to C"
-                  description="An infographic showing the EPC improvement journey for a 1930s semi, with the starting rating, each improvement step, and the final rating. Should show the cumulative point gains and costs in a visually appealing timeline or stepped format."
+                  description="An infographic showing the EPC improvement journey for a typical 1930s semi-detached house. Starting from rating D (58 points), the stepped timeline progresses through cavity wall insulation, loft insulation top-up, and boiler upgrade to reach the final rating C (76 points). Each step displays the point gain and cost, with green brand colours emphasising the positive progression toward compliance."
                   width={800}
                   height={350}
                   instructions={[
-                    'Create a clear visual timeline or stepped progression',
-                    'Show: Starting D (58) -> improvements -> Final C (76)',
-                    'Include cost for each step and point gains',
-                    'Use GreenLord brand colours',
-                    'Make it easy to follow at a glance',
+                    'Create stepped timeline from D (58 points) through improvements to C (76 points)',
+                    'Show cost and point gains for each improvement step',
+                    'Use GreenLord green brand colours for a professional, clear design',
                   ]}
                 />
               </section>

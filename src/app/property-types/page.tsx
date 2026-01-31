@@ -10,7 +10,7 @@ import { EPCRatingBadge } from '@/components/ui/EPCRatingBadge';
 import { KeyFactBox } from '@/components/content/KeyFactBox';
 import { TipBox } from '@/components/content/TipBox';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -262,18 +262,17 @@ export default function PropertyTypesPage() {
       {/* Hero Image */}
       <Section background="muted" padding="md">
         <Container>
-          <ImagePlaceholder
+          <GeneratedImage
+            imageId="property-types-hero-grid"
             alt="Illustrated grid showing different UK property types including Victorian terrace, 1930s semi, and purpose-built flat"
-            description="A visually appealing illustrated grid or collage showing the three main property types covered in these guides. Each property type should be clearly distinguishable with characteristic architectural features. Victorian terrace with bay windows and chimneys, 1930s semi with typical semi-circular bay and pebbledash, and a purpose-built flat block."
+            description="A visually appealing illustrated grid showing the range of UK property types covered in these EPC guides. Three distinct property types are clearly displayed: a Victorian terrace with characteristic bay windows and tall chimneys, a 1930s semi-detached with rounded bay and pebbledash render, and a modern purpose-built flat block. Each property features recognisable British architectural details, presented in a clean modern illustration style with subtle EPC-inspired colour coding to connect energy efficiency themes."
             width={1200}
             height={500}
             priority
             instructions={[
-              'Use a clean, modern illustration style consistent with the GreenLord brand',
-              'Show each property type with recognisable UK architectural features',
-              'Consider using a subtle colour-coding system matching EPC colours',
-              'Include small icons or labels for each property type',
-              'Ensure the image works well as a hero section visual',
+              'Clean modern illustration showing Victorian terrace, 1930s semi, and purpose-built flat side by side',
+              'Include recognisable UK architectural features and subtle EPC colour-coding',
+              'Professional hero section visual with GreenLord brand-consistent styling',
             ]}
           />
         </Container>

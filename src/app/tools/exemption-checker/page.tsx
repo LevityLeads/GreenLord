@@ -103,17 +103,17 @@ export default function ExemptionCheckerPage() {
                 </KeyFactBox>
               </div>
 
-              {/* Hero Image Placeholder */}
-              <ImagePlaceholder
-                alt="Landlord reviewing exemption documentation"
-                description="An image showing a landlord or property professional reviewing documents related to EPC exemptions - could include paperwork, a laptop showing the PRS register, or property documents with official stamps."
+              {/* Hero Image */}
+              <GeneratedImage
+                imageId="exemption-checker-hero"
+                alt="Landlord reviewing EPC exemption documents at a desk"
+                description="A landlord carefully reviews official exemption paperwork at a tidy desk, with a laptop open to a government portal in the background. The scene shows the careful documentation process, with printed forms and a pen ready for notes. The atmosphere is professional and methodical."
                 width={1200}
                 height={500}
                 instructions={[
-                  'Show professional document review scenario',
-                  'Include EPC-related visual elements',
-                  'Convey the official/compliance nature of the process',
-                  'Clean, trustworthy aesthetic',
+                  'Show a person reviewing official-looking documents with focused attention',
+                  'Include a laptop or computer screen in the background suggesting online registration',
+                  'Convey a sense of careful compliance and thorough documentation',
                 ]}
                 className="mb-8"
               />

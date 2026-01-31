@@ -137,18 +137,17 @@ export default function WarmHomesPlanPage() {
                   has begun.
                 </p>
 
-                <ImagePlaceholder
-                  alt="Key highlights infographic from the Warm Homes Plan"
-                  description="A visual summary showing the key points from the Warm Homes Plan: EPC C by October 2030, GBP 10,000 cost cap, GBP 30,000 maximum penalty, applies to all tenancies. Designed as a quick-reference graphic."
+                <GeneratedImage
+                  imageId="warm-homes-plan-hero"
+                  alt="Key highlights from the Warm Homes Plan policy document"
+                  description="A close-up photograph of the official Warm Homes Plan government policy document open on a desk, with key sections highlighted. Nearby sits a landlord's notebook with handwritten summary notes, a pen, and reading glasses, suggesting careful study of the new regulations."
                   width={800}
                   height={400}
                   priority
                   instructions={[
-                    'Create a clean, professional infographic style',
-                    'Highlight the four key numbers prominently',
-                    'Use GreenLord brand colours',
-                    'Include the date (October 2030) clearly',
-                    'Make it scannable at a glance',
+                    "Capture the official, governmental nature of the policy document",
+                    "Include elements showing landlord engagement with the material",
+                    "Professional documentary style emphasising importance of the legislation"
                   ]}
                 />
               </section>

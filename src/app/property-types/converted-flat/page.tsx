@@ -26,7 +26,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -89,18 +89,17 @@ export default function ConvertedFlatPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="converted-flat-exterior"
                 alt="Converted Victorian house showing multiple flat entrances"
-                description="A photograph of a typical converted house in the UK, showing a large Victorian or Edwardian property that has been divided into multiple flats. The image should show multiple doorbells or letter boxes, indicating the conversion, while maintaining the original architectural character."
+                description="A large Victorian house in a residential area of London that has been converted into multiple flats. The grand three-storey property retains its original architectural character with ornate brickwork, bay windows, and decorative stonework, while multiple doorbells and letter boxes at the entrance reveal its conversion to separate dwellings. Morning light highlights the period features that make these conversions both desirable and challenging for EPC improvements."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK converted property, typically Victorian/Edwardian',
-                  'Multiple doorbells or entry points visible to indicate conversion',
-                  'Maintain architectural character of original building',
-                  'Daylight conditions, showing the full facade',
-                  'Avoid showing specific flat numbers or identifiable information',
+                  'Show a genuine UK converted Victorian/Edwardian property with multiple doorbells visible',
+                  'Maintain the original architectural character of the period building',
+                  'Morning light, full facade showing the scale of a typical conversion',
                 ]}
               />
 
@@ -258,17 +257,16 @@ export default function ConvertedFlatPage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="converted-flat-cross-section"
                   alt="Cross-section diagram showing a converted house with multiple flats"
-                  description="A technical illustration showing a cross-section of a typical converted house, clearly showing how the building is divided into separate flats across multiple floors. Should indicate shared elements (walls, roof) versus individual flat spaces."
+                  description="A technical cross-section illustration of a three-storey converted Victorian house divided into separate flats. The diagram clearly delineates individual flat boundaries on each floor, with colour-coded labels distinguishing shared elements such as external walls, roof structure, and communal staircase from the individual flat spaces. Annotations indicate where EPC assessment boundaries apply for each flat, highlighting the complexity of ownership that affects improvement options."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show a cross-section of a 3-4 storey converted house',
-                    'Clearly delineate individual flat boundaries',
-                    'Label shared elements: external walls, roof, communal stairs',
-                    'Show typical flat layouts on different floors',
-                    'Indicate where EPC boundaries apply for each flat',
+                    'Show cross-section of a 3-storey converted house with individual flat boundaries',
+                    'Label shared elements: external walls, roof, communal stairs in different colour',
+                    'Indicate EPC assessment boundaries for each flat with clear annotations',
                   ]}
                   className="mt-8"
                 />
@@ -867,17 +865,16 @@ export default function ConvertedFlatPage() {
                   </p>
                 </TipBox>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="converted-flat-epc-comparison"
                   alt="EPC certificate comparison showing improvement from E to C"
-                  description="A side-by-side comparison showing two EPC certificates - the original E-rated certificate on the left and the improved C-rated certificate on the right. The comparison should highlight the score improvement from 46 to 72 points."
+                  description="A side-by-side comparison of two EPC certificates for a converted flat. The left certificate shows the original E rating with 46 points and an orange-red energy bar, while the right certificate displays the improved C rating with 72 points and a green energy bar. The visual comparison demonstrates the 26-point improvement achievable through strategic upgrades within the constraints of leasehold ownership."
                   width={800}
                   height={350}
                   instructions={[
-                    'Show the official EPC certificate format',
-                    'Left side: E rating, 46 points, orange/red energy bar',
-                    'Right side: C rating, 72 points, green energy bar',
-                    'Highlight the improvement visually',
-                    'Ensure format matches current GOV.UK EPC certificate design',
+                    'Show official GOV.UK EPC certificate format side by side',
+                    'Left: E rating (46 points) with orange/red bar; Right: C rating (72 points) with green bar',
+                    'Highlight the improvement visually with clear before/after comparison',
                   ]}
                   className="mt-8"
                 />

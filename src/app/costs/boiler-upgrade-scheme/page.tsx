@@ -106,16 +106,16 @@ export default function BoilerUpgradeSchemePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
-                alt="Air source heat pump installed at a rental property"
-                description="A modern air source heat pump unit installed outside a typical UK rental property (semi-detached or terraced house). Should show the compact, modern design and professional installation, conveying that heat pumps are practical for standard homes."
+              <GeneratedImage
+                imageId="boiler-upgrade-scheme-hero"
+                alt="Air source heat pump professionally installed outside a British semi-detached home"
+                description="A white air source heat pump unit sits on a concrete plinth against the side wall of a typical 1970s British semi-detached house. Copper pipework runs neatly into the property through the wall, and the installation looks clean and professional. The property has a small side passage with a gravel path, and neighbouring houses are visible in the background - a typical UK suburban setting."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Modern air source heat pump (not ground source)',
-                  'Typical UK residential property setting',
-                  'Professional installation visible',
-                  'Clean, appealing aesthetic',
+                  'Modern ASHP unit (Mitsubishi, Vaillant or similar style)',
+                  'Typical British suburban residential setting',
+                  'Professional pipework and installation visible',
                 ]}
                 priority
               />
