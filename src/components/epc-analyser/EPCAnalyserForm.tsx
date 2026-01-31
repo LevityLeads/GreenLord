@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import {
   ChevronLeft,
   ChevronRight,
@@ -8,6 +8,11 @@ import {
   Home,
   ClipboardList,
   Lightbulb,
+  Upload,
+  FileText,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Select } from '@/components/ui/Select';
@@ -32,6 +37,7 @@ import {
   HOT_WATER_OPTIONS,
   EPC_RECOMMENDATION_OPTIONS,
 } from '@/lib/epc-analysis';
+import { parseEPCDocument, isValidEPCFile } from '@/lib/epc-parser';
 import type { EPCRating, PropertyType } from '@/lib/types';
 import type {
   EPCAnalyserInputs,
@@ -56,27 +62,38 @@ type FormErrors = Partial<Record<keyof EPCAnalyserInputs, string>>;
 
 const STEPS = [
   {
+    id: 'upload',
+    title: 'Upload EPC',
+    description: 'Upload your EPC certificate or enter details manually',
+  },
+  {
     id: 'basics',
     title: 'Basic Details',
-    description: 'Tell us about your property and its current EPC rating',
+    description: 'Confirm your property details and current EPC rating',
   },
   {
     id: 'epc-details',
     title: 'What Your EPC Says',
-    description: 'Enter the details from your current EPC certificate',
+    description: 'Confirm the details from your EPC certificate',
   },
   {
     id: 'recommendations',
-    title: 'Recommendations Listed',
-    description: 'Select the recommendations shown on your EPC',
+    title: 'Recommendations',
+    description: 'Confirm the recommendations shown on your EPC',
   },
 ];
 
-const stepIcons = [Home, ClipboardList, Lightbulb];
+const stepIcons = [Upload, Home, ClipboardList, Lightbulb];
 
 export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFormProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [isParsing, setIsParsing] = useState(false);
+  const [parseWarnings, setParseWarnings] = useState<string[]>([]);
+  const [parseConfidence, setParseConfidence] = useState<'high' | 'medium' | 'low' | null>(null);
+  const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const [formData, setFormData] = useState<Partial<EPCAnalyserInputs>>({
     currentRating: undefined,
     currentScore: undefined,
@@ -122,11 +139,58 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
     });
   }, []);
 
+  // Handle file upload
+  const handleFileUpload = useCallback(async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    if (!isValidEPCFile(file)) {
+      setParseWarnings(['Please upload a PDF file']);
+      return;
+    }
+
+    setIsParsing(true);
+    setParseWarnings([]);
+    setUploadedFileName(file.name);
+
+    try {
+      const result = await parseEPCDocument(file);
+
+      if (result.success) {
+        // Merge parsed data with form
+        setFormData((prev) => ({
+          ...prev,
+          ...result.data,
+        }));
+        setParseConfidence(result.confidence);
+        setParseWarnings(result.warnings);
+
+        // Auto-advance to next step after successful parse
+        if (result.confidence !== 'low') {
+          setTimeout(() => setCurrentStep(1), 500);
+        }
+      } else {
+        setParseWarnings(result.warnings);
+        setParseConfidence('low');
+      }
+    } catch (error) {
+      console.error('Parse error:', error);
+      setParseWarnings(['Failed to parse PDF. Please enter details manually.']);
+      setParseConfidence('low');
+    } finally {
+      setIsParsing(false);
+    }
+  }, []);
+
+  const handleManualEntry = useCallback(() => {
+    setCurrentStep(1);
+  }, []);
+
   const validateStep = useCallback(
     (step: number): boolean => {
       const newErrors: FormErrors = {};
 
-      if (step === 0) {
+      if (step === 1) {
         if (!formData.currentRating) newErrors.currentRating = 'Please select your current EPC rating';
         if (!formData.currentScore && formData.currentScore !== 0) {
           newErrors.currentScore = 'Please enter your EPC score';
@@ -135,7 +199,7 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
         }
         if (!formData.propertyType) newErrors.propertyType = 'Please select a property type';
         if (!formData.constructionAge) newErrors.constructionAge = 'Please select construction age';
-      } else if (step === 1) {
+      } else if (step === 2) {
         if (!formData.wallType) newErrors.wallType = 'Please select wall type';
         if (!formData.wallInsulation) newErrors.wallInsulation = 'Please select wall insulation';
         if (!formData.roofInsulation) newErrors.roofInsulation = 'Please select roof insulation';
@@ -154,6 +218,12 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
   );
 
   const handleNext = useCallback(() => {
+    if (currentStep === 0) {
+      // Upload step - just move forward
+      setCurrentStep(1);
+      return;
+    }
+
     if (validateStep(currentStep)) {
       if (currentStep < totalSteps - 1) {
         setCurrentStep((prev) => prev + 1);
@@ -263,9 +333,149 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
         </CardHeader>
 
         <div className="mt-6 space-y-6">
-          {/* Step 1: Basic Details */}
+          {/* Step 0: Upload EPC */}
           {currentStep === 0 && (
             <>
+              {/* Upload Area */}
+              <div
+                className={cn(
+                  'relative rounded-lg border-2 border-dashed p-8 text-center transition-colors',
+                  isParsing ? 'border-primary-300 bg-primary-50' : 'border-neutral-300 hover:border-primary-400 hover:bg-neutral-50',
+                  uploadedFileName && parseConfidence === 'high' && 'border-success-300 bg-success-50',
+                  uploadedFileName && parseConfidence === 'low' && 'border-warning-300 bg-warning-50'
+                )}
+              >
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".pdf,application/pdf"
+                  onChange={handleFileUpload}
+                  className="absolute inset-0 cursor-pointer opacity-0"
+                  disabled={isParsing}
+                />
+
+                {isParsing ? (
+                  <div className="flex flex-col items-center gap-3">
+                    <Loader2 className="h-12 w-12 text-primary-600 animate-spin" />
+                    <p className="font-medium text-primary-700">Analysing your EPC...</p>
+                    <p className="text-sm text-neutral-600">Extracting property details</p>
+                  </div>
+                ) : uploadedFileName ? (
+                  <div className="flex flex-col items-center gap-3">
+                    {parseConfidence === 'high' ? (
+                      <CheckCircle className="h-12 w-12 text-success-600" />
+                    ) : parseConfidence === 'medium' ? (
+                      <FileText className="h-12 w-12 text-primary-600" />
+                    ) : (
+                      <AlertCircle className="h-12 w-12 text-warning-600" />
+                    )}
+                    <p className="font-medium text-neutral-800">{uploadedFileName}</p>
+                    {parseConfidence === 'high' && (
+                      <p className="text-sm text-success-700">Successfully extracted EPC details</p>
+                    )}
+                    {parseConfidence === 'medium' && (
+                      <p className="text-sm text-primary-700">Extracted most details - please review</p>
+                    )}
+                    {parseConfidence === 'low' && (
+                      <p className="text-sm text-warning-700">Limited data extracted - manual entry needed</p>
+                    )}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        fileInputRef.current?.click();
+                      }}
+                    >
+                      Upload different file
+                    </Button>
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center gap-3">
+                    <Upload className="h-12 w-12 text-neutral-400" />
+                    <div>
+                      <p className="font-medium text-neutral-800">Drop your EPC PDF here</p>
+                      <p className="text-sm text-neutral-600">or click to browse</p>
+                    </div>
+                    <p className="text-xs text-neutral-500">
+                      We&apos;ll automatically extract the details from your certificate
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Parse Warnings */}
+              {parseWarnings.length > 0 && (
+                <div className="rounded-lg border border-warning-200 bg-warning-50 p-4">
+                  <div className="flex items-start gap-3">
+                    <AlertCircle className="h-5 w-5 text-warning-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium text-warning-800">Some details need confirmation</p>
+                      <ul className="mt-2 text-sm text-warning-700 space-y-1">
+                        {parseWarnings.map((warning, index) => (
+                          <li key={index}>• {warning}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Divider */}
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-neutral-200" />
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-white px-4 text-sm text-neutral-500">or</span>
+                </div>
+              </div>
+
+              {/* Manual Entry Option */}
+              <div className="text-center">
+                <Button
+                  variant="outline"
+                  onClick={handleManualEntry}
+                  leftIcon={<ClipboardList className="h-4 w-4" />}
+                >
+                  Enter details manually
+                </Button>
+                <p className="mt-2 text-sm text-neutral-500">
+                  Don&apos;t have your EPC to hand? No problem - enter the details yourself
+                </p>
+              </div>
+
+              {/* Help Text */}
+              <div className="rounded-lg bg-neutral-50 p-4">
+                <h4 className="font-medium text-neutral-800 mb-2">Where to find your EPC</h4>
+                <ul className="text-sm text-neutral-600 space-y-1">
+                  <li>• Check your email for when you last had an EPC assessment</li>
+                  <li>• Search the <a href="https://www.gov.uk/find-energy-certificate" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">EPC Register</a> using your address</li>
+                  <li>• Contact your letting agent if they arranged the assessment</li>
+                </ul>
+              </div>
+            </>
+          )}
+
+          {/* Step 1: Basic Details */}
+          {currentStep === 1 && (
+            <>
+              {uploadedFileName && parseConfidence && (
+                <div className={cn(
+                  'rounded-lg p-3 mb-4 flex items-center gap-2',
+                  parseConfidence === 'high' ? 'bg-success-50 text-success-700' :
+                  parseConfidence === 'medium' ? 'bg-primary-50 text-primary-700' :
+                  'bg-warning-50 text-warning-700'
+                )}>
+                  <FileText className="h-4 w-4" />
+                  <span className="text-sm">
+                    {parseConfidence === 'high' ? 'Details extracted from your EPC - please confirm' :
+                     parseConfidence === 'medium' ? 'Most details extracted - please review and complete' :
+                     'Please complete the missing details'}
+                  </span>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Select
                   label="Current EPC Rating"
@@ -322,7 +532,7 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
           )}
 
           {/* Step 2: EPC Details */}
-          {currentStep === 1 && (
+          {currentStep === 2 && (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Select
@@ -437,10 +647,12 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
           )}
 
           {/* Step 3: Recommendations */}
-          {currentStep === 2 && (
+          {currentStep === 3 && (
             <>
               <p className="text-sm text-neutral-600 mb-4">
-                Select all the recommendations that appear on your EPC certificate. This helps us analyse which improvements have been suggested and identify any that may have been missed.
+                {formData.recommendations && formData.recommendations.length > 0
+                  ? 'We found these recommendations on your EPC. Please confirm or adjust:'
+                  : 'Select all the recommendations that appear on your EPC certificate. This helps us analyse which improvements have been suggested.'}
               </p>
 
               <div className="space-y-2">
@@ -493,21 +705,37 @@ export function EPCAnalyserForm({ onSubmit, isAnalysing = false }: EPCAnalyserFo
           Back
         </Button>
 
-        <Button
-          type="button"
-          variant="primary"
-          onClick={handleNext}
-          isLoading={isAnalysing}
-          rightIcon={
-            currentStep < totalSteps - 1 ? (
-              <ChevronRight className="h-4 w-4" aria-hidden="true" />
-            ) : (
-              <FileSearch className="h-4 w-4" aria-hidden="true" />
-            )
-          }
-        >
-          {currentStep < totalSteps - 1 ? 'Next' : 'Analyse My EPC'}
-        </Button>
+        {currentStep === 0 && uploadedFileName && parseConfidence !== 'low' ? (
+          <Button
+            type="button"
+            variant="primary"
+            onClick={handleNext}
+            rightIcon={<ChevronRight className="h-4 w-4" aria-hidden="true" />}
+          >
+            Review Extracted Details
+          </Button>
+        ) : (
+          <Button
+            type="button"
+            variant="primary"
+            onClick={handleNext}
+            isLoading={isAnalysing}
+            disabled={currentStep === 0 && !uploadedFileName && isParsing}
+            rightIcon={
+              currentStep < totalSteps - 1 ? (
+                <ChevronRight className="h-4 w-4" aria-hidden="true" />
+              ) : (
+                <FileSearch className="h-4 w-4" aria-hidden="true" />
+              )
+            }
+          >
+            {currentStep === 0
+              ? 'Skip - Enter Manually'
+              : currentStep < totalSteps - 1
+              ? 'Next'
+              : 'Analyse My EPC'}
+          </Button>
+        )}
       </div>
     </Card>
   );
