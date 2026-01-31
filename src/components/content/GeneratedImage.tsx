@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { RefreshCw, Loader2, AlertCircle, ImageIcon, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
@@ -211,14 +210,13 @@ export function GeneratedImage({
         }}
       >
         {/* Loaded State - Show Image */}
+        {/* Using regular img tag to avoid Next.js Image domain restrictions */}
         {state === 'loaded' && imageUrl && (
-          <Image
+          <img
             src={imageUrl}
             alt={alt}
-            fill
-            className="object-cover"
-            sizes={`(max-width: 768px) 100vw, ${width}px`}
-            priority={priority}
+            className="absolute inset-0 w-full h-full object-cover"
+            loading={priority ? 'eager' : 'lazy'}
           />
         )}
 
