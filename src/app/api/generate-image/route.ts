@@ -59,13 +59,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateI
     // Determine aspect ratio from dimensions
     const aspectRatio = getAspectRatioFromDimensions(width, height);
 
-    // Determine resolution based on dimensions
-    let resolution: '1K' | '2K' | '4K' = '2K';
-    if (width >= 3000 || height >= 3000) {
-      resolution = '4K';
-    } else if (width <= 1000 && height <= 1000) {
-      resolution = '1K';
-    }
+    // Use 1K resolution for web images (cost-effective and sufficient quality)
+    const resolution: '1K' | '2K' | '4K' = '1K';
 
     // Generate the image
     const result = await generateImage(apiKey, {
