@@ -532,14 +532,14 @@ export default function EPCComplianceResearchPage() {
               {/* Tab Navigation */}
               <div className="flex gap-2 mb-6">
                 <Button
-                  variant={activeTab === 'cities' ? 'default' : 'outline'}
+                  variant={activeTab === 'cities' ? 'primary' : 'outline'}
                   onClick={() => setActiveTab('cities')}
                 >
                   <MapPin className="h-4 w-4 mr-2" />
                   City Analysis
                 </Button>
                 <Button
-                  variant={activeTab === 'leaderboard' ? 'default' : 'outline'}
+                  variant={activeTab === 'leaderboard' ? 'primary' : 'outline'}
                   onClick={() => setActiveTab('leaderboard')}
                 >
                   <Trophy className="h-4 w-4 mr-2" />
