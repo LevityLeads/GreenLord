@@ -224,51 +224,94 @@ export async function generateImage(
 }
 
 /**
- * Build a photorealistic prompt for UK property/landlord images
- * Uses photography terminology for realistic results (lens, lighting, composition)
+ * Detect image type from description to apply appropriate styling
+ */
+function detectImageType(description: string, alt: string): 'photo' | 'diagram' | 'infographic' | 'illustration' {
+  const text = (description + ' ' + alt).toLowerCase();
+
+  // Check for diagram/technical illustration indicators
+  if (text.includes('diagram') || text.includes('cross-section') || text.includes('cutaway') ||
+      text.includes('technical illustration') || text.includes('schematic') || text.includes('exploded view')) {
+    return 'diagram';
+  }
+
+  // Check for infographic indicators
+  if (text.includes('infographic') || text.includes('timeline') || text.includes('flowchart') ||
+      text.includes('chart') || text.includes('comparison') || text.includes('step-by-step') ||
+      text.includes('journey') || text.includes('process illustration')) {
+    return 'infographic';
+  }
+
+  // Check for illustration indicators (non-photographic)
+  if (text.includes('illustration') || text.includes('illustrated') || text.includes('vector') ||
+      text.includes('icon') || text.includes('graphic')) {
+    return 'illustration';
+  }
+
+  // Default to photo
+  return 'photo';
+}
+
+/**
+ * Build an appropriate prompt based on the image type detected from the description
+ * Automatically chooses between photo, diagram, infographic, or illustration styles
  */
 export function buildPropertyImagePrompt(
   alt: string,
   description: string,
   instructions?: string[]
 ): string {
-  // Build a narrative description, not keyword lists
-  // Formula: [Subject] + [Setting] + [Lighting] + [Technical Details]
+  const imageType = detectImageType(description, alt);
 
-  const narrativeParts: string[] = [];
-
-  // Core scene description
-  narrativeParts.push(description);
-
-  // Add any specific instructions as natural language
+  // Build base prompt from description and instructions
+  const baseParts: string[] = [description];
   if (instructions && instructions.length > 0) {
-    narrativeParts.push(instructions.join('. ') + '.');
+    baseParts.push(instructions.join('. ') + '.');
   }
+  const basePrompt = baseParts.join(' ');
 
-  // Photography style - be specific about camera and technique
-  const technicalDetails = [
-    'Shot on a Canon EOS R5 with a 35mm f/1.8 lens',
-    'shallow depth of field with creamy bokeh in the background',
-    'soft natural window light creating gentle shadows',
-    'the scene feels authentic and lived-in, not staged',
-    'subtle film grain for a documentary photography aesthetic',
-    'colors are natural and true-to-life, slightly desaturated',
-    'composition follows the rule of thirds',
-  ].join(', ') + '.';
+  switch (imageType) {
+    case 'diagram':
+      return [
+        basePrompt,
+        'Clean, professional technical illustration style.',
+        'Clear labels and annotations where appropriate.',
+        'Use a cohesive color palette with navy blue (#1e3a5f) as primary and white/light grey background.',
+        'Precise lines, professional engineering diagram aesthetic.',
+        'Educational and easy to understand at a glance.',
+      ].join(' ');
 
-  // Realism markers - avoid AI artifacts
-  const realismNotes = 'The image should look like an editorial photograph from a UK property magazine, capturing a genuine moment. Avoid anything that looks artificial, overly polished, or computer-generated. Show natural imperfections like slight wrinkles in fabric, realistic skin texture, and authentic wear on objects.';
+    case 'infographic':
+      return [
+        basePrompt,
+        'Clean, modern infographic design style.',
+        'Use a cohesive color palette with navy blue (#1e3a5f) as primary and amber/orange (#f59e0b) as accent.',
+        'White or very light grey background for maximum readability.',
+        'Sans-serif typography, clear visual hierarchy.',
+        'Minimalist icons and simple geometric shapes.',
+        'Professional business publication quality.',
+      ].join(' ');
 
-  // UK-specific context
-  const ukContext = 'British setting with authentic UK architectural details, furniture styles, and atmosphere typical of England.';
+    case 'illustration':
+      return [
+        basePrompt,
+        'Clean, modern illustration style.',
+        'Consistent line weight and professional finish.',
+        'Use the brand color palette with navy and green tones.',
+        'Suitable for a professional property/real estate context.',
+      ].join(' ');
 
-  // Combine into flowing narrative
-  return [
-    narrativeParts.join(' '),
-    technicalDetails,
-    realismNotes,
-    ukContext,
-  ].join(' ');
+    case 'photo':
+    default:
+      return [
+        basePrompt,
+        'Shot on a Canon EOS R5 with natural lighting.',
+        'Professional editorial photography style, authentic and not overly staged.',
+        'Colors are natural and true-to-life.',
+        'British setting with authentic UK architectural details and atmosphere.',
+        'Avoid anything that looks artificial or computer-generated.',
+      ].join(' ');
+  }
 }
 
 /**

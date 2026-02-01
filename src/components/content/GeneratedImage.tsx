@@ -184,13 +184,11 @@ export function GeneratedImage({
     }
   }, [imageId]);
 
-  // Build the full prompt for display
+  // Build the full prompt for display - description should be self-contained
+  // with appropriate style direction (photo, illustration, infographic, etc.)
   const fullPrompt = [
-    'Professional architectural photograph of UK property.',
     description,
     ...(instructions || []),
-    'High quality, professional real estate photography, natural daylight, sharp focus.',
-    'British architecture, UK property style.',
   ].join(' ');
 
   return (
