@@ -1,15 +1,34 @@
 # GreenLord - UK Landlord EPC Compliance Platform
 
-The authoritative resource for UK private landlords navigating EPC compliance requirements. Clear guidance, interactive tools, and property-specific recommendations.
+The authoritative resource for UK private landlords navigating EPC compliance requirements. Clear guidance, interactive tools, and property-specific recommendations for the 2030 EPC C deadline.
 
-## Phase 1 Implementation
+## Current Status: Phase 3 Complete
 
-This is the Phase 1 foundation implementation including:
+**47 pages** | **4 interactive tools** | **10 property guides** | **10 local city guides**
 
-- **19 content pages** covering regulations, property guides, costs, and resources
-- **Upgrade Cost Calculator** with realistic UK cost data and recommendations
-- **Component library** with UI, content, and layout components
-- **Design system** following PRD specifications (deep blue primary, teal accent)
+### What's Included
+
+#### Interactive Tools
+- **Upgrade Cost Calculator** - Personalised cost estimates by property type, size, and region
+- **Grant Eligibility Checker** - Check ECO4, Boiler Upgrade Scheme, Warm Homes Local, GBIS eligibility
+- **Exemption Pathway Tool** - Cost cap exemption assessment with evidence checklist
+- **EPC Analyser** - Interpret your EPC, identify quick wins, compare to similar properties
+
+#### Property Type Guides (10)
+- Victorian Terrace (pre-1919) | Edwardian House | Pre-1919 Semi-Detached
+- 1930s Semi-Detached | 1950s House | 1960s-1970s House | 1980s-1990s House
+- Purpose-Built Flat | Converted Flat | HMO
+
+#### Local City Guides (10)
+Manchester | Birmingham | Leeds | Liverpool | Bristol | Sheffield | Newcastle | Nottingham | Leicester | Hackney
+
+#### Costs & Funding Guides
+- D to C Upgrade Costs | E to C Upgrade Costs | Cheapest Improvements Ranked
+- ECO4 for Landlords | Boiler Upgrade Scheme | Warm Homes Local Grant
+
+#### Regulations Content
+- EPC C 2030 Deadline | MEES Regulations Guide | Cost Cap Exemptions
+- RdSAP 10 Changes | Warm Homes Plan
 
 ## Getting Started
 
@@ -37,18 +56,22 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── costs/             # Costs section
-│   ├── property-types/    # Property guides
-│   ├── regulations/       # Regulations section
-│   ├── resources/         # FAQ and Glossary
-│   └── tools/             # Calculator and tools
+│   ├── costs/             # Costs & funding guides (7 pages)
+│   ├── local-guides/      # City-specific guides (11 pages)
+│   ├── property-types/    # Property guides (11 pages)
+│   ├── regulations/       # Regulations section (6 pages)
+│   ├── resources/         # FAQ and Glossary (3 pages)
+│   └── tools/             # Interactive tools (5 pages)
 ├── components/
-│   ├── calculator/        # Calculator components
+│   ├── calculator/        # Cost calculator components
+│   ├── epc-analyser/      # EPC analyser components
+│   ├── exemption/         # Exemption tool components
+│   ├── grants/            # Grant checker components
 │   ├── content/           # Content components (callouts, tables)
 │   ├── layout/            # Layout components (header, footer)
 │   └── ui/                # UI primitives (buttons, inputs)
-├── data/                  # Calculator cost data
-└── lib/                   # Utilities, types, constants
+├── data/                  # Calculator and grant scheme data
+└── lib/                   # Utilities, types, constants, analysis logic
 ```
 
 ## Tech Stack

@@ -27,7 +27,7 @@ import {
   TableOfContents,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -143,18 +143,12 @@ export default function RegulationsPage() {
                   Here are the dates that matter for landlords:
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="regulations-overview-timeline"
                   alt="Timeline infographic showing key EPC regulation dates from 2018 to 2030"
-                  description="A horizontal timeline showing: April 2018 (MEES begins for new tenancies), April 2020 (MEES extends to existing tenancies), June 2025 (RdSAP 10 launches), January 2026 (Warm Homes Plan published), October 2030 (EPC C deadline for all properties)."
+                  prompt="A documentary-style photograph of an open planning diary on a landlord's desk, showing important dates circled and highlighted. Beside it lies an EPC certificate and government policy documents, with a calendar visible in the background marking October 2030 as the critical deadline. Focus on authentic paperwork and planning materials that landlords would actually use. Include subtle visual cues indicating progression of time and approaching deadlines. Maintain professional, serious tone appropriate for regulatory compliance content."
                   width={800}
                   height={300}
-                  instructions={[
-                    'Clean, modern timeline design with clear date markers',
-                    'Use GreenLord brand colours (deep blue primary, teal accent)',
-                    'Highlight the October 2030 deadline prominently',
-                    'Include brief description under each date',
-                    'Make it suitable for both light and dark backgrounds',
-                  ]}
                 />
 
                 <div className="grid sm:grid-cols-2 gap-4 my-8">
@@ -539,18 +533,12 @@ export default function RegulationsPage() {
                   recommendations. Some properties may see their ratings change under the new methodology.
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="regulations-rdsap-comparison"
                   alt="Comparison of RdSAP 9 versus RdSAP 10 ratings for a sample property"
-                  description="Split-screen comparison showing the same property rated under RdSAP 9 (old methodology) and RdSAP 10 (new methodology). Shows how the overall rating and specific improvement recommendations may differ."
+                  prompt="A close-up photograph of two EPC certificates placed side by side on a wooden desk, one older and one newer, showing how the same property can receive different ratings under different assessment methodologies. A magnifying glass hovers over the key differences. Show authentic-looking EPC documents with visible rating bands. Include subtle differences in the certificates to suggest methodology changes. Professional lighting emphasising the documentary comparison nature."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Show a clear before/after comparison layout',
-                    'Include example EPC ratings that might change (e.g., D to C or C to D)',
-                    'Highlight key differences in how improvements are valued',
-                    'Use realistic property example like a 1930s semi',
-                    'Make the comparison visually intuitive',
-                  ]}
                 />
 
                 <TipBox title="Should You Wait for RdSAP 10?">

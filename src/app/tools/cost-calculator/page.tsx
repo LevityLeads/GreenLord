@@ -25,7 +25,7 @@ import { WarningBox } from '@/components/content/WarningBox';
 import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -116,18 +116,13 @@ export default function CostCalculatorPage() {
                 </KeyFactBox>
               </div>
 
-              {/* Hero Image Placeholder */}
-              <ImagePlaceholder
-                alt="Calculator and planning tools for EPC upgrades"
-                description="An inviting image showing calculator/planning elements - could include a laptop showing a calculator interface, printed estimate documents, a clipboard with cost breakdowns, or a property professional reviewing figures. Should convey the tool's purpose of helping landlords plan their upgrade investments."
+              {/* Hero Image */}
+              <GeneratedImage
+                imageId="cost-calculator-hero"
+                alt="Landlord using a laptop to calculate EPC upgrade costs"
+                prompt="A focused landlord sits at a clean home office desk, reviewing EPC upgrade cost estimates on a laptop. Papers with property details and a calculator sit nearby. The scene captures the thoughtful decision-making moment of planning energy efficiency investments. Show a professional person using a laptop with visible spreadsheet or calculator interface. Include subtle property-related context like documents or house keys on desk. Warm, natural lighting suggesting a productive home office environment."
                 width={1200}
                 height={500}
-                instructions={[
-                  'Show calculator or planning elements prominently',
-                  'Include some EPC-related visual cues (rating charts, property images)',
-                  'Professional but approachable tone',
-                  'Clean, modern setting',
-                ]}
                 className="mb-8"
               />
 
@@ -172,19 +167,13 @@ export default function CostCalculatorPage() {
                 />
               </div>
 
-              {/* Screenshot Placeholder */}
-              <ImagePlaceholder
-                alt="Example calculator results showing cost breakdown"
-                description="A screenshot or mockup showing example calculator results - including the cost breakdown chart, recommended improvements list with costs and EPC points, and the progress toward EPC C. Should demonstrate the value and detail users will receive."
+              {/* Planning Image */}
+              <GeneratedImage
+                imageId="cost-calculator-planning"
+                alt="Property professional reviewing upgrade documents and estimates"
+                prompt="A property professional examines printed cost estimates and improvement recommendations at a meeting table. Multiple quotes and EPC documents are spread out, illustrating the thorough comparison process. The setting conveys careful financial planning and informed decision-making. Show hands reviewing documents with visible cost figures and property details. Include multiple printed sheets suggesting quote comparison. Professional setting with good lighting, suggesting a serious planning session."
                 width={1200}
                 height={700}
-                instructions={[
-                  'Show realistic sample results (not blank state)',
-                  'Include cost range visualization',
-                  'Show improvement recommendations list',
-                  'Display EPC rating progression',
-                  'Clean UI design matching the site style',
-                ]}
                 className="mb-12"
               />
             </div>

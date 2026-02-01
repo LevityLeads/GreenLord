@@ -29,7 +29,7 @@ import {
   ArticleHeader,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -285,19 +285,13 @@ export default function RdSAP10ChangesPage() {
                   its heating system.
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="rdsap-10-changes-hero"
                   alt="Comparison of property ratings under RdSAP 9 versus RdSAP 10"
-                  description="Side-by-side comparison showing the same property (1930s semi-detached house) assessed under both methodologies. Shows how the overall score and specific component scores differ, with highlighting on which factors improved or worsened."
+                  prompt="An energy assessor's clipboard and tablet showing EPC assessment data, placed on a table inside a typical 1930s semi-detached property. Two EPC certificates are visible side by side, demonstrating how the same property features can result in different ratings under different assessment methodologies. Show the technical assessment context with professional equipment. Include authentic British property interior elements in background. Emphasise the comparative nature of methodology changes."
                   width={800}
                   height={400}
                   priority
-                  instructions={[
-                    'Create a clear before/after comparison layout',
-                    'Show both overall scores and key component breakdowns',
-                    'Use colour coding to show improvements (green) and declines (red)',
-                    'Include typical example property details',
-                    'Make it clear which methodology is which',
-                  ]}
                 />
 
                 <div className="grid md:grid-cols-2 gap-6 my-8">

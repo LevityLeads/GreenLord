@@ -19,7 +19,7 @@ import { Button } from '@/components/ui';
 import { Card, CardBody, CardTitle, CardDescription } from '@/components/ui';
 import { Badge } from '@/components/ui';
 import { Container, Section } from '@/components/layout';
-import { KeyFactBox, ImagePlaceholder, RelatedContentCard } from '@/components/content';
+import { KeyFactBox, GeneratedImage, RelatedContentCard } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
 import { daysUntilDeadline, formatCurrency, formatNumber } from '@/lib/utils';
 
@@ -81,19 +81,13 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:block">
-              <ImagePlaceholder
-                alt="Professional landlord reviewing property documents with EPC certificate visible"
-                description="A professional-looking landlord in their 40s-50s reviewing property documents at a desk. An EPC certificate with a visible rating scale is prominently displayed. The setting is a home office or study with property-related materials visible."
+              <GeneratedImage
+                imageId="homepage-hero-landlord"
+                alt="Professional landlord reviewing EPC documents in home office"
+                prompt="A candid moment capturing a middle-aged British property landlord sat at their kitchen table on a weekday morning, reviewing an Energy Performance Certificate. Morning light streams through a nearby window, illuminating scattered paperwork and a laptop showing property listings. The landlord wears smart-casual clothes and reading glasses, pen in hand, with a thoughtful expression as they examine the EPC rating chart. A mug of tea sits nearby. The kitchen has typical British details - a kettle, tiled splashback, wooden cabinets. Focus on the authentic, relatable moment of a real person dealing with property paperwork. The EPC document should be partially visible but not the main focus - this is about the human experience."
                 width={600}
                 height={500}
                 priority
-                instructions={[
-                  'Show a realistic, professional UK landlord (diverse representation welcome)',
-                  'EPC certificate should be clearly visible with the A-G rating scale',
-                  'Include property documents, laptop, or tablet showing property details',
-                  'Warm, professional lighting - not stock photo style',
-                  'Could be a kitchen table or home office setting',
-                ]}
               />
             </div>
           </div>
@@ -334,18 +328,12 @@ export default function HomePage() {
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="homepage-author-headshot"
                 alt="James Crawford - Property Compliance Specialist"
-                description="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context."
+                prompt="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context. Professional headshot style with shoulders and head visible. Neutral or office background. Smart casual or business attire. Warm, approachable expression. Good lighting, professional quality."
                 width={400}
                 height={400}
-                instructions={[
-                  'Professional headshot style, shoulders and head visible',
-                  'Neutral or office background',
-                  'Smart casual or business attire',
-                  'Warm, approachable expression',
-                  'Good lighting, professional quality',
-                ]}
               />
             </div>
 

@@ -12,7 +12,7 @@ import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { Button } from '@/components/ui/Button';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -97,18 +97,13 @@ export default function CostsPillarPage() {
                 subtitle="Everything you need to know about the costs of improving your rental property's EPC rating to meet the 2030 deadline."
               />
 
-              {/* Hero Image Placeholder */}
-              <ImagePlaceholder
-                alt="Professional assessor showing cost breakdown on clipboard to landlord"
-                description="A professional energy assessor or contractor showing a detailed cost breakdown document to a landlord, ideally in a residential property setting. Should convey trust, expertise, and transparency about costs."
+              {/* Hero Image */}
+              <GeneratedImage
+                imageId="costs-overview-hero"
+                alt="Professional contractor discussing EPC upgrade costs with landlord in a British home"
+                prompt="A tradesperson in work clothing shows a cost estimate on a clipboard to a homeowner in the kitchen of a typical British semi-detached house. Paperwork is spread on the kitchen table with figures visible, while the contractor points to specific line items. The scene feels consultative and professional, with natural daylight coming through the window. Documentary style - authentic interaction between tradesperson and homeowner. British kitchen setting with typical UK fixtures and finishes. Visible cost documentation on clipboard or tablet."
                 width={1200}
                 height={630}
-                instructions={[
-                  'Professional setting with two people reviewing documents',
-                  'Show a clipboard or tablet with cost figures visible',
-                  'Residential property background (kitchen or living room)',
-                  'Natural lighting, professional but approachable tone',
-                ]}
                 priority
               />
 
@@ -412,19 +407,13 @@ export default function CostsPillarPage() {
                 </section>
               </section>
 
-              {/* Cost Infographic Placeholder */}
-              <ImagePlaceholder
-                alt="Infographic comparing upgrade costs by property type"
-                description="A clear infographic showing typical total upgrade costs for different property types (Victorian terrace, 1930s semi, purpose-built flat, etc.) to reach EPC C. Bar chart or visual comparison format showing the range from lowest to highest cost property types."
+              {/* Property Types Cost Comparison Image */}
+              <GeneratedImage
+                imageId="costs-property-types-comparison"
+                alt="Different British property types showing typical EPC upgrade costs"
+                prompt="A row of different British residential property types photographed from the street - a Victorian terrace, a 1930s semi-detached, a 1960s property, and a purpose-built flat block. Each property has visible energy efficiency features like double glazing or new boiler flues. The properties represent the range of housing stock landlords typically own, from older period homes to newer builds. Authentic British streetscape showing variety of housing ages and styles. Natural daylight, overcast British weather acceptable. Properties should look well-maintained but not newly built."
                 width={1200}
                 height={800}
-                instructions={[
-                  'Clear visual comparison of 5-6 property types',
-                  'Show cost ranges (low to high) for each',
-                  'Use consistent colour coding',
-                  'Include property illustrations or icons',
-                  'Show £ amounts clearly labelled',
-                ]}
                 priority
               />
 
@@ -565,19 +554,13 @@ export default function CostsPillarPage() {
                 </InfoBox>
               </section>
 
-              {/* Cost Effectiveness Chart Placeholder */}
-              <ImagePlaceholder
-                alt="Chart showing cost versus EPC point gain for common improvements"
-                description="A scatter plot or bar chart comparing common improvements by their cost-effectiveness (cost per EPC point gained). Should show quick wins like loft insulation at one end and expensive options like solid wall insulation at the other, making it easy to see which improvements offer best value."
+              {/* Cost Effective Improvements Image */}
+              <GeneratedImage
+                imageId="costs-effective-improvements"
+                alt="Tradesperson installing loft insulation in a British home"
+                prompt="A professional installer in branded workwear carefully lays mineral wool loft insulation between joists in the loft space of a British home. The workspace is clean and organised, with rolls of insulation material stacked nearby. Sunlight streams through a velux window, illuminating the work area. This represents one of the most cost-effective EPC improvements available to landlords. Professional installer at work in realistic loft space. High-quality insulation materials clearly visible. Clean, safe working environment with appropriate PPE."
                 width={1200}
                 height={700}
-                instructions={[
-                  'Clear axis labels: Cost (x-axis) and EPC Points (y-axis)',
-                  'Or: show cost per point gained as bars',
-                  'Highlight best value improvements in green',
-                  'Include 8-10 common improvements',
-                  'Make it easy to scan and understand at a glance',
-                ]}
               />
 
               {/* Cost Effectiveness */}
