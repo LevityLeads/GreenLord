@@ -10,7 +10,7 @@ import { EPCRatingBadge } from '@/components/ui/EPCRatingBadge';
 import { KeyFactBox } from '@/components/content/KeyFactBox';
 import { TipBox } from '@/components/content/TipBox';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   },
 };
 
-const propertyTypes = [
+// Pre-War Properties
+const preWarProperties = [
   {
     title: 'Victorian Terrace (Pre-1919)',
     slug: 'victorian-terrace',
@@ -45,6 +46,40 @@ const propertyTypes = [
       'Single glazing or secondary glazing',
       'Suspended timber floors',
       'High ceilings (heat loss)',
+    ],
+  },
+  {
+    title: 'Edwardian House (1901-1910)',
+    slug: 'edwardian-house',
+    description:
+      'Similar to Victorian properties but often with larger windows and slightly better ventilation. Still featuring solid walls but may have some early cavity construction.',
+    typicalStartingRating: 'E' as const,
+    typicalStartingScore: '35-55 points',
+    keyChallenge: 'Large windows and solid walls create significant heat loss',
+    costRange: '7,000 - 25,000',
+    icon: Home,
+    features: [
+      'Solid or early cavity walls',
+      'Large single-glazed windows',
+      'High ceilings with cornices',
+      'Better natural light than Victorian',
+    ],
+  },
+  {
+    title: 'Pre-1919 Semi-Detached',
+    slug: 'pre-1919-semi',
+    description:
+      'Period semi-detached properties with solid walls and traditional construction. One shared wall reduces heat loss compared to terraces, but solid walls remain challenging.',
+    typicalStartingRating: 'E' as const,
+    typicalStartingScore: '32-52 points',
+    keyChallenge: 'Solid walls and original features require careful upgrade planning',
+    costRange: '7,500 - 28,000',
+    icon: Building2,
+    features: [
+      'Solid brick construction',
+      'One shared party wall',
+      'Original timber windows',
+      'Suspended timber floors',
     ],
   },
   {
@@ -64,6 +99,65 @@ const propertyTypes = [
       'Loft often accessible',
     ],
   },
+];
+
+// Post-War Properties
+const postWarProperties = [
+  {
+    title: '1950s House',
+    slug: '1950s-house',
+    description:
+      'Post-war construction with cavity walls, often with non-traditional building methods. May include prefab elements or system-built construction requiring specialist assessment.',
+    typicalStartingRating: 'D' as const,
+    typicalStartingScore: '48-62 points',
+    keyChallenge: 'Non-standard construction may limit insulation options',
+    costRange: '2,500 - 12,000',
+    icon: Home,
+    features: [
+      'Cavity walls (various types)',
+      'May have non-traditional construction',
+      'Original metal windows common',
+      'Solid concrete floors',
+    ],
+  },
+  {
+    title: '1960s-1970s House',
+    slug: '1960s-1970s-house',
+    description:
+      'Wide variety of construction types including system-built and traditional. Often features unfilled cavities and single glazing, but generally straightforward to upgrade.',
+    typicalStartingRating: 'D' as const,
+    typicalStartingScore: '50-68 points',
+    keyChallenge: 'Variable construction quality and potential for non-standard builds',
+    costRange: '2,000 - 10,000',
+    icon: Home,
+    features: [
+      'Cavity walls (often unfilled)',
+      'Original UPVC or aluminium windows',
+      'Flat roofs common on extensions',
+      'Partial loft insulation likely',
+    ],
+  },
+  {
+    title: '1980s-1990s House',
+    slug: '1980s-1990s-house',
+    description:
+      'Built to better building regulations with partial insulation already present. Often feature double glazing and some cavity insulation, requiring fewer improvements to reach EPC C.',
+    typicalStartingRating: 'D' as const,
+    typicalStartingScore: '55-72 points',
+    keyChallenge: 'May already have partial upgrades making further gains incremental',
+    costRange: '1,500 - 8,000',
+    icon: Home,
+    features: [
+      'Partial cavity insulation likely',
+      'Double glazing often present',
+      'Some loft insulation installed',
+      'Gas central heating standard',
+    ],
+  },
+];
+
+// Flats & HMOs
+const flatsAndHMOs = [
   {
     title: 'Purpose-Built Flat',
     slug: 'purpose-built-flat',
@@ -81,7 +175,44 @@ const propertyTypes = [
       'Leasehold considerations',
     ],
   },
+  {
+    title: 'Converted Flat',
+    slug: 'converted-flat',
+    description:
+      'Flats created from larger houses, often Victorian or Edwardian. May have inherited poor insulation from the original property and complex ownership arrangements.',
+    typicalStartingRating: 'E' as const,
+    typicalStartingScore: '40-60 points',
+    keyChallenge: 'Inherited construction issues and shared building consent requirements',
+    costRange: '3,000 - 12,000',
+    icon: Building,
+    features: [
+      'Original building construction',
+      'Complex ownership structures',
+      'May share heating systems',
+      'Limited external control',
+    ],
+  },
+  {
+    title: 'HMO (House in Multiple Occupation)',
+    slug: 'hmo',
+    description:
+      'Properties let to multiple households with shared facilities. Subject to additional licensing and fire safety requirements that affect upgrade choices.',
+    typicalStartingRating: 'D' as const,
+    typicalStartingScore: '45-65 points',
+    keyChallenge: 'Balancing energy upgrades with HMO licensing and fire safety requirements',
+    costRange: '4,000 - 18,000',
+    icon: Building2,
+    features: [
+      'Multiple individual rooms',
+      'Shared kitchen/bathroom facilities',
+      'Additional licensing requirements',
+      'Fire safety considerations',
+    ],
+  },
 ];
+
+// Combined for iteration when needed
+const allPropertyTypes = [...preWarProperties, ...postWarProperties, ...flatsAndHMOs];
 
 export default function PropertyTypesPage() {
   return (
@@ -131,18 +262,17 @@ export default function PropertyTypesPage() {
       {/* Hero Image */}
       <Section background="muted" padding="md">
         <Container>
-          <ImagePlaceholder
+          <GeneratedImage
+            imageId="property-types-hero-grid"
             alt="Illustrated grid showing different UK property types including Victorian terrace, 1930s semi, and purpose-built flat"
-            description="Architectural illustration showcasing the three core UK property types as a triptych. Use a clean, vector-based illustration style with consistent linework and the GreenLord colour palette. LEFT: Victorian terrace - emphasise the tall proportions, ornate bay window, sash windows, chimney pots, and decorative brickwork patterns. CENTRE: 1930s semi-detached - show the paired symmetry, curved bay window, pebbledash texture, hipped roof with clay tiles. RIGHT: Purpose-built flat block - depict a low-rise 1960s/70s style with regular window pattern, concrete balconies, flat or shallow-pitched roof. Each building should be styled consistently, presented at similar scale, creating an 'at a glance' reference for visitors to identify their property type."
+            description="A visually appealing illustrated grid showing the range of UK property types covered in these EPC guides. Three distinct property types are clearly displayed: a Victorian terrace with characteristic bay windows and tall chimneys, a 1930s semi-detached with rounded bay and pebbledash render, and a modern purpose-built flat block. Each property features recognisable British architectural details, presented in a clean modern illustration style with subtle EPC-inspired colour coding to connect energy efficiency themes."
             width={1200}
             height={500}
             priority
             instructions={[
-              'Consistent illustration style: clean vector art, subtle shadows, architectural precision',
-              'Three distinct buildings at similar scale - side by side or in a creative layout',
-              'Emphasise era-defining features: Victorian ornament, 1930s curves, 1960s utility',
-              'Brand colour palette; consider EPC-inspired colour accents per building',
-              'Works as hero image: balanced composition, text overlay friendly if needed',
+              'Clean modern illustration showing Victorian terrace, 1930s semi, and purpose-built flat side by side',
+              'Include recognisable UK architectural features and subtle EPC colour-coding',
+              'Professional hero section visual with GreenLord brand-consistent styling',
             ]}
           />
         </Container>
@@ -151,93 +281,226 @@ export default function PropertyTypesPage() {
       {/* Property Type Cards */}
       <Section background="white" padding="lg" id="property-guides">
         <Container>
-          <h2 className="text-2xl font-bold text-primary-800 mb-8">
-            Choose Your Property Type
-          </h2>
+          {/* Pre-War Properties */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-primary-800 mb-2">
+              Pre-War Properties
+            </h2>
+            <p className="text-neutral-600 mb-6">
+              Properties built before 1945, typically featuring solid or early cavity walls and traditional construction methods.
+            </p>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {propertyTypes.map((property) => {
-              const Icon = property.icon;
-              return (
-                <Card
-                  key={property.slug}
-                  as="article"
-                  hoverable
-                  className="flex flex-col h-full"
-                >
-                  <CardBody className="flex-1">
-                    {/* Header with Icon */}
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-primary-700" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-bold text-primary-800 mb-1">
-                          {property.title}
-                        </h3>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-neutral-600">Typical EPC:</span>
-                          <EPCRatingBadge rating={property.typicalStartingRating} size="sm" />
-                          <span className="text-xs text-neutral-500">
-                            ({property.typicalStartingScore})
-                          </span>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {preWarProperties.map((property) => {
+                const Icon = property.icon;
+                return (
+                  <Card
+                    key={property.slug}
+                    as="article"
+                    hoverable
+                    className="flex flex-col h-full"
+                  >
+                    <CardBody className="flex-1">
+                      {/* Header with Icon */}
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-primary-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-bold text-primary-800 mb-1">
+                            {property.title}
+                          </h3>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-neutral-600">Typical EPC:</span>
+                            <EPCRatingBadge rating={property.typicalStartingRating} size="sm" />
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Description */}
-                    <p className="text-neutral-600 text-sm mb-4">{property.description}</p>
+                      {/* Description */}
+                      <p className="text-neutral-600 text-sm mb-4">{property.description}</p>
 
-                    {/* Key Challenge */}
-                    <div className="mb-4 p-3 rounded-lg bg-warning-50 border border-warning-200">
-                      <p className="text-sm text-warning-800">
-                        <span className="font-semibold">Key Challenge:</span>{' '}
-                        {property.keyChallenge}
-                      </p>
-                    </div>
+                      {/* Key Challenge */}
+                      <div className="mb-4 p-3 rounded-lg bg-warning-50 border border-warning-200">
+                        <p className="text-sm text-warning-800">
+                          <span className="font-semibold">Key Challenge:</span>{' '}
+                          {property.keyChallenge}
+                        </p>
+                      </div>
 
-                    {/* Features List */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-neutral-700 mb-2">
-                        Common Features:
-                      </h4>
-                      <ul className="space-y-1">
-                        {property.features.map((feature) => (
-                          <li
-                            key={feature}
-                            className="text-sm text-neutral-600 flex items-start gap-2"
-                          >
-                            <span className="text-primary-500 mt-1">-</span>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                      {/* Cost Range */}
+                      <div className="flex items-center gap-2 text-sm">
+                        <PoundSterling className="w-4 h-4 text-neutral-500" />
+                        <span className="text-neutral-600">Typical cost:</span>
+                        <span className="font-semibold text-primary-700">
+                          {property.costRange}
+                        </span>
+                      </div>
+                    </CardBody>
 
-                    {/* Cost Range */}
-                    <div className="flex items-center gap-2 text-sm">
-                      <PoundSterling className="w-4 h-4 text-neutral-500" />
-                      <span className="text-neutral-600">Typical upgrade cost:</span>
-                      <span className="font-semibold text-primary-700">
-                        {property.costRange}
-                      </span>
-                    </div>
-                  </CardBody>
+                    <CardFooter align="left" className="mt-auto">
+                      <Link href={`/property-types/${property.slug}`} className="w-full">
+                        <Button
+                          variant="primary"
+                          fullWidth
+                          rightIcon={<ArrowRight className="w-4 h-4" />}
+                        >
+                          View Guide
+                        </Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
 
-                  <CardFooter align="left" className="mt-auto">
-                    <Link href={`/property-types/${property.slug}`} className="w-full">
-                      <Button
-                        variant="primary"
-                        fullWidth
-                        rightIcon={<ArrowRight className="w-4 h-4" />}
-                      >
-                        View Full Guide
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-              );
-            })}
+          {/* Post-War Properties */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-primary-800 mb-2">
+              Post-War Properties
+            </h2>
+            <p className="text-neutral-600 mb-6">
+              Properties built from 1945 onwards with cavity walls and improving building standards over time.
+            </p>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {postWarProperties.map((property) => {
+                const Icon = property.icon;
+                return (
+                  <Card
+                    key={property.slug}
+                    as="article"
+                    hoverable
+                    className="flex flex-col h-full"
+                  >
+                    <CardBody className="flex-1">
+                      {/* Header with Icon */}
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-100 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-accent-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-bold text-primary-800 mb-1">
+                            {property.title}
+                          </h3>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-neutral-600">Typical EPC:</span>
+                            <EPCRatingBadge rating={property.typicalStartingRating} size="sm" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-neutral-600 text-sm mb-4">{property.description}</p>
+
+                      {/* Key Challenge */}
+                      <div className="mb-4 p-3 rounded-lg bg-warning-50 border border-warning-200">
+                        <p className="text-sm text-warning-800">
+                          <span className="font-semibold">Key Challenge:</span>{' '}
+                          {property.keyChallenge}
+                        </p>
+                      </div>
+
+                      {/* Cost Range */}
+                      <div className="flex items-center gap-2 text-sm">
+                        <PoundSterling className="w-4 h-4 text-neutral-500" />
+                        <span className="text-neutral-600">Typical cost:</span>
+                        <span className="font-semibold text-primary-700">
+                          {property.costRange}
+                        </span>
+                      </div>
+                    </CardBody>
+
+                    <CardFooter align="left" className="mt-auto">
+                      <Link href={`/property-types/${property.slug}`} className="w-full">
+                        <Button
+                          variant="primary"
+                          fullWidth
+                          rightIcon={<ArrowRight className="w-4 h-4" />}
+                        >
+                          View Guide
+                        </Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Flats & HMOs */}
+          <div>
+            <h2 className="text-2xl font-bold text-primary-800 mb-2">
+              Flats & HMOs
+            </h2>
+            <p className="text-neutral-600 mb-6">
+              Purpose-built and converted flats, plus Houses in Multiple Occupation with their unique compliance considerations.
+            </p>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {flatsAndHMOs.map((property) => {
+                const Icon = property.icon;
+                return (
+                  <Card
+                    key={property.slug}
+                    as="article"
+                    hoverable
+                    className="flex flex-col h-full"
+                  >
+                    <CardBody className="flex-1">
+                      {/* Header with Icon */}
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-success-100 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-success-700" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-bold text-primary-800 mb-1">
+                            {property.title}
+                          </h3>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-neutral-600">Typical EPC:</span>
+                            <EPCRatingBadge rating={property.typicalStartingRating} size="sm" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-neutral-600 text-sm mb-4">{property.description}</p>
+
+                      {/* Key Challenge */}
+                      <div className="mb-4 p-3 rounded-lg bg-warning-50 border border-warning-200">
+                        <p className="text-sm text-warning-800">
+                          <span className="font-semibold">Key Challenge:</span>{' '}
+                          {property.keyChallenge}
+                        </p>
+                      </div>
+
+                      {/* Cost Range */}
+                      <div className="flex items-center gap-2 text-sm">
+                        <PoundSterling className="w-4 h-4 text-neutral-500" />
+                        <span className="text-neutral-600">Typical cost:</span>
+                        <span className="font-semibold text-primary-700">
+                          {property.costRange}
+                        </span>
+                      </div>
+                    </CardBody>
+
+                    <CardFooter align="left" className="mt-auto">
+                      <Link href={`/property-types/${property.slug}`} className="w-full">
+                        <Button
+                          variant="primary"
+                          fullWidth
+                          rightIcon={<ArrowRight className="w-4 h-4" />}
+                        >
+                          View Guide
+                        </Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </Container>
       </Section>
@@ -262,8 +525,6 @@ export default function PropertyTypesPage() {
               upgradeComplexity: 'Upgrade Complexity',
               typicalCost: 'Typical Cost to C',
               costCapLikely: 'Cost Cap Exemption Likely',
-              planningRestrictions: 'Planning Restrictions Common',
-              leaseholdConsent: 'Leasehold Consent Required',
             }}
             options={[
               {
@@ -275,8 +536,28 @@ export default function PropertyTypesPage() {
                   upgradeComplexity: 'High',
                   typicalCost: '8,000 - 30,000',
                   costCapLikely: true,
-                  planningRestrictions: true,
-                  leaseholdConsent: false,
+                },
+              },
+              {
+                name: 'Edwardian House',
+                features: {
+                  typicalEpc: 'E (35-55)',
+                  wallType: 'Solid/early cavity',
+                  cavityInsulation: false,
+                  upgradeComplexity: 'High',
+                  typicalCost: '7,000 - 25,000',
+                  costCapLikely: true,
+                },
+              },
+              {
+                name: 'Pre-1919 Semi',
+                features: {
+                  typicalEpc: 'E (32-52)',
+                  wallType: 'Solid brick',
+                  cavityInsulation: false,
+                  upgradeComplexity: 'High',
+                  typicalCost: '7,500 - 28,000',
+                  costCapLikely: true,
                 },
               },
               {
@@ -289,8 +570,39 @@ export default function PropertyTypesPage() {
                   upgradeComplexity: 'Medium',
                   typicalCost: '2,000 - 15,000',
                   costCapLikely: false,
-                  planningRestrictions: false,
-                  leaseholdConsent: false,
+                },
+              },
+              {
+                name: '1950s House',
+                features: {
+                  typicalEpc: 'D (48-62)',
+                  wallType: 'Cavity (various)',
+                  cavityInsulation: true,
+                  upgradeComplexity: 'Medium',
+                  typicalCost: '2,500 - 12,000',
+                  costCapLikely: false,
+                },
+              },
+              {
+                name: '1960s-1970s House',
+                features: {
+                  typicalEpc: 'D (50-68)',
+                  wallType: 'Cavity (unfilled)',
+                  cavityInsulation: true,
+                  upgradeComplexity: 'Low-Medium',
+                  typicalCost: '2,000 - 10,000',
+                  costCapLikely: false,
+                },
+              },
+              {
+                name: '1980s-1990s House',
+                features: {
+                  typicalEpc: 'D (55-72)',
+                  wallType: 'Insulated cavity',
+                  cavityInsulation: true,
+                  upgradeComplexity: 'Low',
+                  typicalCost: '1,500 - 8,000',
+                  costCapLikely: false,
                 },
               },
               {
@@ -302,8 +614,28 @@ export default function PropertyTypesPage() {
                   upgradeComplexity: 'Low-Medium',
                   typicalCost: '1,000 - 5,000',
                   costCapLikely: false,
-                  planningRestrictions: false,
-                  leaseholdConsent: true,
+                },
+              },
+              {
+                name: 'Converted Flat',
+                features: {
+                  typicalEpc: 'E (40-60)',
+                  wallType: 'Original building',
+                  cavityInsulation: null,
+                  upgradeComplexity: 'Medium-High',
+                  typicalCost: '3,000 - 12,000',
+                  costCapLikely: false,
+                },
+              },
+              {
+                name: 'HMO',
+                features: {
+                  typicalEpc: 'D (45-65)',
+                  wallType: 'Varies',
+                  cavityInsulation: null,
+                  upgradeComplexity: 'Medium-High',
+                  typicalCost: '4,000 - 18,000',
+                  costCapLikely: false,
                 },
               },
             ]}

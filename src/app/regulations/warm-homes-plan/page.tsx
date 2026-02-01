@@ -28,7 +28,7 @@ import {
   ArticleHeader,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -137,18 +137,17 @@ export default function WarmHomesPlanPage() {
                   has begun.
                 </p>
 
-                <ImagePlaceholder
-                  alt="Key highlights infographic from the Warm Homes Plan"
-                  description="Bold, shareable summary graphic distilling the Warm Homes Plan into four unforgettable numbers. Design as a '4-box' or 'at a glance' layout with each key stat given equal prominence: EPC C REQUIRED (with letter C styled as an EPC badge), OCTOBER 2030 (the deadline), £10,000 COST CAP (what you must spend before exemption), £30,000 MAX PENALTY (the consequence of non-compliance). Use high-contrast typography and the GreenLord colour palette. This should work as a standalone image for social sharing."
+                <GeneratedImage
+                  imageId="warm-homes-plan-hero"
+                  alt="Key highlights from the Warm Homes Plan policy document"
+                  description="A close-up photograph of the official Warm Homes Plan government policy document open on a desk, with key sections highlighted. Nearby sits a landlord's notebook with handwritten summary notes, a pen, and reading glasses, suggesting careful study of the new regulations."
                   width={800}
                   height={400}
                   priority
                   instructions={[
-                    'Four-quadrant or card-based layout - each stat gets equal visual weight',
-                    'Large, bold typography for the numbers - these are the headline facts',
-                    'EPC rating shown as styled badge (the official rainbow graphic if possible)',
-                    'Colour coding: deadline in neutral/blue, penalty in red/warning tones, cost cap in amber',
-                    'Include subtle GreenLord branding - this should be shareable on social media',
+                    "Capture the official, governmental nature of the policy document",
+                    "Include elements showing landlord engagement with the material",
+                    "Professional documentary style emphasising importance of the legislation"
                   ]}
                 />
               </section>

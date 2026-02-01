@@ -10,7 +10,6 @@ import {
   PoundSterling,
   Clock,
   CheckCircle,
-  Construction,
 } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
@@ -152,9 +151,10 @@ export default function ToolsPage() {
         'Boiler Upgrade Scheme (BUS) guide',
         'Warm Homes: Local Grant lookup',
         'Great British Insulation Scheme',
-        'Local authority schemes by postcode',
+        'Personalised next steps',
       ],
-      status: 'coming-soon',
+      status: 'available',
+      highlighted: true,
     },
     {
       title: 'Exemption Pathway Tool',
@@ -168,21 +168,23 @@ export default function ToolsPage() {
         'Exemption validity timeline',
         'Renewal planning support',
       ],
-      status: 'coming-soon',
+      status: 'available',
+      highlighted: false,
     },
     {
-      title: 'Upgrade Priority Recommender',
-      description: 'Get a prioritised improvement plan that maximises your EPC gains within your available budget.',
-      href: '/tools/priority-planner',
+      title: 'EPC Analyser',
+      description: 'Upload your existing EPC certificate to get detailed insights, improvement recommendations, and cost estimates.',
+      href: '/tools/epc-analyser',
       icon: TrendingUp,
       features: [
-        'Budget-constrained optimisation',
-        'Cost-per-EPC-point ranking',
-        'Cumulative progress tracking',
-        'Quick wins identification',
-        'Property-specific recommendations',
+        'Parse existing EPC data automatically',
+        'Identify recommended improvements',
+        'Estimate costs for each measure',
+        'Track progress toward EPC C',
+        'Compare before and after scenarios',
       ],
-      status: 'coming-soon',
+      status: 'available',
+      highlighted: false,
     },
   ];
 
@@ -299,31 +301,19 @@ export default function ToolsPage() {
         </Container>
       </Section>
 
-      {/* Coming Soon Tools */}
+      {/* All Tools Available */}
       <Section background="muted" padding="lg">
         <Container>
-          <div className="text-center mb-8">
+          <div className="text-center">
             <div className="inline-flex items-center gap-2 mb-4">
-              <Construction className="h-5 w-5 text-neutral-500" />
+              <CheckCircle className="h-5 w-5 text-success-500" />
               <h2 className="text-xl font-semibold text-neutral-700">
-                More Tools Coming Soon
+                All Tools Now Available
               </h2>
             </div>
             <p className="text-neutral-600 max-w-2xl mx-auto">
-              We are actively developing additional tools to help with grant eligibility checking, exemption pathway navigation, and upgrade prioritisation. Sign up for our newsletter to be notified when new tools launch.
+              Our complete suite of EPC compliance tools is now available to help UK landlords plan, budget, and navigate the path to EPC C compliance. All tools are free to use with no registration required.
             </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="secondary" size="md" className="px-4 py-2">
-              Grant Eligibility Checker - Q1 2026
-            </Badge>
-            <Badge variant="secondary" size="md" className="px-4 py-2">
-              Exemption Pathway Tool - Q2 2026
-            </Badge>
-            <Badge variant="secondary" size="md" className="px-4 py-2">
-              Upgrade Priority Planner - Q2 2026
-            </Badge>
           </div>
         </Container>
       </Section>

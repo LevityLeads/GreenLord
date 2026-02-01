@@ -27,7 +27,7 @@ import {
   TableOfContents,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -143,17 +143,16 @@ export default function RegulationsPage() {
                   Here are the dates that matter for landlords:
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="regulations-overview-timeline"
                   alt="Timeline infographic showing key EPC regulation dates from 2018 to 2030"
-                  description="Historical timeline infographic tracing the evolution of MEES regulations. Horizontal format flowing left to right through time. Mark five key milestones: April 2018 (MEES begins - F/G ban for new tenancies), April 2020 (extended to all tenancies), June 2025 (RdSAP 10 methodology launches), January 2026 (Warm Homes Plan confirms EPC C), and October 2030 (compliance deadline). Past events shown in muted tones; the 2030 deadline should be visually prominent as the endpoint. Include a 'today' marker showing current position on the timeline."
+                  description="A documentary-style photograph of an open planning diary on a landlord's desk, showing important dates circled and highlighted. Beside it lies an EPC certificate and government policy documents, with a calendar visible in the background marking October 2030 as the critical deadline."
                   width={800}
                   height={300}
                   instructions={[
-                    'Horizontal timeline with clear chronological flow',
-                    'Past milestones in muted/greyed styling; future in full colour',
-                    'October 2030 as a bold, prominent endpoint - larger marker, warning colour',
-                    'Brief label under each date explaining significance',
-                    '"You are here" or "Today" indicator for February 2026 position',
+                    "Focus on authentic paperwork and planning materials that landlords would actually use",
+                    "Include subtle visual cues indicating progression of time and approaching deadlines",
+                    "Maintain professional, serious tone appropriate for regulatory compliance content"
                   ]}
                 />
 
@@ -539,17 +538,16 @@ export default function RegulationsPage() {
                   recommendations. Some properties may see their ratings change under the new methodology.
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="regulations-rdsap-comparison"
                   alt="Comparison of RdSAP 9 versus RdSAP 10 ratings for a sample property"
-                  description="Technical comparison infographic showing the same 1930s semi-detached property assessed under both EPC methodologies. Left panel: RdSAP 9 result showing rating D (score 62), with breakdown of component scores. Right panel: RdSAP 10 result showing how scores shift - perhaps rating C (score 69) if electrically heated, or similar D if gas. Use annotation callouts to highlight what changed: updated carbon factors favour electricity, heat pump valuations improved, minor shifts in wall/window U-value calculations. The key message: same property, different methodology, potentially different result."
+                  description="A close-up photograph of two EPC certificates placed side by side on a wooden desk, one older and one newer, showing how the same property can receive different ratings under different assessment methodologies. A magnifying glass hovers over the key differences."
                   width={800}
                   height={400}
                   instructions={[
-                    'Side-by-side comparison layout: RdSAP 9 (left) vs RdSAP 10 (right)',
-                    'Same property shown in both: use a recognisable 1930s semi silhouette',
-                    'Show both overall score AND key component breakdowns for comparison',
-                    'Annotation callouts explaining why scores differ',
-                    'Colour-coded change indicators: green for improved, red for declined, grey for unchanged',
+                    "Show authentic-looking EPC documents with visible rating bands",
+                    "Include subtle differences in the certificates to suggest methodology changes",
+                    "Professional lighting emphasising the documentary comparison nature"
                   ]}
                 />
 

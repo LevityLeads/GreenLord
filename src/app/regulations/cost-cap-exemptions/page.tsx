@@ -29,7 +29,7 @@ import {
   ArticleHeader,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -188,18 +188,17 @@ export default function CostCapExemptionsPage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
-                  alt="Decision tree showing cost cap exemption eligibility"
-                  description="Cost cap decision flowchart guiding landlords through exemption eligibility. Start: 'Does your property meet EPC C?'. If YES → green endpoint 'Compliant - no action needed'. If NO → 'Get quotes for recommended improvements'. Branch: 'Total cost under £10,000?' If YES → amber 'Must proceed with improvements' (no exemption available). If NO → 'Spend up to £10,000 on most cost-effective measures' → 'Still below C after £10k spend?' If YES → green 'Register cost cap exemption'. Include cost callout: the £10,000 figure should be prominently displayed."
+                <GeneratedImage
+                  imageId="cost-cap-exemptions-hero"
+                  alt="Cost cap exemption decision-making documentation"
+                  description="A landlord's desk showing the financial planning side of EPC compliance. Visible are contractor quotes and invoices for energy efficiency improvements, a calculator, an EPC certificate, and the PRS Exemptions Register guidance document. The scene suggests careful cost tracking and exemption eligibility assessment."
                   width={800}
                   height={450}
                   priority
                   instructions={[
-                    'Decision flowchart with clear yes/no branches at each step',
-                    'The £10,000 threshold should be visually prominent - large, bold, highlighted',
-                    'Three endpoints: Compliant (green), Must improve (amber), Can exempt (green)',
-                    'Show that exemption requires spending UP TO the cap first',
-                    'Visual hierarchy guides reader through the logical flow',
+                    "Focus on authentic financial documentation and cost-related paperwork",
+                    "Include recognisable UK building contractor invoices or quotes",
+                    "Convey the careful record-keeping required for exemption claims"
                   ]}
                 />
               </section>

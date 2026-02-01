@@ -27,7 +27,7 @@ import {
   ArticleHeader,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -264,17 +264,16 @@ export default function EpcC2030DeadlinePage() {
                   between now and the deadline:
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="epc-c-2030-deadline-hero"
                   alt="Timeline showing key dates from January 2026 to October 2030 for EPC compliance"
-                  description="Horizontal timeline infographic spanning 2025-2030, designed to create urgency while showing the window of opportunity. Mark key milestones as pins or nodes along the line: June 2025 (RdSAP 10 launched - past, shown in grey), January 2026 (Warm Homes Plan published - recent past), 2026-2029 (shaded 'action window' zone in green/blue), and October 2030 (deadline - prominent red marker). Include a 'YOU ARE HERE' indicator for early 2026. The visual should show time running left-to-right, with the action window clearly marked as the optimal period. End with a hard stop at the deadline."
+                  description="A close-up of official documents and paperwork spread across a desk, with an EPC certificate prominently visible alongside a wall calendar turned to October 2030. A red circle marks the deadline date, with government policy documents and a landlord's planning notes visible nearby."
                   width={800}
                   height={350}
                   instructions={[
-                    'Horizontal timeline running left to right - time flows naturally',
-                    'Past events in muted grey; future events in full colour',
-                    'Shaded zone for 2026-2029 labelled as \"Recommended action window\"',
-                    '\"YOU ARE HERE\" marker with today\'s position clearly indicated',
-                    'October 2030 deadline as a bold endpoint - red or warning colour',
+                    "Emphasise the urgency and importance of the deadline through visual composition",
+                    "Include authentic-looking UK property compliance documents",
+                    "Create a sense of organised planning and preparation"
                   ]}
                   priority
                 />

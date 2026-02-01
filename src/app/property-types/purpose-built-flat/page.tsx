@@ -23,7 +23,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -87,18 +87,17 @@ export default function PurposeBuiltFlatPage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="purpose-built-flat-exterior"
                 alt="Purpose-built flat block showing typical 1960s and modern examples"
-                description="Diptych or split-composition photography contrasting two eras of UK flat construction. LEFT: A 1960s/70s low-rise block - typically 3-4 storeys in brown or red brick, with smaller windows, concrete balconies, and utilitarian design. RIGHT: A contemporary development from the 2000s-2020s - larger windows with slim aluminium frames, cladding panels, private balconies, possibly some architectural flair. Both should feel residential and rental-appropriate rather than luxury. The juxtaposition tells the story: this guide covers the full spectrum."
+                description="A composite image showing the range of purpose-built flats in the UK rental market. On the left, a typical 1960s low-rise brick flat block of 3-4 storeys with characteristic small windows and shared entrance. On the right, a modern purpose-built development with larger windows, balconies, and contemporary cladding. Morning light illuminates both buildings, demonstrating the variety of flat types landlords may encounter when planning EPC improvements."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Diptych composition: two distinct photographs side by side or creative split',
-                  'Left block: post-war/1960s aesthetic - functional, brick, modest windows',
-                  'Right block: contemporary build - larger glazing, mixed materials, modern design',
-                  'Both should look like rental stock: well-maintained but not premium',
-                  'Consistent lighting tone across both images for cohesive composition',
+                  'Show two contrasting purpose-built flat blocks side by side',
+                  'Left: 1960s/70s low-rise brick block (3-4 storeys); Right: modern block with larger windows',
+                  'Morning light, both looking like typical UK rental properties',
                 ]}
               />
 
@@ -706,17 +705,16 @@ export default function PurposeBuiltFlatPage() {
                   </p>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="purpose-built-flat-secondary-glazing"
                   alt="Secondary glazing installation in a purpose-built flat"
-                  description="Interior product photography showing secondary glazing in situ. Capture a window from inside a modern flat - you should see both the original outer window and the secondary glazing panel mounted inside the reveal. The gap between them (typically 100-150mm) should be clearly visible. Show the fixing system: magnetic catches, discrete hinges, or sliding tracks. The secondary unit should look sleek and professional, not DIY. Frame the shot to show enough room context (wall, perhaps a radiator below) to demonstrate that this is a liveable, attractive solution."
+                  description="An interior view of secondary glazing installed in a purpose-built flat, photographed from inside the living room. The image clearly shows the secondary glazing panel sitting on the inside of the window frame, with a visible gap between the original single-glazed window and the new secondary unit. The magnetic fixing mechanism allows the panel to be removed for cleaning, while the installation looks neat and unobtrusive within the modern flat interior with natural daylight streaming through."
                   width={800}
                   height={400}
                   instructions={[
-                    'Interior photography with product focus - the secondary glazing is the hero',
-                    'Show the air gap between original and secondary glazing (key for understanding)',
-                    'Visible fixing mechanism: hinges for opening, or magnetic strips for removal',
-                    'Flat interior context: neutral decor, good daylight through the window',
-                    'Emphasise the unobtrusive, quality finish - this is a premium solution',
+                    'Show secondary glazing from inside a flat with clear gap between original and secondary panel',
+                    'Demonstrate the fixing mechanism (magnetic, hinged, or sliding)',
+                    'Include realistic flat interior with natural lighting, looking neat and unobtrusive',
                   ]}
                 />
 
@@ -888,17 +886,16 @@ export default function PurposeBuiltFlatPage() {
                   </CardBody>
                 </Card>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="purpose-built-flat-improvement-options"
                   alt="Typical purpose-built flat EPC improvement options"
-                  description="Decision-matrix infographic tailored to flat landlords. Create a two-column layout: LEFT column 'No Consent Needed' in green tones (LED lighting, smart controls, draught-proofing, cylinder jacket); RIGHT column 'Consent Usually Required' in amber/orange tones (window replacement, heating system changes, wall insulation). Each improvement shows an icon, points gain (+2, +4 etc), and cost range. A visual callout emphasises the key message: 'Many flats reach C using only the left column'. The design should feel practical and decision-enabling."
+                  description="An infographic displaying EPC improvement options for purpose-built flats, organised into two columns. The left column shows improvements requiring no consent: LED lighting, smart thermostat, draught-proofing, and secondary glazing, with point gains and costs for each. The right column shows consent-required options: window replacement, boiler upgrade, and internal wall insulation. Icons represent each improvement type, with GreenLord green brand colours emphasising that many flats can achieve compliance using only the no-consent options."
                   width={800}
                   height={350}
                   instructions={[
-                    'Two-column layout: green zone (no consent) vs amber zone (consent needed)',
-                    'Icon set for each improvement type: lightbulb, thermostat, window, radiator, etc.',
-                    'Clear data per item: name, points gained, cost range',
-                    'Callout box or highlight showing most flats only need no-consent measures',
-                    'Clean, modern infographic style - scannable at a glance',
+                    'Create two columns: No Consent Needed vs Consent Required',
+                    'Show improvements with their point gains, costs, and representative icons',
+                    'Use GreenLord green brand colours, highlighting that no-consent options are often sufficient',
                   ]}
                 />
               </section>

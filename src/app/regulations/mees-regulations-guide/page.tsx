@@ -30,7 +30,7 @@ import {
   ArticleHeader,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -130,17 +130,16 @@ export default function MEESRegulationsGuidePage() {
                   has been registered.
                 </p>
 
-                <ImagePlaceholder
-                  alt="MEES compliance flowchart showing decision process for landlords"
-                  description="Decision-tree flowchart guiding landlords through MEES compliance. Start with 'Do you have a valid EPC?' - if no, get one first. If yes, branch to 'Does it meet minimum standard? (Currently E, from 2030: C)'. Compliant path leads to green 'You can let the property' endpoint. Non-compliant path asks 'Can improvements achieve the standard?'. If yes under cost cap, proceed to improve. If no (or too expensive), register exemption. Use distinct visual styling for each path: green for compliant, amber for exemption route, red for non-compliant without action."
+                <GeneratedImage
+                  imageId="mees-guide-hero"
+                  alt="MEES compliance documentation and decision-making process"
+                  description="A landlord's hands holding property documents and reviewing compliance requirements at a desk. Visible are official MEES guidance documents, an EPC certificate showing a rating band, and a checklist with some items ticked off, representing the decision-making process for regulatory compliance."
                   width={800}
                   height={450}
                   instructions={[
-                    'Flowchart with diamond decision nodes and rectangular action/outcome boxes',
-                    'Clear START point and multiple END points (compliant, exempt, non-compliant)',
-                    'Green path: meets standard, can let legally',
-                    'Amber path: exemption route with required evidence',
-                    'Include current threshold (E) and 2030 threshold (C) in relevant decision box',
+                    "Capture the documentary feel of official compliance paperwork",
+                    "Show professional hands suggesting an active landlord reviewing materials",
+                    "Include recognisable UK property documentation elements"
                   ]}
                   priority
                 />

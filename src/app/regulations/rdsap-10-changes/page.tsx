@@ -29,7 +29,7 @@ import {
   ArticleHeader,
   RelatedContentCard,
   SourceCitation,
-  ImagePlaceholder,
+  GeneratedImage,
   Breadcrumbs
 } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -285,18 +285,17 @@ export default function RdSAP10ChangesPage() {
                   its heating system.
                 </p>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="rdsap-10-changes-hero"
                   alt="Comparison of property ratings under RdSAP 9 versus RdSAP 10"
-                  description="Detailed methodology comparison showing a 1930s semi-detached rated under both systems. Create a split or tabbed layout with the property silhouette centred between two assessment panels. LEFT (RdSAP 9): Overall score 62, rating D, with component breakdown (walls, roof, heating, etc.). RIGHT (RdSAP 10): Same property now scores 65, still D but closer to C. Use delta indicators (▲+3, ▼-1) beside each component to show what shifted. Highlight the biggest movers: carbon factors, heating system valuation, solar PV credit. The visual should educate: 'same bricks and mortar, different calculation, different result'."
+                  description="An energy assessor's clipboard and tablet showing EPC assessment data, placed on a table inside a typical 1930s semi-detached property. Two EPC certificates are visible side by side, demonstrating how the same property features can result in different ratings under different assessment methodologies."
                   width={800}
                   height={400}
                   priority
                   instructions={[
-                    'Central property illustration with two flanking assessment panels',
-                    'Each panel shows: overall score, rating band, component breakdown table',
-                    'Delta indicators (▲▼) showing change direction for each component',
-                    'Callout annotations explaining WHY key components changed',
-                    'Colour coding: green for improved scores, red for declined, grey for static',
+                    "Show the technical assessment context with professional equipment",
+                    "Include authentic British property interior elements in background",
+                    "Emphasise the comparative nature of methodology changes"
                   ]}
                 />
 

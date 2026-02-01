@@ -23,7 +23,7 @@ import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { ComparisonTable } from '@/components/content/ComparisonTable';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content/GeneratedImage';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
@@ -85,18 +85,19 @@ export default function VictorianTerracePage() {
               />
 
               {/* Hero Image */}
-              <ImagePlaceholder
+              <GeneratedImage
+                imageId="victorian-terrace-hero"
                 alt="Row of Victorian terrace houses in a typical UK street"
-                description="Architectural street photography of a quintessential Victorian terrace row. Shoot from a slight angle to capture the rhythmic repetition of bay windows receding into perspective. Golden hour or overcast light works best - harsh midday shadows obscure the ornate brickwork details. The street should feel residential and lived-in: perhaps a bicycle locked to railings, potted plants on windowsills. Avoid sterile estate-agent perfection."
+                description="A photograph of a traditional Victorian terrace street showing the characteristic features: bay windows, tall sash windows, decorative brickwork, chimneys, and slate roofs. The image should show the uniform row of houses that typifies Victorian terrace development."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Architectural photography approach - strong composition and perspective',
-                  'Capture period details: decorative corbels, sash windows, chimney stacks, slate roofs',
-                  'Soft, even lighting preferred; golden hour adds warmth without harsh shadows',
-                  'Signs of life welcome: window boxes, painted doors, but no identifiable people',
-                  'Focus plane on nearest properties; gentle depth fall-off along the row',
+                  'Show a genuine UK Victorian terrace street, ideally in good condition',
+                  'Capture characteristic features: bay windows, sash windows, decorative details',
+                  'Daylight conditions, showing the full facade',
+                  'Avoid showing house numbers or identifiable personal information',
+                  'A mix of well-maintained properties demonstrates the housing stock',
                 ]}
               />
 
@@ -198,17 +199,18 @@ export default function VictorianTerracePage() {
                   </Card>
                 </div>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="victorian-terrace-wall-cross-section"
                   alt="Cross-section diagram showing Victorian terrace solid wall construction"
-                  description="Technical cutaway illustration in a clean, modern architectural style. Slice through a Victorian external wall to reveal its layers: 9-inch solid brick, lime mortar joints, internal lime plaster on lath. Where the wall meets the floor, show suspended timber joists resting on wall plates, with the void beneath and airbricks for ventilation. Use a limited colour palette with accent colours for heat-loss arrows escaping through the uninsulated wall."
+                  description="A technical illustration showing a cross-section of a typical Victorian terrace wall, clearly labelling the solid brick construction, internal plaster, and the absence of any cavity. Should also show the typical floor junction and how the suspended timber floor connects to the walls."
                   width={800}
                   height={400}
                   instructions={[
-                    'Architectural illustration style: precise linework, isometric or section view',
-                    'Label all components with clean sans-serif typography and leader lines',
-                    'Include dimension annotations: 225mm (9\") wall thickness',
-                    'Heat-loss arrows in warm orange/red flowing outward through brickwork',
-                    'Muted material colours: warm brick tone, cream plaster, timber brown',
+                    'Use a clean, technical illustration style',
+                    'Clearly label: solid brick, internal plaster, lime mortar, no cavity',
+                    'Show the wall-floor junction with suspended timber floor',
+                    'Include measurements where helpful (9" wall thickness)',
+                    'Consider showing heat loss arrows to illustrate the problem',
                   ]}
                   className="mt-8"
                 />
@@ -594,17 +596,18 @@ export default function VictorianTerracePage() {
                   footerNote="Costs vary significantly by property size, access, and specification. Internal insulation is usually the only option for terraces in conservation areas."
                 />
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="victorian-terrace-iwi-before-after"
                   alt="Before and after internal wall insulation installation in a Victorian terrace room"
-                  description="Split-screen comparison photography showing identical room angles before and after internal wall insulation. LEFT: Original room with characterful imperfections - perhaps slightly uneven plaster, original picture rail and cornice, deep skirting boards. RIGHT: Same view post-insulation - visibly reduced room depth (place identical furniture piece to emphasise), new smooth walls, sympathetically recreated or simplified mouldings. Consistent lighting across both shots."
+                  description="A side-by-side comparison showing a Victorian terrace room before and after internal wall insulation. The before image should show the bare brick or plaster wall, while the after shows the finished insulated wall with new plasterboard and skirting. Both should show how the room proportions are affected."
                   width={800}
                   height={400}
                   instructions={[
-                    'Matched photography: identical camera position, lens, and lighting for both shots',
-                    'Include a fixed reference point (fireplace, window, or placed furniture) to show depth loss',
-                    'Before: celebrate original features even if imperfect - this builds authenticity',
-                    'After: show quality finish but acknowledge the trade-off of lost space',
-                    'Consider split-screen or slider-style composition for direct comparison',
+                    'Show the same room angle in both images',
+                    'Before: original walls, possibly with original features',
+                    'After: smooth finished wall with new skirting boards',
+                    'Include a reference object to show the 50-100mm depth lost',
+                    'Show how original features like cornices are handled',
                   ]}
                   className="mt-8"
                 />
@@ -732,17 +735,18 @@ export default function VictorianTerracePage() {
                   </CardBody>
                 </Card>
 
-                <ImagePlaceholder
+                <GeneratedImage
+                  imageId="victorian-terrace-epc-comparison"
                   alt="EPC certificate comparison showing before and after improvement"
-                  description="Document-style graphic mocking up two official EPC certificates in a before/after layout. Replicate the authentic GOV.UK EPC format with the distinctive rainbow energy scale. Left certificate shows an E rating (score 42) with the indicator arrow in the orange-red zone. Right certificate shows a C rating (score 71) with the arrow now in the green zone. Add subtle design elements - perhaps a large curved arrow between them or a 'transformation' visual treatment - to emphasise the positive journey."
+                  description="A mock-up or real example showing two EPC certificates side by side - the original E-rated certificate on the left and the improved C-rated certificate on the right. The comparison should highlight the score improvement from 42 to 71 points."
                   width={800}
                   height={350}
                   instructions={[
-                    'Replicate official EPC certificate design accurately for credibility',
-                    'Left (before): E rating, 42 points - emphasise the unfavourable position',
-                    'Right (after): C rating, 71 points - the arrow now sits comfortably in green',
-                    'Add visual storytelling: arrow, timeline, or progress indicator between certificates',
-                    'Consider angled/overlapping layout rather than rigid side-by-side for visual interest',
+                    'Show the official EPC certificate format',
+                    'Left side: E rating, 42 points, red/orange energy bar',
+                    'Right side: C rating, 71 points, green energy bar',
+                    'Highlight the improvement visually with arrows or annotations',
+                    'Ensure format matches current GOV.UK EPC certificate design',
                   ]}
                 />
               </section>

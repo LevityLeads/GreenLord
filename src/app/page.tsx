@@ -19,7 +19,7 @@ import { Button } from '@/components/ui';
 import { Card, CardBody, CardTitle, CardDescription } from '@/components/ui';
 import { Badge } from '@/components/ui';
 import { Container, Section } from '@/components/layout';
-import { KeyFactBox, ImagePlaceholder, RelatedContentCard } from '@/components/content';
+import { KeyFactBox, GeneratedImage, RelatedContentCard } from '@/components/content';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
 import { daysUntilDeadline, formatCurrency, formatNumber } from '@/lib/utils';
 
@@ -81,19 +81,17 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:block">
-              <ImagePlaceholder
-                id="homepage-hero-landlord"
-                alt="Professional landlord reviewing property documents with EPC certificate visible"
-                description="Capture a candid, documentary-style photograph of a property investor at work. Frame a middle-aged professional seated at their kitchen table or home office, papers spread before them, with an EPC certificate prominently placed in the foreground. The scene should feel authentic and unposed - natural window light, lived-in surroundings, perhaps a mug of tea nearby. This is someone taking practical steps, not posing for a corporate shoot."
+              <GeneratedImage
+                imageId="homepage-hero-landlord"
+                alt="Professional landlord reviewing EPC documents in home office"
+                description="A candid moment capturing a middle-aged British property landlord sat at their kitchen table on a weekday morning, reviewing an Energy Performance Certificate. Morning light streams through a nearby window, illuminating scattered paperwork and a laptop showing property listings. The landlord wears smart-casual clothes and reading glasses, pen in hand, with a thoughtful expression as they examine the EPC rating chart. A mug of tea sits nearby. The kitchen has typical British details - a kettle, tiled splashback, wooden cabinets."
                 width={600}
                 height={500}
                 priority
                 instructions={[
-                  'Documentary photography style - authentic, not staged or stock-like',
-                  'Diverse representation: any ethnicity, gender; age 40s-60s feels credible',
-                  'EPC certificate must be legible with A-G colour bands visible',
-                  'Warm ambient lighting from windows; avoid flash or studio feel',
-                  'Include contextual props: reading glasses, pen, calculator, property listings',
+                  'Focus on the authentic, relatable moment of a real person dealing with property paperwork',
+                  'The EPC document should be partially visible but not the main focus - this is about the human experience',
+                  'Capture the slight stress and concentration of someone figuring out compliance requirements',
                 ]}
               />
             </div>
@@ -335,18 +333,18 @@ export default function HomePage() {
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <ImagePlaceholder
-                id="homepage-author-headshot"
+              <GeneratedImage
+                imageId="homepage-author-headshot"
                 alt="James Crawford - Property Compliance Specialist"
-                description="Professional headshot with personality. Capture a confident but approachable industry expert - someone you'd trust to give you straight answers. Slight smile, direct eye contact, shot against a clean but not sterile background. Think 'trusted advisor' rather than 'corporate executive'. Smart-casual attire suggests expertise without stuffiness."
+                description="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context."
                 width={400}
                 height={400}
                 instructions={[
-                  'Editorial headshot style - more personality than passport photo',
-                  'Shallow depth of field; subject sharp, background softly blurred',
-                  'Natural or mixed lighting; avoid flat corporate lighting',
-                  'Smart casual: open-collar shirt or casual blazer works well',
-                  'Expression: genuine warmth, perhaps mid-conversation',
+                  'Professional headshot style, shoulders and head visible',
+                  'Neutral or office background',
+                  'Smart casual or business attire',
+                  'Warm, approachable expression',
+                  'Good lighting, professional quality',
                 ]}
               />
             </div>

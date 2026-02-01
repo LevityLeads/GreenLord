@@ -12,7 +12,7 @@ import { InfoBox } from '@/components/content/InfoBox';
 import { CostTable } from '@/components/content/CostTable';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content';
 import { ArticleHeader } from '@/components/content/ArticleHeader';
 import { Button } from '@/components/ui/Button';
 import { SITE_CONFIG, KEY_DATES } from '@/lib/constants';
@@ -97,18 +97,17 @@ export default function CostsPillarPage() {
                 subtitle="Everything you need to know about the costs of improving your rental property's EPC rating to meet the 2030 deadline."
               />
 
-              {/* Hero Image Placeholder */}
-              <ImagePlaceholder
-                alt="Professional assessor showing cost breakdown on clipboard to landlord"
-                description="Documentary-style photograph capturing a genuine consultation moment. A uniformed energy assessor or contractor (identifiable by branded workwear or ID lanyard) stands with a homeowner/landlord in a real property setting - perhaps a kitchen or hallway. They're reviewing a printed quote or tablet screen together. The assessor is explaining, gesturing at figures; the landlord is engaged, perhaps holding reading glasses or leaning in. The mood is collaborative and transparent - this is an honest conversation about costs, not a sales pitch."
+              {/* Hero Image */}
+              <GeneratedImage
+                imageId="costs-overview-hero"
+                alt="Professional contractor discussing EPC upgrade costs with landlord in a British home"
+                description="A tradesperson in work clothing shows a cost estimate on a clipboard to a homeowner in the kitchen of a typical British semi-detached house. Paperwork is spread on the kitchen table with figures visible, while the contractor points to specific line items. The scene feels consultative and professional, with natural daylight coming through the window."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Documentary/candid style - capture a real conversation, not posed stock imagery',
-                  'Two people: identifiable professional (workwear, lanyard) + homeowner/landlord',
-                  'Visible document or tablet with cost figures - the content is the focus',
-                  'Residential location context: kitchen worktop, hallway, or living room',
-                  'Warm, natural lighting; authentic and reassuring atmosphere',
+                  'Documentary style - authentic interaction between tradesperson and homeowner',
+                  'British kitchen setting with typical UK fixtures and finishes',
+                  'Visible cost documentation on clipboard or tablet',
                 ]}
                 priority
               />
@@ -413,18 +412,17 @@ export default function CostsPillarPage() {
                 </section>
               </section>
 
-              {/* Cost Infographic Placeholder */}
-              <ImagePlaceholder
-                alt="Infographic comparing upgrade costs by property type"
-                description="Data visualisation comparing EPC upgrade costs across property types. Use a horizontal bar chart or range chart format, with property types listed vertically (Victorian Terrace, 1930s Semi, Purpose-Built Flat, etc.) and cost ranges shown horizontally. Each property type should have a bar showing the low-to-high range (e.g., £8,000-£25,000 for Victorian). Add small property silhouette icons beside each label for visual recognition. Colour-code from green (cheapest/easiest) through amber to red (most expensive/complex). The chart should tell a clear story: older solid-wall properties cost more."
+              {/* Property Types Cost Comparison Image */}
+              <GeneratedImage
+                imageId="costs-property-types-comparison"
+                alt="Different British property types showing typical EPC upgrade costs"
+                description="A row of different British residential property types photographed from the street - a Victorian terrace, a 1930s semi-detached, a 1960s property, and a purpose-built flat block. Each property has visible energy efficiency features like double glazing or new boiler flues. The properties represent the range of housing stock landlords typically own, from older period homes to newer builds."
                 width={1200}
                 height={800}
                 instructions={[
-                  'Data visualisation style: clean, readable, professional chart',
-                  'Horizontal range bars showing min-max costs for each property type',
-                  'Property icons or silhouettes for visual identification',
-                  'Colour gradient from green (low cost) to red (high cost)',
-                  'All £ amounts clearly labelled; include total cost range summary',
+                  'Authentic British streetscape showing variety of housing ages and styles',
+                  'Natural daylight, overcast British weather acceptable',
+                  'Properties should look well-maintained but not newly built',
                 ]}
                 priority
               />
@@ -566,18 +564,17 @@ export default function CostsPillarPage() {
                 </InfoBox>
               </section>
 
-              {/* Cost Effectiveness Chart Placeholder */}
-              <ImagePlaceholder
-                alt="Chart showing cost versus EPC point gain for common improvements"
-                description="Value-for-money chart plotting common EPC improvements by cost-effectiveness. Create a scatter plot or bubble chart with total cost on the X-axis, EPC points gained on the Y-axis, and bubble size representing 'value' (points per pound). Alternatively, use a sorted bar chart showing 'cost per EPC point' with the best value (lowest £/point) at the top. Label each improvement clearly. Colour-code zones: green zone for 'Best Value' (loft insulation, cylinder jacket), amber for 'Good Value' (cavity walls, boiler), and red zone for 'Lower Value' (external wall insulation, triple glazing). The chart should instantly answer: 'Where should I spend my money first?'"
+              {/* Cost Effective Improvements Image */}
+              <GeneratedImage
+                imageId="costs-effective-improvements"
+                alt="Tradesperson installing loft insulation in a British home"
+                description="A professional installer in branded workwear carefully lays mineral wool loft insulation between joists in the loft space of a British home. The workspace is clean and organised, with rolls of insulation material stacked nearby. Sunlight streams through a velux window, illuminating the work area. This represents one of the most cost-effective EPC improvements available to landlords."
                 width={1200}
                 height={700}
                 instructions={[
-                  'Cost-effectiveness chart: either scatter plot or ranked bar chart',
-                  'Clear axis labels: use £ per EPC point for easy comparison',
-                  'Zone highlighting: green (best value), amber (good), red (lower value)',
-                  'Label each improvement with name and key metrics',
-                  'Visual hierarchy guides the eye to best-value options first',
+                  'Professional installer at work in realistic loft space',
+                  'High-quality insulation materials clearly visible',
+                  'Clean, safe working environment with appropriate PPE',
                 ]}
               />
 

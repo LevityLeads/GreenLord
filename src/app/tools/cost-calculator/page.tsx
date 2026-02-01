@@ -25,7 +25,7 @@ import { WarningBox } from '@/components/content/WarningBox';
 import { TipBox } from '@/components/content/TipBox';
 import { InfoBox } from '@/components/content/InfoBox';
 import { RelatedContentCard } from '@/components/content/RelatedContentCard';
-import { ImagePlaceholder } from '@/components/content/ImagePlaceholder';
+import { GeneratedImage } from '@/components/content';
 import { SourceCitation } from '@/components/content/SourceCitation';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -116,18 +116,17 @@ export default function CostCalculatorPage() {
                 </KeyFactBox>
               </div>
 
-              {/* Hero Image Placeholder */}
-              <ImagePlaceholder
-                alt="Calculator and planning tools for EPC upgrades"
-                description="Overhead flat-lay photography of EPC planning in progress. Arrange on a clean desk surface: a tablet or laptop showing a calculator interface with cost figures, printed EPC certificate with visible rating scale, a notepad with handwritten improvement notes, and perhaps a calculator or smartphone. Scattered but purposeful - this is active planning, not chaos. Include a coffee cup or plant for warmth. The composition should invite the user into the planning process: 'this could be you getting organised'."
+              {/* Hero Image */}
+              <GeneratedImage
+                imageId="cost-calculator-hero"
+                alt="Landlord using a laptop to calculate EPC upgrade costs"
+                description="A focused landlord sits at a clean home office desk, reviewing EPC upgrade cost estimates on a laptop. Papers with property details and a calculator sit nearby. The scene captures the thoughtful decision-making moment of planning energy efficiency investments."
                 width={1200}
                 height={500}
                 instructions={[
-                  'Overhead/flat-lay composition on clean desk or table surface',
-                  'Digital device showing calculator UI - cost figures visible on screen',
-                  'EPC certificate partially visible with rating scale showing',
-                  'Analogue planning elements: notepad, pen, sticky notes with improvement ideas',
-                  'Lifestyle touches: coffee cup, plant, or glasses add warmth and authenticity',
+                  'Show a professional person using a laptop with visible spreadsheet or calculator interface',
+                  'Include subtle property-related context like documents or house keys on desk',
+                  'Warm, natural lighting suggesting a productive home office environment',
                 ]}
                 className="mb-8"
               />
@@ -173,18 +172,17 @@ export default function CostCalculatorPage() {
                 />
               </div>
 
-              {/* Screenshot Placeholder */}
-              <ImagePlaceholder
-                alt="Example calculator results showing cost breakdown"
-                description="UI screenshot or high-fidelity mockup of calculator results page. Show a complete results view for a sample 1930s semi: cost range summary at top (£2,500-£4,200), EPC journey visualisation (D → C with progress bar), and a prioritised improvements table listing each measure with its cost range, expected points gain, and cost-effectiveness ranking. Include a 'likely within cost cap' indicator. The design should match GreenLord's UI style and demonstrate the genuine value of using the tool - detailed, actionable, trustworthy data."
+              {/* Planning Image */}
+              <GeneratedImage
+                imageId="cost-calculator-planning"
+                alt="Property professional reviewing upgrade documents and estimates"
+                description="A property professional examines printed cost estimates and improvement recommendations at a meeting table. Multiple quotes and EPC documents are spread out, illustrating the thorough comparison process. The setting conveys careful financial planning and informed decision-making."
                 width={1200}
                 height={700}
                 instructions={[
-                  'UI mockup or annotated screenshot - not a photograph of a screen',
-                  'Show complete results: summary stats, visualisation, and detailed table',
-                  'Include realistic data for a sample property (1930s semi, rating D)',
-                  'EPC progress visualisation: before rating → target rating with bar/journey',
-                  'Match GreenLord brand styling: colours, typography, component design',
+                  'Show hands reviewing documents with visible cost figures and property details',
+                  'Include multiple printed sheets suggesting quote comparison',
+                  'Professional setting with good lighting, suggesting a serious planning session',
                 ]}
                 className="mb-12"
               />
