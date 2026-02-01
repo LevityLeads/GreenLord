@@ -100,14 +100,15 @@ export default function CostsPillarPage() {
               {/* Hero Image Placeholder */}
               <ImagePlaceholder
                 alt="Professional assessor showing cost breakdown on clipboard to landlord"
-                description="A professional energy assessor or contractor showing a detailed cost breakdown document to a landlord, ideally in a residential property setting. Should convey trust, expertise, and transparency about costs."
+                description="Documentary-style photograph capturing a genuine consultation moment. A uniformed energy assessor or contractor (identifiable by branded workwear or ID lanyard) stands with a homeowner/landlord in a real property setting - perhaps a kitchen or hallway. They're reviewing a printed quote or tablet screen together. The assessor is explaining, gesturing at figures; the landlord is engaged, perhaps holding reading glasses or leaning in. The mood is collaborative and transparent - this is an honest conversation about costs, not a sales pitch."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Professional setting with two people reviewing documents',
-                  'Show a clipboard or tablet with cost figures visible',
-                  'Residential property background (kitchen or living room)',
-                  'Natural lighting, professional but approachable tone',
+                  'Documentary/candid style - capture a real conversation, not posed stock imagery',
+                  'Two people: identifiable professional (workwear, lanyard) + homeowner/landlord',
+                  'Visible document or tablet with cost figures - the content is the focus',
+                  'Residential location context: kitchen worktop, hallway, or living room',
+                  'Warm, natural lighting; authentic and reassuring atmosphere',
                 ]}
                 priority
               />
@@ -415,15 +416,15 @@ export default function CostsPillarPage() {
               {/* Cost Infographic Placeholder */}
               <ImagePlaceholder
                 alt="Infographic comparing upgrade costs by property type"
-                description="A clear infographic showing typical total upgrade costs for different property types (Victorian terrace, 1930s semi, purpose-built flat, etc.) to reach EPC C. Bar chart or visual comparison format showing the range from lowest to highest cost property types."
+                description="Data visualisation comparing EPC upgrade costs across property types. Use a horizontal bar chart or range chart format, with property types listed vertically (Victorian Terrace, 1930s Semi, Purpose-Built Flat, etc.) and cost ranges shown horizontally. Each property type should have a bar showing the low-to-high range (e.g., £8,000-£25,000 for Victorian). Add small property silhouette icons beside each label for visual recognition. Colour-code from green (cheapest/easiest) through amber to red (most expensive/complex). The chart should tell a clear story: older solid-wall properties cost more."
                 width={1200}
                 height={800}
                 instructions={[
-                  'Clear visual comparison of 5-6 property types',
-                  'Show cost ranges (low to high) for each',
-                  'Use consistent colour coding',
-                  'Include property illustrations or icons',
-                  'Show £ amounts clearly labelled',
+                  'Data visualisation style: clean, readable, professional chart',
+                  'Horizontal range bars showing min-max costs for each property type',
+                  'Property icons or silhouettes for visual identification',
+                  'Colour gradient from green (low cost) to red (high cost)',
+                  'All £ amounts clearly labelled; include total cost range summary',
                 ]}
                 priority
               />
@@ -568,15 +569,15 @@ export default function CostsPillarPage() {
               {/* Cost Effectiveness Chart Placeholder */}
               <ImagePlaceholder
                 alt="Chart showing cost versus EPC point gain for common improvements"
-                description="A scatter plot or bar chart comparing common improvements by their cost-effectiveness (cost per EPC point gained). Should show quick wins like loft insulation at one end and expensive options like solid wall insulation at the other, making it easy to see which improvements offer best value."
+                description="Value-for-money chart plotting common EPC improvements by cost-effectiveness. Create a scatter plot or bubble chart with total cost on the X-axis, EPC points gained on the Y-axis, and bubble size representing 'value' (points per pound). Alternatively, use a sorted bar chart showing 'cost per EPC point' with the best value (lowest £/point) at the top. Label each improvement clearly. Colour-code zones: green zone for 'Best Value' (loft insulation, cylinder jacket), amber for 'Good Value' (cavity walls, boiler), and red zone for 'Lower Value' (external wall insulation, triple glazing). The chart should instantly answer: 'Where should I spend my money first?'"
                 width={1200}
                 height={700}
                 instructions={[
-                  'Clear axis labels: Cost (x-axis) and EPC Points (y-axis)',
-                  'Or: show cost per point gained as bars',
-                  'Highlight best value improvements in green',
-                  'Include 8-10 common improvements',
-                  'Make it easy to scan and understand at a glance',
+                  'Cost-effectiveness chart: either scatter plot or ranked bar chart',
+                  'Clear axis labels: use £ per EPC point for easy comparison',
+                  'Zone highlighting: green (best value), amber (good), red (lower value)',
+                  'Label each improvement with name and key metrics',
+                  'Visual hierarchy guides the eye to best-value options first',
                 ]}
               />
 

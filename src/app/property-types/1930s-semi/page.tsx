@@ -84,16 +84,16 @@ export default function ThirtiesSemiPage() {
               {/* Hero Image */}
               <ImagePlaceholder
                 alt="Typical 1930s semi-detached house showing characteristic features"
-                description="A photograph of a classic 1930s semi-detached house showing typical features: bay windows on ground and first floor, pebbledash or rendered finish, hipped roof, and small front garden. The image should show the archetypal style that most people would recognise."
+                description="Classic suburban architectural photography of the iconic 1930s semi-detached. Compose to show the full symmetry of the pair, with the characteristic curved or squared bay windows stacked on both floors. Capture the pebbledash or painted render, the hipped roof with original clay tiles, and that quintessential 1930s front garden with low wall and privet hedge. Aim for a sense of suburban calm - these houses are everywhere, and the viewer should immediately recognise their own or their tenant's home."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show a genuine UK 1930s semi in good condition',
-                  'Capture characteristic features: bay windows, pebbledash, hipped roof',
-                  'Daylight conditions, showing the full front facade',
-                  'Include the driveway/garden typical of these properties',
-                  'Avoid showing house numbers or identifiable personal information',
+                  'Suburban architectural photography: capture the paired symmetry of semis',
+                  'Feature the era\'s signatures: curved bays, pebbledash, herringbone paths',
+                  'Include front garden context: low brick wall, hedge, maybe a gravel drive',
+                  'Bright overcast sky ideal - avoids harsh shadows on textured render',
+                  'Well-maintained but not over-renovated: authenticity over perfection',
                 ]}
               />
 
@@ -405,15 +405,15 @@ export default function ThirtiesSemiPage() {
 
                 <ImagePlaceholder
                   alt="Diagram showing cavity wall insulation being injected into 1930s semi wall"
-                  description="A technical illustration showing a cross-section of a 1930s cavity wall during the insulation process. Show the drill holes in the outer brick layer, the injection gun, and the insulation material filling the cavity between the inner and outer leaves."
+                  description="Process illustration showing cavity wall insulation in action. Create an exploded or cutaway view of a 1930s wall section: outer brick leaf (110mm), clear air cavity (50mm), inner brick or blockwork leaf, plaster finish. Show the installation process - drill holes through the outer leaf in a grid pattern, an injection nozzle inserted, and insulation beads or foam expanding to fill the void. Use directional arrows to show the material spreading through the cavity. Consider a split view: left side empty cavity, right side filled."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show a clear cross-section of cavity wall construction',
-                    'Label: outer brick leaf, cavity (50mm), inner leaf, plaster',
-                    'Show injection holes and the spray gun injecting material',
-                    'Include insulation beads or foam filling the cavity',
-                    'Consider showing before/after in split image',
+                    'Technical illustration with process storytelling - show the installation in action',
+                    'Cutaway/exploded view revealing all wall layers clearly',
+                    'Label components: outer leaf (110mm), cavity (50mm), inner leaf, plaster',
+                    'Show EPS beads or foam as distinct particles/texture filling the void',
+                    'Include human element: hand on injection gun adds scale and context',
                   ]}
                 />
 
@@ -720,15 +720,15 @@ export default function ThirtiesSemiPage() {
 
                 <ImagePlaceholder
                   alt="Typical 1930s semi EPC improvement journey from D to C"
-                  description="An infographic showing the EPC improvement journey for a 1930s semi, with the starting rating, each improvement step, and the final rating. Should show the cumulative point gains and costs in a visually appealing timeline or stepped format."
+                  description="Infographic visualising the EPC upgrade journey as a rising staircase or progress bar. Start at D rating (58 points) at the bottom-left, then step upward through each improvement: cavity wall insulation (+10), loft top-up (+5), smart controls (+2), LED lighting (+1), reaching the C rating summit (76 points) at top-right. Each step should show the measure name, points gained, and cost. Use a visual metaphor of climbing toward the green zone. The overall feel should be optimistic - this is an achievable journey."
                   width={800}
                   height={350}
                   instructions={[
-                    'Create a clear visual timeline or stepped progression',
-                    'Show: Starting D (58) -> improvements -> Final C (76)',
-                    'Include cost for each step and point gains',
-                    'Use GreenLord brand colours',
-                    'Make it easy to follow at a glance',
+                    'Infographic style: clean, data-driven, uses visual metaphor (stairs, mountain, progress bar)',
+                    'Each step clearly labelled: improvement name, +X points, cost in £',
+                    'Colour gradient from orange/red (D rating) to green (C rating) as progress increases',
+                    'Include running total: show cumulative score at each stage',
+                    'Final total cost prominently displayed at journey\'s end: £1,670',
                   ]}
                 />
               </section>

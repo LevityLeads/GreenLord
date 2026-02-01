@@ -83,16 +83,16 @@ export default function HomePage() {
             <div className="hidden lg:block">
               <ImagePlaceholder
                 alt="Professional landlord reviewing property documents with EPC certificate visible"
-                description="A professional-looking landlord in their 40s-50s reviewing property documents at a desk. An EPC certificate with a visible rating scale is prominently displayed. The setting is a home office or study with property-related materials visible."
+                description="Capture a candid, documentary-style photograph of a property investor at work. Frame a middle-aged professional seated at their kitchen table or home office, papers spread before them, with an EPC certificate prominently placed in the foreground. The scene should feel authentic and unposed - natural window light, lived-in surroundings, perhaps a mug of tea nearby. This is someone taking practical steps, not posing for a corporate shoot."
                 width={600}
                 height={500}
                 priority
                 instructions={[
-                  'Show a realistic, professional UK landlord (diverse representation welcome)',
-                  'EPC certificate should be clearly visible with the A-G rating scale',
-                  'Include property documents, laptop, or tablet showing property details',
-                  'Warm, professional lighting - not stock photo style',
-                  'Could be a kitchen table or home office setting',
+                  'Documentary photography style - authentic, not staged or stock-like',
+                  'Diverse representation: any ethnicity, gender; age 40s-60s feels credible',
+                  'EPC certificate must be legible with A-G colour bands visible',
+                  'Warm ambient lighting from windows; avoid flash or studio feel',
+                  'Include contextual props: reading glasses, pen, calculator, property listings',
                 ]}
               />
             </div>
@@ -336,15 +336,15 @@ export default function HomePage() {
             <div className="order-2 lg:order-1">
               <ImagePlaceholder
                 alt="James Crawford - Property Compliance Specialist"
-                description="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context."
+                description="Professional headshot with personality. Capture a confident but approachable industry expert - someone you'd trust to give you straight answers. Slight smile, direct eye contact, shot against a clean but not sterile background. Think 'trusted advisor' rather than 'corporate executive'. Smart-casual attire suggests expertise without stuffiness."
                 width={400}
                 height={400}
                 instructions={[
-                  'Professional headshot style, shoulders and head visible',
-                  'Neutral or office background',
-                  'Smart casual or business attire',
-                  'Warm, approachable expression',
-                  'Good lighting, professional quality',
+                  'Editorial headshot style - more personality than passport photo',
+                  'Shallow depth of field; subject sharp, background softly blurred',
+                  'Natural or mixed lighting; avoid flat corporate lighting',
+                  'Smart casual: open-collar shirt or casual blazer works well',
+                  'Expression: genuine warmth, perhaps mid-conversation',
                 ]}
               />
             </div>

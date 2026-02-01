@@ -133,16 +133,16 @@ export default function PropertyTypesPage() {
         <Container>
           <ImagePlaceholder
             alt="Illustrated grid showing different UK property types including Victorian terrace, 1930s semi, and purpose-built flat"
-            description="A visually appealing illustrated grid or collage showing the three main property types covered in these guides. Each property type should be clearly distinguishable with characteristic architectural features. Victorian terrace with bay windows and chimneys, 1930s semi with typical semi-circular bay and pebbledash, and a purpose-built flat block."
+            description="Architectural illustration showcasing the three core UK property types as a triptych. Use a clean, vector-based illustration style with consistent linework and the GreenLord colour palette. LEFT: Victorian terrace - emphasise the tall proportions, ornate bay window, sash windows, chimney pots, and decorative brickwork patterns. CENTRE: 1930s semi-detached - show the paired symmetry, curved bay window, pebbledash texture, hipped roof with clay tiles. RIGHT: Purpose-built flat block - depict a low-rise 1960s/70s style with regular window pattern, concrete balconies, flat or shallow-pitched roof. Each building should be styled consistently, presented at similar scale, creating an 'at a glance' reference for visitors to identify their property type."
             width={1200}
             height={500}
             priority
             instructions={[
-              'Use a clean, modern illustration style consistent with the GreenLord brand',
-              'Show each property type with recognisable UK architectural features',
-              'Consider using a subtle colour-coding system matching EPC colours',
-              'Include small icons or labels for each property type',
-              'Ensure the image works well as a hero section visual',
+              'Consistent illustration style: clean vector art, subtle shadows, architectural precision',
+              'Three distinct buildings at similar scale - side by side or in a creative layout',
+              'Emphasise era-defining features: Victorian ornament, 1930s curves, 1960s utility',
+              'Brand colour palette; consider EPC-inspired colour accents per building',
+              'Works as hero image: balanced composition, text overlay friendly if needed',
             ]}
           />
         </Container>

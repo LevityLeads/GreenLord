@@ -266,15 +266,15 @@ export default function EpcC2030DeadlinePage() {
 
                 <ImagePlaceholder
                   alt="Timeline showing key dates from January 2026 to October 2030 for EPC compliance"
-                  description="A visual timeline with key milestones: January 2026 (Warm Homes Plan published), June 2025 (RdSAP 10 launched), throughout 2026-2029 (recommended action period), and October 2030 (compliance deadline). The timeline should emphasize that earlier action gives more options."
+                  description="Horizontal timeline infographic spanning 2025-2030, designed to create urgency while showing the window of opportunity. Mark key milestones as pins or nodes along the line: June 2025 (RdSAP 10 launched - past, shown in grey), January 2026 (Warm Homes Plan published - recent past), 2026-2029 (shaded 'action window' zone in green/blue), and October 2030 (deadline - prominent red marker). Include a 'YOU ARE HERE' indicator for early 2026. The visual should show time running left-to-right, with the action window clearly marked as the optimal period. End with a hard stop at the deadline."
                   width={800}
                   height={350}
                   instructions={[
-                    'Create a clean horizontal timeline design',
-                    'Use colour coding to show past events vs future deadlines',
-                    'Highlight the October 2030 deadline prominently',
-                    'Include a "You are here" marker for current date',
-                    'Show the recommended action window clearly',
+                    'Horizontal timeline running left to right - time flows naturally',
+                    'Past events in muted grey; future events in full colour',
+                    'Shaded zone for 2026-2029 labelled as \"Recommended action window\"',
+                    '\"YOU ARE HERE\" marker with today\'s position clearly indicated',
+                    'October 2030 deadline as a bold endpoint - red or warning colour',
                   ]}
                   priority
                 />

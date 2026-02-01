@@ -139,16 +139,16 @@ export default function WarmHomesPlanPage() {
 
                 <ImagePlaceholder
                   alt="Key highlights infographic from the Warm Homes Plan"
-                  description="A visual summary showing the key points from the Warm Homes Plan: EPC C by October 2030, GBP 10,000 cost cap, GBP 30,000 maximum penalty, applies to all tenancies. Designed as a quick-reference graphic."
+                  description="Bold, shareable summary graphic distilling the Warm Homes Plan into four unforgettable numbers. Design as a '4-box' or 'at a glance' layout with each key stat given equal prominence: EPC C REQUIRED (with letter C styled as an EPC badge), OCTOBER 2030 (the deadline), £10,000 COST CAP (what you must spend before exemption), £30,000 MAX PENALTY (the consequence of non-compliance). Use high-contrast typography and the GreenLord colour palette. This should work as a standalone image for social sharing."
                   width={800}
                   height={400}
                   priority
                   instructions={[
-                    'Create a clean, professional infographic style',
-                    'Highlight the four key numbers prominently',
-                    'Use GreenLord brand colours',
-                    'Include the date (October 2030) clearly',
-                    'Make it scannable at a glance',
+                    'Four-quadrant or card-based layout - each stat gets equal visual weight',
+                    'Large, bold typography for the numbers - these are the headline facts',
+                    'EPC rating shown as styled badge (the official rainbow graphic if possible)',
+                    'Colour coding: deadline in neutral/blue, penalty in red/warning tones, cost cap in amber',
+                    'Include subtle GreenLord branding - this should be shareable on social media',
                   ]}
                 />
               </section>

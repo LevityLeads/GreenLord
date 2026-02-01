@@ -89,16 +89,16 @@ export default function PurposeBuiltFlatPage() {
               {/* Hero Image */}
               <ImagePlaceholder
                 alt="Purpose-built flat block showing typical 1960s and modern examples"
-                description="A composite or split image showing two types of purpose-built flat blocks: a typical 1960s low-rise block with brick construction, and a more modern development. This illustrates the range of purpose-built flats covered by this guide."
+                description="Diptych or split-composition photography contrasting two eras of UK flat construction. LEFT: A 1960s/70s low-rise block - typically 3-4 storeys in brown or red brick, with smaller windows, concrete balconies, and utilitarian design. RIGHT: A contemporary development from the 2000s-2020s - larger windows with slim aluminium frames, cladding panels, private balconies, possibly some architectural flair. Both should feel residential and rental-appropriate rather than luxury. The juxtaposition tells the story: this guide covers the full spectrum."
                 width={800}
                 height={450}
                 priority
                 instructions={[
-                  'Show two contrasting purpose-built flat blocks',
-                  'Left side: 1960s/70s low-rise brick block (3-4 storeys)',
-                  'Right side: Modern purpose-built block with larger windows',
-                  'Both should look like typical UK rental properties',
-                  'Avoid showing identifiable building names or locations',
+                  'Diptych composition: two distinct photographs side by side or creative split',
+                  'Left block: post-war/1960s aesthetic - functional, brick, modest windows',
+                  'Right block: contemporary build - larger glazing, mixed materials, modern design',
+                  'Both should look like rental stock: well-maintained but not premium',
+                  'Consistent lighting tone across both images for cohesive composition',
                 ]}
               />
 
@@ -708,15 +708,15 @@ export default function PurposeBuiltFlatPage() {
 
                 <ImagePlaceholder
                   alt="Secondary glazing installation in a purpose-built flat"
-                  description="A photograph or diagram showing secondary glazing installed on the inside of an existing window in a flat. Should show how the secondary glazing panel sits on the inside of the window frame, with a clear gap between the original window and the secondary unit."
+                  description="Interior product photography showing secondary glazing in situ. Capture a window from inside a modern flat - you should see both the original outer window and the secondary glazing panel mounted inside the reveal. The gap between them (typically 100-150mm) should be clearly visible. Show the fixing system: magnetic catches, discrete hinges, or sliding tracks. The secondary unit should look sleek and professional, not DIY. Frame the shot to show enough room context (wall, perhaps a radiator below) to demonstrate that this is a liveable, attractive solution."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show secondary glazing from inside the room',
-                    'Clear distinction between original window and secondary panel',
-                    'Show the fixing mechanism (magnetic, hinged, or sliding)',
-                    'Include a realistic flat interior setting',
-                    'Demonstrate how it looks neat and unobtrusive',
+                    'Interior photography with product focus - the secondary glazing is the hero',
+                    'Show the air gap between original and secondary glazing (key for understanding)',
+                    'Visible fixing mechanism: hinges for opening, or magnetic strips for removal',
+                    'Flat interior context: neutral decor, good daylight through the window',
+                    'Emphasise the unobtrusive, quality finish - this is a premium solution',
                   ]}
                 />
 
@@ -890,15 +890,15 @@ export default function PurposeBuiltFlatPage() {
 
                 <ImagePlaceholder
                   alt="Typical purpose-built flat EPC improvement options"
-                  description="An infographic showing the range of EPC improvement options for purpose-built flats, organised by whether they require consent or not. Should show the typical point gains and costs for each option in a clear, visual format."
+                  description="Decision-matrix infographic tailored to flat landlords. Create a two-column layout: LEFT column 'No Consent Needed' in green tones (LED lighting, smart controls, draught-proofing, cylinder jacket); RIGHT column 'Consent Usually Required' in amber/orange tones (window replacement, heating system changes, wall insulation). Each improvement shows an icon, points gain (+2, +4 etc), and cost range. A visual callout emphasises the key message: 'Many flats reach C using only the left column'. The design should feel practical and decision-enabling."
                   width={800}
                   height={350}
                   instructions={[
-                    'Create two columns: No Consent Needed vs Consent Required',
-                    'Show improvements with their point gains and costs',
-                    'Use icons to represent each type of improvement',
-                    'Highlight that many flats only need the no-consent options',
-                    'Use GreenLord brand colours',
+                    'Two-column layout: green zone (no consent) vs amber zone (consent needed)',
+                    'Icon set for each improvement type: lightbulb, thermostat, window, radiator, etc.',
+                    'Clear data per item: name, points gained, cost range',
+                    'Callout box or highlight showing most flats only need no-consent measures',
+                    'Clean, modern infographic style - scannable at a glance',
                   ]}
                 />
               </section>
