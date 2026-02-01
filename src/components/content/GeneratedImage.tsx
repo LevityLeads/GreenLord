@@ -209,11 +209,12 @@ export function GeneratedImage({
       >
         {/* Loaded State - Show Image */}
         {/* Using regular img tag to avoid Next.js Image domain restrictions */}
+        {/* object-contain ensures full image is visible without cropping */}
         {state === 'loaded' && imageUrl && (
           <img
             src={imageUrl}
             alt={alt}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain bg-neutral-100"
             loading={priority ? 'eager' : 'lazy'}
           />
         )}

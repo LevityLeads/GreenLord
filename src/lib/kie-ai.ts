@@ -430,20 +430,42 @@ export function buildConceptualPrompt(
 }
 
 /**
- * Calculate aspect ratio from dimensions
+ * Available aspect ratios from Nano Banana Pro with their decimal values
+ */
+const AVAILABLE_RATIOS: { ratio: string; value: number }[] = [
+  { ratio: '1:1', value: 1.0 },
+  { ratio: '2:3', value: 0.667 },
+  { ratio: '3:2', value: 1.5 },
+  { ratio: '3:4', value: 0.75 },
+  { ratio: '4:3', value: 1.333 },
+  { ratio: '4:5', value: 0.8 },
+  { ratio: '5:4', value: 1.25 },
+  { ratio: '9:16', value: 0.5625 },
+  { ratio: '16:9', value: 1.778 },
+  { ratio: '21:9', value: 2.333 },
+];
+
+/**
+ * Calculate the closest available aspect ratio from dimensions
+ * Returns the Nano Banana Pro ratio that best matches the requested dimensions
  */
 export function getAspectRatioFromDimensions(
   width: number,
   height: number
-): '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | '3:2' | '2:3' {
-  const ratio = width / height;
+): '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | '3:2' | '2:3' | '5:4' | '4:5' | '21:9' {
+  const targetRatio = width / height;
 
-  if (ratio > 2.0) return '21:9' as '16:9'; // Use 16:9 as fallback
-  if (ratio > 1.7) return '16:9';
-  if (ratio > 1.4) return '3:2';
-  if (ratio > 1.2) return '4:3';
-  if (ratio > 0.9) return '1:1';
-  if (ratio > 0.7) return '3:4';
-  if (ratio > 0.6) return '2:3';
-  return '9:16';
+  // Find the closest available ratio
+  let closest = AVAILABLE_RATIOS[0];
+  let smallestDiff = Math.abs(targetRatio - closest.value);
+
+  for (const option of AVAILABLE_RATIOS) {
+    const diff = Math.abs(targetRatio - option.value);
+    if (diff < smallestDiff) {
+      smallestDiff = diff;
+      closest = option;
+    }
+  }
+
+  return closest.ratio as '1:1' | '16:9' | '9:16' | '4:3' | '3:4' | '3:2' | '2:3' | '5:4' | '4:5' | '21:9';
 }
