@@ -7,6 +7,7 @@ export const SITE_CONFIG = {
   description:
     'The authoritative resource for UK private landlords navigating EPC compliance requirements. Clear guidance, interactive tools, and property-specific recommendations.',
   url: 'https://greenlord.co.uk',
+  author: 'GreenLord Team',
 };
 
 // Key dates
