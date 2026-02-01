@@ -195,7 +195,7 @@ export default function VictorianTerracePage() {
                 <GeneratedImage
                   imageId="victorian-terrace-wall-cross-section"
                   alt="Cross-section diagram showing Victorian terrace solid wall construction"
-                  prompt="A technical illustration showing a cross-section of a typical Victorian terrace wall, clearly labelling the solid brick construction, internal plaster, and the absence of any cavity. Should also show the typical floor junction and how the suspended timber floor connects to the walls. Use a clean, technical illustration style. Clearly label: solid brick, internal plaster, lime mortar, no cavity. Show the wall-floor junction with suspended timber floor. Include measurements where helpful (9\" wall thickness). Consider showing heat loss arrows to illustrate the problem."
+                  prompt="A technical illustration showing a cross-section of a typical Victorian terrace wall, clearly labelling the solid brick construction, internal plaster, and the absence of any cavity. Should also show the typical floor junction and how the suspended timber floor connects to the walls. Use a clean, technical illustration style. Clearly label: solid brick, internal plaster, lime mortar, no cavity. Show the wall-floor junction with suspended timber floor. Include measurements where helpful (9 inch wall thickness). Consider showing heat loss arrows to illustrate the problem."
                   width={800}
                   height={400}
                   className="mt-8"
