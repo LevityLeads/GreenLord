@@ -10,16 +10,14 @@ import type { CheckImageStatusResponse } from '@/app/api/check-image-status/rout
 export interface GeneratedImageProps {
   /** Unique identifier for this image placement */
   imageId: string;
-  /** Alt text for the image (accessibility description) */
+  /** Alt text for the image (accessibility) */
   alt: string;
-  /** Detailed description of what the image should contain */
-  description: string;
+  /** The complete prompt for image generation - be specific about style, content, and details */
+  prompt: string;
   /** Recommended width in pixels */
   width: number;
   /** Recommended height in pixels */
   height: number;
-  /** Optional additional instructions for the AI */
-  instructions?: string[];
   /** Whether this is a priority image */
   priority?: boolean;
   /** Additional CSS classes */
@@ -43,10 +41,9 @@ const MAX_POLL_TIME_MS = 180000; // Max 3 minutes
 export function GeneratedImage({
   imageId,
   alt,
-  description,
+  prompt,
   width,
   height,
-  instructions,
   priority = false,
   className,
   existingImageUrl,
@@ -141,10 +138,9 @@ export function GeneratedImage({
       const requestBody: GenerateImageRequest = {
         imageId,
         alt,
-        description,
+        prompt,
         width,
         height,
-        instructions,
       };
 
       const response = await fetch('/api/generate-image', {
@@ -170,7 +166,7 @@ export function GeneratedImage({
       setError(err instanceof Error ? err.message : 'Unknown error');
       setState('error');
     }
-  }, [imageId, alt, description, width, height, instructions, pollForCompletion]);
+  }, [imageId, alt, prompt, width, height, pollForCompletion]);
 
   const clearImage = useCallback(() => {
     setImageUrl(null);
@@ -184,12 +180,8 @@ export function GeneratedImage({
     }
   }, [imageId]);
 
-  // Build the full prompt for display - description should be self-contained
-  // with appropriate style direction (photo, illustration, infographic, etc.)
-  const fullPrompt = [
-    description,
-    ...(instructions || []),
-  ].join(' ');
+  // The prompt is now a single, complete string
+  const fullPrompt = prompt;
 
   return (
     <figure

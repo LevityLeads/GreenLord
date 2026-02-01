@@ -224,10 +224,10 @@ export async function generateImage(
 }
 
 /**
- * Detect image type from description to apply appropriate styling
+ * Detect image type from prompt text to apply appropriate style suffix
  */
-function detectImageType(description: string, alt: string): 'photo' | 'diagram' | 'infographic' | 'illustration' {
-  const text = (description + ' ' + alt).toLowerCase();
+function detectImageType(prompt: string, alt: string): 'photo' | 'diagram' | 'infographic' | 'illustration' {
+  const text = (prompt + ' ' + alt).toLowerCase();
 
   // Check for diagram/technical illustration indicators
   if (text.includes('diagram') || text.includes('cross-section') || text.includes('cutaway') ||
@@ -253,65 +253,23 @@ function detectImageType(description: string, alt: string): 'photo' | 'diagram' 
 }
 
 /**
- * Build an appropriate prompt based on the image type detected from the description
- * Automatically chooses between photo, diagram, infographic, or illustration styles
+ * Style suffixes for different image types
  */
-export function buildPropertyImagePrompt(
-  alt: string,
-  description: string,
-  instructions?: string[]
-): string {
-  const imageType = detectImageType(description, alt);
+const STYLE_SUFFIXES: Record<string, string> = {
+  diagram: 'Clean, professional technical illustration. Navy blue (#1e3a5f) primary color, white background. Clear labels, precise lines.',
+  infographic: 'Clean modern infographic. Navy blue (#1e3a5f) primary, amber (#f59e0b) accent. White background, clear hierarchy.',
+  illustration: 'Clean modern illustration. Consistent line weight, navy and green brand colors.',
+  photo: 'Professional editorial photography. Canon EOS R5, natural lighting. Authentic British setting, not artificial.',
+};
 
-  // Build base prompt from description and instructions
-  const baseParts: string[] = [description];
-  if (instructions && instructions.length > 0) {
-    baseParts.push(instructions.join('. ') + '.');
-  }
-  const basePrompt = baseParts.join(' ');
-
-  switch (imageType) {
-    case 'diagram':
-      return [
-        basePrompt,
-        'Clean, professional technical illustration style.',
-        'Clear labels and annotations where appropriate.',
-        'Use a cohesive color palette with navy blue (#1e3a5f) as primary and white/light grey background.',
-        'Precise lines, professional engineering diagram aesthetic.',
-        'Educational and easy to understand at a glance.',
-      ].join(' ');
-
-    case 'infographic':
-      return [
-        basePrompt,
-        'Clean, modern infographic design style.',
-        'Use a cohesive color palette with navy blue (#1e3a5f) as primary and amber/orange (#f59e0b) as accent.',
-        'White or very light grey background for maximum readability.',
-        'Sans-serif typography, clear visual hierarchy.',
-        'Minimalist icons and simple geometric shapes.',
-        'Professional business publication quality.',
-      ].join(' ');
-
-    case 'illustration':
-      return [
-        basePrompt,
-        'Clean, modern illustration style.',
-        'Consistent line weight and professional finish.',
-        'Use the brand color palette with navy and green tones.',
-        'Suitable for a professional property/real estate context.',
-      ].join(' ');
-
-    case 'photo':
-    default:
-      return [
-        basePrompt,
-        'Shot on a Canon EOS R5 with natural lighting.',
-        'Professional editorial photography style, authentic and not overly staged.',
-        'Colors are natural and true-to-life.',
-        'British setting with authentic UK architectural details and atmosphere.',
-        'Avoid anything that looks artificial or computer-generated.',
-      ].join(' ');
-  }
+/**
+ * Add appropriate style suffix to a prompt based on detected image type
+ * The prompt should already be complete - this just adds consistent style guidance
+ */
+export function addStyleSuffix(prompt: string, alt: string): string {
+  const imageType = detectImageType(prompt, alt);
+  const suffix = STYLE_SUFFIXES[imageType];
+  return `${prompt} ${suffix}`;
 }
 
 /**

@@ -1,17 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
   createImageTask,
-  buildPropertyImagePrompt,
   getAspectRatioFromDimensions,
+  addStyleSuffix,
 } from '@/lib/kie-ai';
 
 export interface GenerateImageRequest {
+  imageId: string;
   alt: string;
-  description: string;
+  prompt: string;
   width: number;
   height: number;
-  instructions?: string[];
-  imageId: string; // Unique identifier for this image placement
 }
 
 export interface GenerateImageResponse {
@@ -24,14 +23,14 @@ export interface GenerateImageResponse {
 export async function POST(request: NextRequest): Promise<NextResponse<GenerateImageResponse>> {
   try {
     const body: GenerateImageRequest = await request.json();
-    const { alt, description, width, height, instructions, imageId } = body;
+    const { imageId, alt, prompt, width, height } = body;
 
     // Validate required fields
-    if (!alt || !description || !width || !height || !imageId) {
+    if (!imageId || !alt || !prompt || !width || !height) {
       return NextResponse.json(
         {
           success: false,
-          error: 'Missing required fields: alt, description, width, height, imageId',
+          error: 'Missing required fields: imageId, alt, prompt, width, height',
           imageId: imageId || 'unknown',
         },
         { status: 400 }
@@ -52,8 +51,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateI
       );
     }
 
-    // Build the prompt
-    const prompt = buildPropertyImagePrompt(alt, description, instructions);
+    // Add style suffix based on detected image type
+    const finalPrompt = addStyleSuffix(prompt, alt);
 
     // Determine aspect ratio from dimensions
     const aspectRatio = getAspectRatioFromDimensions(width, height);
@@ -63,7 +62,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateI
 
     // Create the task (returns immediately, doesn't wait for completion)
     const result = await createImageTask(apiKey, {
-      prompt,
+      prompt: finalPrompt,
       aspectRatio,
       resolution,
       outputFormat: 'png',

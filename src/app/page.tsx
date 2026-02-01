@@ -84,15 +84,10 @@ export default function HomePage() {
               <GeneratedImage
                 imageId="homepage-hero-landlord"
                 alt="Professional landlord reviewing EPC documents in home office"
-                description="A candid moment capturing a middle-aged British property landlord sat at their kitchen table on a weekday morning, reviewing an Energy Performance Certificate. Morning light streams through a nearby window, illuminating scattered paperwork and a laptop showing property listings. The landlord wears smart-casual clothes and reading glasses, pen in hand, with a thoughtful expression as they examine the EPC rating chart. A mug of tea sits nearby. The kitchen has typical British details - a kettle, tiled splashback, wooden cabinets."
+                prompt="A candid moment capturing a middle-aged British property landlord sat at their kitchen table on a weekday morning, reviewing an Energy Performance Certificate. Morning light streams through a nearby window, illuminating scattered paperwork and a laptop showing property listings. The landlord wears smart-casual clothes and reading glasses, pen in hand, with a thoughtful expression as they examine the EPC rating chart. A mug of tea sits nearby. The kitchen has typical British details - a kettle, tiled splashback, wooden cabinets. Focus on the authentic, relatable moment of a real person dealing with property paperwork. The EPC document should be partially visible but not the main focus - this is about the human experience."
                 width={600}
                 height={500}
                 priority
-                instructions={[
-                  'Focus on the authentic, relatable moment of a real person dealing with property paperwork',
-                  'The EPC document should be partially visible but not the main focus - this is about the human experience',
-                  'Capture the slight stress and concentration of someone figuring out compliance requirements',
-                ]}
               />
             </div>
           </div>
