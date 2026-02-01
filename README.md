@@ -4,7 +4,7 @@ The authoritative resource for UK private landlords navigating EPC compliance re
 
 ## Current Status: Phase 3 Complete
 
-**47 pages** | **4 interactive tools** | **10 property guides** | **10 local city guides**
+**47 pages** | **4 interactive tools** | **10 property guides** | **10 local city guides** | **AI Image Generation**
 
 ### What's Included
 
@@ -13,6 +13,12 @@ The authoritative resource for UK private landlords navigating EPC compliance re
 - **Grant Eligibility Checker** - Check ECO4, Boiler Upgrade Scheme, Warm Homes Local, GBIS eligibility
 - **Exemption Pathway Tool** - Cost cap exemption assessment with evidence checklist
 - **EPC Analyser** - Interpret your EPC, identify quick wins, compare to similar properties
+
+#### AI Image Generation
+- **Kie.ai Integration** - Nano Banana Pro (Gemini 3.0) for photorealistic images
+- **GeneratedImage Component** - Generate, regenerate, and manage AI images across the site
+- **Specialized Prompts** - Property exteriors, interiors, infographics, conceptual imagery
+- **Photography-style Prompts** - Camera/lens terminology for realistic results
 
 #### Property Type Guides (10)
 - Victorian Terrace (pre-1919) | Edwardian House | Pre-1919 Semi-Detached
@@ -51,11 +57,22 @@ npm run lint
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+## Environment Variables
+
+For AI image generation, add to your `.env.local` or Vercel environment:
+
+```bash
+KIE_AI_API_KEY=your_kie_ai_api_key_here
+```
+
 ## Project Structure
 
 ```
 src/
 ├── app/                    # Next.js App Router pages
+│   ├── api/               # API routes
+│   │   ├── generate-image/    # Create image generation task
+│   │   └── check-image-status/ # Poll for completion
 │   ├── costs/             # Costs & funding guides (7 pages)
 │   ├── local-guides/      # City-specific guides (11 pages)
 │   ├── property-types/    # Property guides (11 pages)
@@ -67,11 +84,11 @@ src/
 │   ├── epc-analyser/      # EPC analyser components
 │   ├── exemption/         # Exemption tool components
 │   ├── grants/            # Grant checker components
-│   ├── content/           # Content components (callouts, tables)
+│   ├── content/           # Content components (GeneratedImage, callouts, tables)
 │   ├── layout/            # Layout components (header, footer)
 │   └── ui/                # UI primitives (buttons, inputs)
 ├── data/                  # Calculator and grant scheme data
-└── lib/                   # Utilities, types, constants, analysis logic
+└── lib/                   # Utilities, types, constants, Kie.ai client
 ```
 
 ## Tech Stack
@@ -80,6 +97,7 @@ src/
 - **TypeScript** for type safety
 - **Tailwind CSS** for styling
 - **Lucide React** for icons
+- **Kie.ai** for AI image generation (Nano Banana Pro)
 
 ## Key Features
 
@@ -87,3 +105,4 @@ src/
 - WCAG 2.1 AA accessibility compliance
 - SEO optimized with schema.org markup
 - Static site generation for performance
+- AI-generated photorealistic images with regeneration capability
