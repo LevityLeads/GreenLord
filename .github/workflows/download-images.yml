@@ -1,0 +1,110 @@
+name: Download AI Images
+
+on:
+  workflow_dispatch:  # Manual trigger from GitHub UI
+
+jobs:
+  download-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create output directory
+        run: mkdir -p public/images/generated
+
+      - name: Download all AI images
+        run: |
+          echo "Downloading AI-generated images..."
+
+          # Homepage
+          curl -sS -o public/images/generated/homepage-hero-landlord.png "https://tempfile.aiquickdraw.com/images/1769942554802-5d2i0o98mo.png" && echo "✓ homepage-hero-landlord"
+          curl -sS -o public/images/generated/homepage-author-headshot.png "https://tempfile.aiquickdraw.com/images/1769942961546-j0bwssimda.png" && echo "✓ homepage-author-headshot"
+
+          # Victorian Terrace
+          curl -sS -o public/images/generated/victorian-terrace-hero.png "https://tempfile.aiquickdraw.com/images/1769944122029-p06bvmyl29i.png" && echo "✓ victorian-terrace-hero"
+          curl -sS -o public/images/generated/victorian-terrace-wall-cross-section.png "https://tempfile.aiquickdraw.com/images/1769944216679-a3py4vbht1v.png" && echo "✓ victorian-terrace-wall-cross-section"
+          curl -sS -o public/images/generated/victorian-terrace-epc-comparison.png "https://tempfile.aiquickdraw.com/images/1769944271283-wa2f971qojq.png" && echo "✓ victorian-terrace-epc-comparison"
+
+          # 1930s Semi
+          curl -sS -o public/images/generated/1930s-semi-exterior.png "https://tempfile.aiquickdraw.com/images/1769944346395-ibpefqhvfoi.png" && echo "✓ 1930s-semi-exterior"
+          curl -sS -o public/images/generated/1930s-semi-cavity-wall-insulation.png "https://tempfile.aiquickdraw.com/images/1769944344996-lt4i7w42w1.png" && echo "✓ 1930s-semi-cavity-wall-insulation"
+          curl -sS -o public/images/generated/1930s-semi-epc-journey-infographic.png "https://tempfile.aiquickdraw.com/images/1769944343582-3yulef0r65q.png" && echo "✓ 1930s-semi-epc-journey-infographic"
+
+          # 1950s House
+          curl -sS -o public/images/generated/1950s-house-exterior.png "https://tempfile.aiquickdraw.com/images/1769944599959-ciooudwnfks.png" && echo "✓ 1950s-house-exterior"
+          curl -sS -o public/images/generated/1950s-house-wall-measurement.png "https://tempfile.aiquickdraw.com/images/1769944609611-gs0n1illbo4.png" && echo "✓ 1950s-house-wall-measurement"
+          curl -sS -o public/images/generated/1950s-house-wall-comparison.png "https://tempfile.aiquickdraw.com/images/1769944634147-05ryol0u2637.png" && echo "✓ 1950s-house-wall-comparison"
+          curl -sS -o public/images/generated/1950s-house-epc-comparison.png "https://tempfile.aiquickdraw.com/images/1769944611791-6kpluzvj78.png" && echo "✓ 1950s-house-epc-comparison"
+
+          # 1960s-1970s House
+          curl -sS -o public/images/generated/1960s-1970s-house-exterior.png "https://tempfile.aiquickdraw.com/images/1769944514815-8tx6xsubia.png" && echo "✓ 1960s-1970s-house-exterior"
+          curl -sS -o public/images/generated/1960s-1970s-house-cavity-wall-cross-section.png "https://tempfile.aiquickdraw.com/images/1769944522238-1gvq0rz8l8f.png" && echo "✓ 1960s-1970s-house-cavity-wall-cross-section"
+          curl -sS -o public/images/generated/1960s-1970s-house-epc-comparison.png "https://tempfile.aiquickdraw.com/workers/nano/image_1769944522151_rr7qdn.png" && echo "✓ 1960s-1970s-house-epc-comparison"
+
+          # 1980s-1990s House
+          curl -sS -o public/images/generated/1980s-1990s-house-exterior.png "https://tempfile.aiquickdraw.com/images/1769945043609-serf76irk1g.png" && echo "✓ 1980s-1990s-house-exterior"
+
+          # Purpose-Built Flat
+          curl -sS -o public/images/generated/purpose-built-flat-exterior.png "https://tempfile.aiquickdraw.com/images/1769944403098-h34keghqu8e.png" && echo "✓ purpose-built-flat-exterior"
+          curl -sS -o public/images/generated/purpose-built-flat-secondary-glazing.png "https://tempfile.aiquickdraw.com/images/1769944434617-w3xx1y4c2zl.png" && echo "✓ purpose-built-flat-secondary-glazing"
+          curl -sS -o public/images/generated/purpose-built-flat-improvement-options.png "https://tempfile.aiquickdraw.com/images/1769944429692-4vqn0icbwpu.png" && echo "✓ purpose-built-flat-improvement-options"
+
+          # Converted Flat
+          curl -sS -o public/images/generated/converted-flat-exterior.png "https://tempfile.aiquickdraw.com/images/1769944820192-5idt42p20sx.png" && echo "✓ converted-flat-exterior"
+          curl -sS -o public/images/generated/converted-flat-cross-section.png "https://tempfile.aiquickdraw.com/images/1769944828309-52za3sowogj.png" && echo "✓ converted-flat-cross-section"
+          curl -sS -o public/images/generated/converted-flat-epc-comparison.png "https://tempfile.aiquickdraw.com/workers/nano/image_1769944828985_xbcu5p.png" && echo "✓ converted-flat-epc-comparison"
+
+          # Edwardian House
+          curl -sS -o public/images/generated/edwardian-house-exterior.png "https://tempfile.aiquickdraw.com/images/1769944905515-omr2pzy222.png" && echo "✓ edwardian-house-exterior"
+          curl -sS -o public/images/generated/edwardian-house-cross-section.png "https://tempfile.aiquickdraw.com/images/1769944910099-7j6u1sk8fb.png" && echo "✓ edwardian-house-cross-section"
+
+          # HMO
+          curl -sS -o public/images/generated/hmo-property-exterior.png "https://tempfile.aiquickdraw.com/images/1769945101139-ynzg67jcypc.png" && echo "✓ hmo-property-exterior"
+
+          # Pre-1919 Semi
+          curl -sS -o public/images/generated/pre-1919-semi-exterior.png "https://tempfile.aiquickdraw.com/images/1769945246620-gsx8bxp4wn5.png" && echo "✓ pre-1919-semi-exterior"
+          curl -sS -o public/images/generated/pre-1919-semi-heat-loss-comparison.png "https://tempfile.aiquickdraw.com/images/1769946700667-0ki7j51rniy.png" && echo "✓ pre-1919-semi-heat-loss-comparison"
+
+          # Regulations
+          curl -sS -o public/images/generated/epc-c-2030-deadline-hero.png "https://tempfile.aiquickdraw.com/images/1769891326570-tj86ghplq88.png" && echo "✓ epc-c-2030-deadline-hero"
+          curl -sS -o public/images/generated/mees-guide-hero.png "https://tempfile.aiquickdraw.com/images/1769943507149-rqvdvnex33a.png" && echo "✓ mees-guide-hero"
+          curl -sS -o public/images/generated/cost-cap-exemptions-hero.png "https://tempfile.aiquickdraw.com/images/1769943593623-6zfju3dhq9h.png" && echo "✓ cost-cap-exemptions-hero"
+          curl -sS -o public/images/generated/rdsap-10-changes-hero.png "https://tempfile.aiquickdraw.com/images/1769943974277-aqhy63hxxaw.png" && echo "✓ rdsap-10-changes-hero"
+          curl -sS -o public/images/generated/warm-homes-plan-hero.png "https://tempfile.aiquickdraw.com/images/1769944042610-2hqitht3fad.png" && echo "✓ warm-homes-plan-hero"
+
+          # Costs & Funding
+          curl -sS -o public/images/generated/costs-overview-hero.png "https://tempfile.aiquickdraw.com/images/1769945057843-6eb0e53nw1.png" && echo "✓ costs-overview-hero"
+          curl -sS -o public/images/generated/costs-property-types-comparison.png "https://tempfile.aiquickdraw.com/workers/nano/image_1769945022284_11lylx.png" && echo "✓ costs-property-types-comparison"
+          curl -sS -o public/images/generated/costs-effective-improvements.png "https://tempfile.aiquickdraw.com/images/1769945058732-uv3yruswqte.png" && echo "✓ costs-effective-improvements"
+          curl -sS -o public/images/generated/cheapest-improvements-hero.png "https://tempfile.aiquickdraw.com/images/1769941580751-jinvre718g.png" && echo "✓ cheapest-improvements-hero"
+          curl -sS -o public/images/generated/d-to-c-upgrade-hero.png "https://tempfile.aiquickdraw.com/images/1769945139806-k66k9qxcwkd.png" && echo "✓ d-to-c-upgrade-hero"
+          curl -sS -o public/images/generated/d-to-c-upgrade-journey.png "https://tempfile.aiquickdraw.com/images/1769945038061-0zchfar01xo8.png" && echo "✓ d-to-c-upgrade-journey"
+          curl -sS -o public/images/generated/d-to-c-upgrade-loft-insulation.png "https://tempfile.aiquickdraw.com/workers/nano/image_1769945032728_t01rd2.png" && echo "✓ d-to-c-upgrade-loft-insulation"
+          curl -sS -o public/images/generated/e-to-c-upgrade-hero.png "https://tempfile.aiquickdraw.com/images/1769945059511-qw92rrnkmi.png" && echo "✓ e-to-c-upgrade-hero"
+          curl -sS -o public/images/generated/eco4-landlords-hero.png "https://tempfile.aiquickdraw.com/images/1769945059750-ou3eno9v2qk.png" && echo "✓ eco4-landlords-hero"
+          curl -sS -o public/images/generated/boiler-upgrade-scheme-hero.png "https://tempfile.aiquickdraw.com/images/1769945079381-xbz6u4hjpt.png" && echo "✓ boiler-upgrade-scheme-hero"
+          curl -sS -o public/images/generated/warm-homes-local-grant-hero.png "https://tempfile.aiquickdraw.com/images/1769945079136-xaikysr0td.png" && echo "✓ warm-homes-local-grant-hero"
+
+          # Tools
+          curl -sS -o public/images/generated/cost-calculator-hero.png "https://tempfile.aiquickdraw.com/images/1769946907582-w69g69uc95j.png" && echo "✓ cost-calculator-hero"
+          curl -sS -o public/images/generated/cost-calculator-planning.png "https://tempfile.aiquickdraw.com/images/1769946909780-rxty2pvcoei.png" && echo "✓ cost-calculator-planning"
+          curl -sS -o public/images/generated/exemption-checker-hero.png "https://tempfile.aiquickdraw.com/workers/nano/image_1769946911277_6rx9hf.png" && echo "✓ exemption-checker-hero"
+
+          echo ""
+          echo "Download complete! Counting files..."
+          ls -la public/images/generated/ | wc -l
+
+      - name: Copy local paths config
+        run: cp scripts/default-images-local.ts src/lib/default-images.ts
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/images/generated/ src/lib/default-images.ts
+          git commit -m "feat: Store AI images permanently in repo (via GitHub Action)" || echo "No changes to commit"
+          git push
