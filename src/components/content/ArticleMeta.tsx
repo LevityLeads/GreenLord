@@ -32,7 +32,7 @@ export interface ArticleMetaProps {
  *     { name: 'NRLA Landlord Guidance' },
  *   ]}
  *   lastReviewedDate="2025-01-15"
- *   reviewedBy="James Crawford"
+ *   reviewedBy="GreenLord Team"
  * />
  * ```
  */
