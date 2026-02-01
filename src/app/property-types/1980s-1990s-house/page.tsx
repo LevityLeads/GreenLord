@@ -87,15 +87,10 @@ export default function ModernHousePage() {
               <GeneratedImage
                 imageId="1980s-1990s-house-exterior"
                 alt="Typical 1980s-1990s house with cavity walls and double glazing"
-                description="A well-maintained 1980s or 1990s semi-detached house on a quiet suburban street in the UK. The property showcases the era's characteristic features: red brick with rendered sections, original uPVC double-glazed windows, an integral garage, and concrete roof tiles. Afternoon sunlight highlights the standardised construction that makes these homes among the easiest to improve for EPC compliance."
+                prompt="A well-maintained 1980s or 1990s semi-detached house on a quiet suburban street in the UK. The property showcases the era's characteristic features: red brick with rendered sections, original uPVC double-glazed windows, an integral garage, and concrete roof tiles. Afternoon sunlight highlights the standardised construction that makes these homes among the easiest to improve for EPC compliance. Show a genuine UK 1980s-1990s semi-detached house with uPVC windows and integral garage. Capture the standardised modern construction with brick and render exterior. Afternoon daylight showing the full facade in good condition."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK 1980s-1990s semi-detached house with uPVC windows and integral garage',
-                  'Capture the standardised modern construction with brick and render exterior',
-                  'Afternoon daylight showing the full facade in good condition',
-                ]}
               />
 
               {/* Introduction */}

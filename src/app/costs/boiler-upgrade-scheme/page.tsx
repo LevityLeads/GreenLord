@@ -109,14 +109,9 @@ export default function BoilerUpgradeSchemePage() {
               <GeneratedImage
                 imageId="boiler-upgrade-scheme-hero"
                 alt="Air source heat pump professionally installed outside a British semi-detached home"
-                description="A white air source heat pump unit sits on a concrete plinth against the side wall of a typical 1970s British semi-detached house. Copper pipework runs neatly into the property through the wall, and the installation looks clean and professional. The property has a small side passage with a gravel path, and neighbouring houses are visible in the background - a typical UK suburban setting."
+                prompt="A white air source heat pump unit sits on a concrete plinth against the side wall of a typical 1970s British semi-detached house. Copper pipework runs neatly into the property through the wall, and the installation looks clean and professional. The property has a small side passage with a gravel path, and neighbouring houses are visible in the background - a typical UK suburban setting. Modern ASHP unit (Mitsubishi, Vaillant or similar style). Typical British suburban residential setting. Professional pipework and installation visible."
                 width={1200}
                 height={630}
-                instructions={[
-                  'Modern ASHP unit (Mitsubishi, Vaillant or similar style)',
-                  'Typical British suburban residential setting',
-                  'Professional pipework and installation visible',
-                ]}
                 priority
               />
 

@@ -191,15 +191,10 @@ export default function CostCapExemptionsPage() {
                 <GeneratedImage
                   imageId="cost-cap-exemptions-hero"
                   alt="Cost cap exemption decision-making documentation"
-                  description="A landlord's desk showing the financial planning side of EPC compliance. Visible are contractor quotes and invoices for energy efficiency improvements, a calculator, an EPC certificate, and the PRS Exemptions Register guidance document. The scene suggests careful cost tracking and exemption eligibility assessment."
+                  prompt="A landlord's desk showing the financial planning side of EPC compliance. Visible are contractor quotes and invoices for energy efficiency improvements, a calculator, an EPC certificate, and the PRS Exemptions Register guidance document. The scene suggests careful cost tracking and exemption eligibility assessment. Focus on authentic financial documentation and cost-related paperwork. Include recognisable UK building contractor invoices or quotes. Convey the careful record-keeping required for exemption claims."
                   width={800}
                   height={450}
                   priority
-                  instructions={[
-                    "Focus on authentic financial documentation and cost-related paperwork",
-                    "Include recognisable UK building contractor invoices or quotes",
-                    "Convey the careful record-keeping required for exemption claims"
-                  ]}
                 />
               </section>
 

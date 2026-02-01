@@ -85,15 +85,10 @@ export default function ThirtiesSemiPage() {
               <GeneratedImage
                 imageId="1930s-semi-exterior"
                 alt="Typical 1930s semi-detached house showing characteristic features"
-                description="A classic 1930s semi-detached house on a tree-lined suburban street in the English Midlands. The property displays the era's unmistakable character: rounded bay windows on both floors, cream pebbledash render, a hipped roof with red clay tiles, and a small front garden with low brick wall. Soft afternoon light highlights the craftsmanship of inter-war housing that makes these homes among the easiest to upgrade for EPC compliance."
+                prompt="A classic 1930s semi-detached house on a tree-lined suburban street in the English Midlands. The property displays the era's unmistakable character: rounded bay windows on both floors, cream pebbledash render, a hipped roof with red clay tiles, and a small front garden with low brick wall. Soft afternoon light highlights the craftsmanship of inter-war housing that makes these homes among the easiest to upgrade for EPC compliance. Show a genuine UK 1930s semi with bay windows, pebbledash, and hipped roof. Include typical front garden and driveway setting of suburban location. Afternoon light, property in good condition reflecting maintainable housing stock."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK 1930s semi with bay windows, pebbledash, and hipped roof',
-                  'Include typical front garden and driveway setting of suburban location',
-                  'Afternoon light, property in good condition reflecting maintainable housing stock',
-                ]}
               />
 
               {/* Introduction */}
@@ -405,14 +400,9 @@ export default function ThirtiesSemiPage() {
                 <GeneratedImage
                   imageId="1930s-semi-cavity-wall-insulation"
                   alt="Diagram showing cavity wall insulation being injected into 1930s semi wall"
-                  description="A technical cross-section illustration depicting a 1930s cavity wall during the insulation injection process. The diagram clearly shows the brick outer leaf with small drilled holes, the injection equipment inserting insulation material, and the cavity between the two leaves gradually filling with EPS beads or mineral wool. Labels indicate the wall components and 50mm cavity width."
+                  prompt="A technical cross-section illustration depicting a 1930s cavity wall during the insulation injection process. The diagram clearly shows the brick outer leaf with small drilled holes, the injection equipment inserting insulation material, and the cavity between the two leaves gradually filling with EPS beads or mineral wool. Labels indicate the wall components and 50mm cavity width. Cross-section showing outer brick leaf, 50mm cavity, inner leaf, and plaster. Show injection gun inserting insulation through drilled holes. Label all components clearly with dimensions where appropriate."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Cross-section showing outer brick leaf, 50mm cavity, inner leaf, and plaster',
-                    'Show injection gun inserting insulation through drilled holes',
-                    'Label all components clearly with dimensions where appropriate',
-                  ]}
                 />
 
                 <ComparisonTable
@@ -719,14 +709,9 @@ export default function ThirtiesSemiPage() {
                 <GeneratedImage
                   imageId="1930s-semi-epc-journey-infographic"
                   alt="Typical 1930s semi EPC improvement journey from D to C"
-                  description="An infographic showing the EPC improvement journey for a typical 1930s semi-detached house. Starting from rating D (58 points), the stepped timeline progresses through cavity wall insulation, loft insulation top-up, and boiler upgrade to reach the final rating C (76 points). Each step displays the point gain and cost, with green brand colours emphasising the positive progression toward compliance."
+                  prompt="An infographic showing the EPC improvement journey for a typical 1930s semi-detached house. Starting from rating D (58 points), the stepped timeline progresses through cavity wall insulation, loft insulation top-up, and boiler upgrade to reach the final rating C (76 points). Each step displays the point gain and cost, with green brand colours emphasising the positive progression toward compliance. Create stepped timeline from D (58 points) through improvements to C (76 points). Show cost and point gains for each improvement step. Use GreenLord green brand colours for a professional, clear design."
                   width={800}
                   height={350}
-                  instructions={[
-                    'Create stepped timeline from D (58 points) through improvements to C (76 points)',
-                    'Show cost and point gains for each improvement step',
-                    'Use GreenLord green brand colours for a professional, clear design',
-                  ]}
                 />
               </section>
 

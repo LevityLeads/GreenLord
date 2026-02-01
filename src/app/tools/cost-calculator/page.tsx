@@ -120,14 +120,9 @@ export default function CostCalculatorPage() {
               <GeneratedImage
                 imageId="cost-calculator-hero"
                 alt="Landlord using a laptop to calculate EPC upgrade costs"
-                description="A focused landlord sits at a clean home office desk, reviewing EPC upgrade cost estimates on a laptop. Papers with property details and a calculator sit nearby. The scene captures the thoughtful decision-making moment of planning energy efficiency investments."
+                prompt="A focused landlord sits at a clean home office desk, reviewing EPC upgrade cost estimates on a laptop. Papers with property details and a calculator sit nearby. The scene captures the thoughtful decision-making moment of planning energy efficiency investments. Show a professional person using a laptop with visible spreadsheet or calculator interface. Include subtle property-related context like documents or house keys on desk. Warm, natural lighting suggesting a productive home office environment."
                 width={1200}
                 height={500}
-                instructions={[
-                  'Show a professional person using a laptop with visible spreadsheet or calculator interface',
-                  'Include subtle property-related context like documents or house keys on desk',
-                  'Warm, natural lighting suggesting a productive home office environment',
-                ]}
                 className="mb-8"
               />
 
@@ -176,14 +171,9 @@ export default function CostCalculatorPage() {
               <GeneratedImage
                 imageId="cost-calculator-planning"
                 alt="Property professional reviewing upgrade documents and estimates"
-                description="A property professional examines printed cost estimates and improvement recommendations at a meeting table. Multiple quotes and EPC documents are spread out, illustrating the thorough comparison process. The setting conveys careful financial planning and informed decision-making."
+                prompt="A property professional examines printed cost estimates and improvement recommendations at a meeting table. Multiple quotes and EPC documents are spread out, illustrating the thorough comparison process. The setting conveys careful financial planning and informed decision-making. Show hands reviewing documents with visible cost figures and property details. Include multiple printed sheets suggesting quote comparison. Professional setting with good lighting, suggesting a serious planning session."
                 width={1200}
                 height={700}
-                instructions={[
-                  'Show hands reviewing documents with visible cost figures and property details',
-                  'Include multiple printed sheets suggesting quote comparison',
-                  'Professional setting with good lighting, suggesting a serious planning session',
-                ]}
                 className="mb-12"
               />
             </div>

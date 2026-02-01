@@ -267,14 +267,9 @@ export default function EpcC2030DeadlinePage() {
                 <GeneratedImage
                   imageId="epc-c-2030-deadline-hero"
                   alt="Timeline showing key dates from January 2026 to October 2030 for EPC compliance"
-                  description="A close-up of official documents and paperwork spread across a desk, with an EPC certificate prominently visible alongside a wall calendar turned to October 2030. A red circle marks the deadline date, with government policy documents and a landlord's planning notes visible nearby."
+                  prompt="A close-up of official documents and paperwork spread across a desk, with an EPC certificate prominently visible alongside a wall calendar turned to October 2030. A red circle marks the deadline date, with government policy documents and a landlord's planning notes visible nearby. Emphasise the urgency and importance of the deadline through visual composition. Include authentic-looking UK property compliance documents. Create a sense of organised planning and preparation."
                   width={800}
                   height={350}
-                  instructions={[
-                    "Emphasise the urgency and importance of the deadline through visual composition",
-                    "Include authentic-looking UK property compliance documents",
-                    "Create a sense of organised planning and preparation"
-                  ]}
                   priority
                 />
 

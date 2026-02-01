@@ -95,14 +95,9 @@ export default function DToCUpgradePage() {
               <GeneratedImage
                 imageId="d-to-c-upgrade-hero"
                 alt="Landlord reviewing EPC certificate showing D rating in a British rental property"
-                description="A landlord holds an EPC certificate in the living room of a 1970s semi-detached house, with the D rating band clearly visible on the document. Behind them, the property shows typical features of a D-rated home - double glazed windows, a gas boiler radiator, but also opportunities for improvement like thin curtains and an older thermostat on the wall. The scene conveys assessment and planning for upgrades."
+                prompt="A landlord holds an EPC certificate in the living room of a 1970s semi-detached house, with the D rating band clearly visible on the document. Behind them, the property shows typical features of a D-rated home - double glazed windows, a gas boiler radiator, but also opportunities for improvement like thin curtains and an older thermostat on the wall. The scene conveys assessment and planning for upgrades. EPC certificate document should be visible and readable. Interior of typical British rental property from 1970s-80s era. Person reviewing document in thoughtful, planning mode."
                 width={1200}
                 height={630}
-                instructions={[
-                  'EPC certificate document should be visible and readable',
-                  'Interior of typical British rental property from 1970s-80s era',
-                  'Person reviewing document in thoughtful, planning mode',
-                ]}
                 priority
               />
 
@@ -291,14 +286,9 @@ export default function DToCUpgradePage() {
               <GeneratedImage
                 imageId="d-to-c-upgrade-journey"
                 alt="Tradesperson installing smart heating controls in a British rental property"
-                description="A heating engineer installs a modern smart thermostat on the wall of a British home, replacing an old dial thermostat. The engineer wears professional workwear and uses appropriate tools. The living room setting shows a typical 1970s property with magnolia walls, a gas radiator below the thermostat, and patterned carpet - a property mid-way through its D to C upgrade journey."
+                prompt="A heating engineer installs a modern smart thermostat on the wall of a British home, replacing an old dial thermostat. The engineer wears professional workwear and uses appropriate tools. The living room setting shows a typical 1970s property with magnolia walls, a gas radiator below the thermostat, and patterned carpet - a property mid-way through its D to C upgrade journey. Focus on smart thermostat installation - a key quick win. Professional tradesperson doing quality work. Typical British rental property interior from 1970s-80s."
                 width={1200}
                 height={600}
-                instructions={[
-                  'Focus on smart thermostat installation - a key quick win',
-                  'Professional tradesperson doing quality work',
-                  'Typical British rental property interior from 1970s-80s',
-                ]}
               />
 
               {/* Typical Scenarios */}
@@ -472,14 +462,9 @@ export default function DToCUpgradePage() {
               <GeneratedImage
                 imageId="d-to-c-upgrade-loft-insulation"
                 alt="Professional loft insulation installation in a British home"
-                description="A loft space in a British home with freshly installed thick mineral wool insulation laid between and over the joists to the full 300mm depth. The yellow insulation is neatly fitted around pipes and cables, with the installer's work light illuminating the completed section. Rolls of unused insulation are stacked near the loft hatch, and the work represents a typical loft top-up that gains 4-8 EPC points."
+                prompt="A loft space in a British home with freshly installed thick mineral wool insulation laid between and over the joists to the full 300mm depth. The yellow insulation is neatly fitted around pipes and cables, with the installer's work light illuminating the completed section. Rolls of unused insulation are stacked near the loft hatch, and the work represents a typical loft top-up that gains 4-8 EPC points. Realistic British loft space with proper insulation depth. Professional quality installation - neat and complete. Natural or work lighting showing the insulation clearly."
                 width={1200}
                 height={500}
-                instructions={[
-                  'Realistic British loft space with proper insulation depth',
-                  'Professional quality installation - neat and complete',
-                  'Natural or work lighting showing the insulation clearly',
-                ]}
               />
 
               {/* Common Mistakes */}

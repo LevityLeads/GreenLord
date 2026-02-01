@@ -265,15 +265,10 @@ export default function PropertyTypesPage() {
           <GeneratedImage
             imageId="property-types-hero-grid"
             alt="Illustrated grid showing different UK property types including Victorian terrace, 1930s semi, and purpose-built flat"
-            description="A visually appealing illustrated grid showing the range of UK property types covered in these EPC guides. Three distinct property types are clearly displayed: a Victorian terrace with characteristic bay windows and tall chimneys, a 1930s semi-detached with rounded bay and pebbledash render, and a modern purpose-built flat block. Each property features recognisable British architectural details, presented in a clean modern illustration style with subtle EPC-inspired colour coding to connect energy efficiency themes."
+            prompt="A visually appealing illustrated grid showing the range of UK property types covered in these EPC guides. Three distinct property types are clearly displayed: a Victorian terrace with characteristic bay windows and tall chimneys, a 1930s semi-detached with rounded bay and pebbledash render, and a modern purpose-built flat block. Each property features recognisable British architectural details, presented in a clean modern illustration style with subtle EPC-inspired colour coding to connect energy efficiency themes. Clean modern illustration showing Victorian terrace, 1930s semi, and purpose-built flat side by side. Include recognisable UK architectural features and subtle EPC colour-coding. Professional hero section visual with GreenLord brand-consistent styling."
             width={1200}
             height={500}
             priority
-            instructions={[
-              'Clean modern illustration showing Victorian terrace, 1930s semi, and purpose-built flat side by side',
-              'Include recognisable UK architectural features and subtle EPC colour-coding',
-              'Professional hero section visual with GreenLord brand-consistent styling',
-            ]}
           />
         </Container>
       </Section>

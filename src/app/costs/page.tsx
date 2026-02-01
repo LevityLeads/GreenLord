@@ -101,14 +101,9 @@ export default function CostsPillarPage() {
               <GeneratedImage
                 imageId="costs-overview-hero"
                 alt="Professional contractor discussing EPC upgrade costs with landlord in a British home"
-                description="A tradesperson in work clothing shows a cost estimate on a clipboard to a homeowner in the kitchen of a typical British semi-detached house. Paperwork is spread on the kitchen table with figures visible, while the contractor points to specific line items. The scene feels consultative and professional, with natural daylight coming through the window."
+                prompt="A tradesperson in work clothing shows a cost estimate on a clipboard to a homeowner in the kitchen of a typical British semi-detached house. Paperwork is spread on the kitchen table with figures visible, while the contractor points to specific line items. The scene feels consultative and professional, with natural daylight coming through the window. Documentary style - authentic interaction between tradesperson and homeowner. British kitchen setting with typical UK fixtures and finishes. Visible cost documentation on clipboard or tablet."
                 width={1200}
                 height={630}
-                instructions={[
-                  'Documentary style - authentic interaction between tradesperson and homeowner',
-                  'British kitchen setting with typical UK fixtures and finishes',
-                  'Visible cost documentation on clipboard or tablet',
-                ]}
                 priority
               />
 
@@ -416,14 +411,9 @@ export default function CostsPillarPage() {
               <GeneratedImage
                 imageId="costs-property-types-comparison"
                 alt="Different British property types showing typical EPC upgrade costs"
-                description="A row of different British residential property types photographed from the street - a Victorian terrace, a 1930s semi-detached, a 1960s property, and a purpose-built flat block. Each property has visible energy efficiency features like double glazing or new boiler flues. The properties represent the range of housing stock landlords typically own, from older period homes to newer builds."
+                prompt="A row of different British residential property types photographed from the street - a Victorian terrace, a 1930s semi-detached, a 1960s property, and a purpose-built flat block. Each property has visible energy efficiency features like double glazing or new boiler flues. The properties represent the range of housing stock landlords typically own, from older period homes to newer builds. Authentic British streetscape showing variety of housing ages and styles. Natural daylight, overcast British weather acceptable. Properties should look well-maintained but not newly built."
                 width={1200}
                 height={800}
-                instructions={[
-                  'Authentic British streetscape showing variety of housing ages and styles',
-                  'Natural daylight, overcast British weather acceptable',
-                  'Properties should look well-maintained but not newly built',
-                ]}
                 priority
               />
 
@@ -568,14 +558,9 @@ export default function CostsPillarPage() {
               <GeneratedImage
                 imageId="costs-effective-improvements"
                 alt="Tradesperson installing loft insulation in a British home"
-                description="A professional installer in branded workwear carefully lays mineral wool loft insulation between joists in the loft space of a British home. The workspace is clean and organised, with rolls of insulation material stacked nearby. Sunlight streams through a velux window, illuminating the work area. This represents one of the most cost-effective EPC improvements available to landlords."
+                prompt="A professional installer in branded workwear carefully lays mineral wool loft insulation between joists in the loft space of a British home. The workspace is clean and organised, with rolls of insulation material stacked nearby. Sunlight streams through a velux window, illuminating the work area. This represents one of the most cost-effective EPC improvements available to landlords. Professional installer at work in realistic loft space. High-quality insulation materials clearly visible. Clean, safe working environment with appropriate PPE."
                 width={1200}
                 height={700}
-                instructions={[
-                  'Professional installer at work in realistic loft space',
-                  'High-quality insulation materials clearly visible',
-                  'Clean, safe working environment with appropriate PPE',
-                ]}
               />
 
               {/* Cost Effectiveness */}

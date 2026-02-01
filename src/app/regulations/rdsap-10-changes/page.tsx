@@ -288,15 +288,10 @@ export default function RdSAP10ChangesPage() {
                 <GeneratedImage
                   imageId="rdsap-10-changes-hero"
                   alt="Comparison of property ratings under RdSAP 9 versus RdSAP 10"
-                  description="An energy assessor's clipboard and tablet showing EPC assessment data, placed on a table inside a typical 1930s semi-detached property. Two EPC certificates are visible side by side, demonstrating how the same property features can result in different ratings under different assessment methodologies."
+                  prompt="An energy assessor's clipboard and tablet showing EPC assessment data, placed on a table inside a typical 1930s semi-detached property. Two EPC certificates are visible side by side, demonstrating how the same property features can result in different ratings under different assessment methodologies. Show the technical assessment context with professional equipment. Include authentic British property interior elements in background. Emphasise the comparative nature of methodology changes."
                   width={800}
                   height={400}
                   priority
-                  instructions={[
-                    "Show the technical assessment context with professional equipment",
-                    "Include authentic British property interior elements in background",
-                    "Emphasise the comparative nature of methodology changes"
-                  ]}
                 />
 
                 <div className="grid md:grid-cols-2 gap-6 my-8">

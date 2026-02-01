@@ -88,15 +88,10 @@ export default function SixtiesSeventiesHousePage() {
               <GeneratedImage
                 imageId="1960s-1970s-house-exterior"
                 alt="Typical 1960s-1970s semi-detached house in a UK suburban street"
-                description="A well-maintained 1960s-1970s detached house on a typical UK suburban estate. The property exhibits the era's distinctive features: a flat-fronted design with large picture windows, an integral garage, a low-pitched roof with grey concrete tiles, and a combination of brick and rendered finish. Late afternoon sunlight falls across the facade, revealing the straightforward construction that makes these homes relatively simple to upgrade for EPC compliance."
+                prompt="A well-maintained 1960s-1970s detached house on a typical UK suburban estate. The property exhibits the era's distinctive features: a flat-fronted design with large picture windows, an integral garage, a low-pitched roof with grey concrete tiles, and a combination of brick and rendered finish. Late afternoon sunlight falls across the facade, revealing the straightforward construction that makes these homes relatively simple to upgrade for EPC compliance. Show a genuine UK 1960s-1970s semi or detached with flat front, large windows, and integral garage. Capture the clean, simple lines and low-pitched roof typical of this era. Late afternoon light, well-maintained property in suburban estate setting."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK 1960s-1970s semi or detached with flat front, large windows, and integral garage',
-                  'Capture the clean, simple lines and low-pitched roof typical of this era',
-                  'Late afternoon light, well-maintained property in suburban estate setting',
-                ]}
               />
 
               {/* Introduction */}
@@ -255,14 +250,9 @@ export default function SixtiesSeventiesHousePage() {
                 <GeneratedImage
                   imageId="1960s-1970s-house-cavity-wall-cross-section"
                   alt="Cross-section diagram showing 1960s-1970s cavity wall construction"
-                  description="A technical cross-section illustration of typical 1960s-1970s cavity wall construction. The diagram clearly labels the brick outer leaf, the 50-75mm cavity gap, and the block inner leaf. An adjacent view shows the cavity filled with insulation material, with heat loss arrows demonstrating the dramatic reduction in thermal transfer once insulated. Measurements and component labels make the construction easy to understand."
+                  prompt="A technical cross-section illustration of typical 1960s-1970s cavity wall construction. The diagram clearly labels the brick outer leaf, the 50-75mm cavity gap, and the block inner leaf. An adjacent view shows the cavity filled with insulation material, with heat loss arrows demonstrating the dramatic reduction in thermal transfer once insulated. Measurements and component labels make the construction easy to understand. Show cross-section with brick outer leaf, 50-75mm cavity, and block inner leaf. Illustrate cavity filled with insulation material. Include heat loss arrows showing before and after insulation benefit."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Show cross-section with brick outer leaf, 50-75mm cavity, and block inner leaf',
-                    'Illustrate cavity filled with insulation material',
-                    'Include heat loss arrows showing before and after insulation benefit',
-                  ]}
                   className="mt-8"
                 />
               </section>
@@ -700,14 +690,9 @@ export default function SixtiesSeventiesHousePage() {
                 <GeneratedImage
                   imageId="1960s-1970s-house-epc-comparison"
                   alt="EPC certificate comparison showing before and after improvement"
-                  description="A side-by-side comparison of two EPC certificates for a 1960s-1970s house. The left certificate shows the original D rating with 58 points and an orange energy bar, while the right certificate displays the improved C rating with 79 points and a green energy bar. Arrows or annotations highlight the significant 21-point improvement achieved through cavity wall insulation and other upgrades."
+                  prompt="A side-by-side comparison of two EPC certificates for a 1960s-1970s house. The left certificate shows the original D rating with 58 points and an orange energy bar, while the right certificate displays the improved C rating with 79 points and a green energy bar. Arrows or annotations highlight the significant 21-point improvement achieved through cavity wall insulation and other upgrades. Show official GOV.UK EPC certificate format side by side. Left: D rating (58 points) with orange bar; Right: C rating (79 points) with green bar. Use arrows or annotations to highlight the improvement journey."
                   width={800}
                   height={350}
-                  instructions={[
-                    'Show official GOV.UK EPC certificate format side by side',
-                    'Left: D rating (58 points) with orange bar; Right: C rating (79 points) with green bar',
-                    'Use arrows or annotations to highlight the improvement journey',
-                  ]}
                   className="mt-8"
                 />
               </section>

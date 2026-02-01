@@ -110,14 +110,9 @@ export default function EToCUpgradePage() {
               <GeneratedImage
                 imageId="e-to-c-upgrade-hero"
                 alt="Victorian terraced house requiring major EPC upgrades to reach C rating"
-                description="A Victorian mid-terrace house on a typical British street, showing characteristics of an E-rated property - original sash windows, solid brick walls without external insulation, and an older boiler flue visible on the exterior. A surveyor with a clipboard examines the property from the pavement, assessing the scale of work needed. The neighbouring properties show similar period features common in UK rental stock."
+                prompt="A Victorian mid-terrace house on a typical British street, showing characteristics of an E-rated property - original sash windows, solid brick walls without external insulation, and an older boiler flue visible on the exterior. A surveyor with a clipboard examines the property from the pavement, assessing the scale of work needed. The neighbouring properties show similar period features common in UK rental stock. Pre-1919 Victorian or Edwardian terraced property. Visible energy efficiency challenges - old windows, solid walls. Professional surveyor assessing the property exterior."
                 width={1200}
                 height={630}
-                instructions={[
-                  'Pre-1919 Victorian or Edwardian terraced property',
-                  'Visible energy efficiency challenges - old windows, solid walls',
-                  'Professional surveyor assessing the property exterior',
-                ]}
                 priority
               />
 

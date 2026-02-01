@@ -133,14 +133,9 @@ export default function MEESRegulationsGuidePage() {
                 <GeneratedImage
                   imageId="mees-guide-hero"
                   alt="MEES compliance documentation and decision-making process"
-                  description="A landlord's hands holding property documents and reviewing compliance requirements at a desk. Visible are official MEES guidance documents, an EPC certificate showing a rating band, and a checklist with some items ticked off, representing the decision-making process for regulatory compliance."
+                  prompt="A landlord's hands holding property documents and reviewing compliance requirements at a desk. Visible are official MEES guidance documents, an EPC certificate showing a rating band, and a checklist with some items ticked off, representing the decision-making process for regulatory compliance. Capture the documentary feel of official compliance paperwork. Show professional hands suggesting an active landlord reviewing materials. Include recognisable UK property documentation elements."
                   width={800}
                   height={450}
-                  instructions={[
-                    "Capture the documentary feel of official compliance paperwork",
-                    "Show professional hands suggesting an active landlord reviewing materials",
-                    "Include recognisable UK property documentation elements"
-                  ]}
                   priority
                 />
 

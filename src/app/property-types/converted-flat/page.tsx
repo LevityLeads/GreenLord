@@ -92,15 +92,10 @@ export default function ConvertedFlatPage() {
               <GeneratedImage
                 imageId="converted-flat-exterior"
                 alt="Converted Victorian house showing multiple flat entrances"
-                description="A large Victorian house in a residential area of London that has been converted into multiple flats. The grand three-storey property retains its original architectural character with ornate brickwork, bay windows, and decorative stonework, while multiple doorbells and letter boxes at the entrance reveal its conversion to separate dwellings. Morning light highlights the period features that make these conversions both desirable and challenging for EPC improvements."
+                prompt="A large Victorian house in a residential area of London that has been converted into multiple flats. The grand three-storey property retains its original architectural character with ornate brickwork, bay windows, and decorative stonework, while multiple doorbells and letter boxes at the entrance reveal its conversion to separate dwellings. Morning light highlights the period features that make these conversions both desirable and challenging for EPC improvements. Show a genuine UK converted Victorian/Edwardian property with multiple doorbells visible. Maintain the original architectural character of the period building. Morning light, full facade showing the scale of a typical conversion."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK converted Victorian/Edwardian property with multiple doorbells visible',
-                  'Maintain the original architectural character of the period building',
-                  'Morning light, full facade showing the scale of a typical conversion',
-                ]}
               />
 
               {/* Introduction */}
@@ -260,14 +255,9 @@ export default function ConvertedFlatPage() {
                 <GeneratedImage
                   imageId="converted-flat-cross-section"
                   alt="Cross-section diagram showing a converted house with multiple flats"
-                  description="A technical cross-section illustration of a three-storey converted Victorian house divided into separate flats. The diagram clearly delineates individual flat boundaries on each floor, with colour-coded labels distinguishing shared elements such as external walls, roof structure, and communal staircase from the individual flat spaces. Annotations indicate where EPC assessment boundaries apply for each flat, highlighting the complexity of ownership that affects improvement options."
+                  prompt="A technical cross-section illustration of a three-storey converted Victorian house divided into separate flats. The diagram clearly delineates individual flat boundaries on each floor, with colour-coded labels distinguishing shared elements such as external walls, roof structure, and communal staircase from the individual flat spaces. Annotations indicate where EPC assessment boundaries apply for each flat, highlighting the complexity of ownership that affects improvement options. Show cross-section of a 3-storey converted house with individual flat boundaries. Label shared elements: external walls, roof, communal stairs in different colour. Indicate EPC assessment boundaries for each flat with clear annotations."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Show cross-section of a 3-storey converted house with individual flat boundaries',
-                    'Label shared elements: external walls, roof, communal stairs in different colour',
-                    'Indicate EPC assessment boundaries for each flat with clear annotations',
-                  ]}
                   className="mt-8"
                 />
               </section>
@@ -868,14 +858,9 @@ export default function ConvertedFlatPage() {
                 <GeneratedImage
                   imageId="converted-flat-epc-comparison"
                   alt="EPC certificate comparison showing improvement from E to C"
-                  description="A side-by-side comparison of two EPC certificates for a converted flat. The left certificate shows the original E rating with 46 points and an orange-red energy bar, while the right certificate displays the improved C rating with 72 points and a green energy bar. The visual comparison demonstrates the 26-point improvement achievable through strategic upgrades within the constraints of leasehold ownership."
+                  prompt="A side-by-side comparison of two EPC certificates for a converted flat. The left certificate shows the original E rating with 46 points and an orange-red energy bar, while the right certificate displays the improved C rating with 72 points and a green energy bar. The visual comparison demonstrates the 26-point improvement achievable through strategic upgrades within the constraints of leasehold ownership. Show official GOV.UK EPC certificate format side by side. Left: E rating (46 points) with orange/red bar; Right: C rating (72 points) with green bar. Highlight the improvement visually with clear before/after comparison."
                   width={800}
                   height={350}
-                  instructions={[
-                    'Show official GOV.UK EPC certificate format side by side',
-                    'Left: E rating (46 points) with orange/red bar; Right: C rating (72 points) with green bar',
-                    'Highlight the improvement visually with clear before/after comparison',
-                  ]}
                   className="mt-8"
                 />
               </section>

@@ -89,15 +89,10 @@ export default function FiftiesHousePage() {
               <GeneratedImage
                 imageId="1950s-house-exterior"
                 alt="Typical 1950s semi-detached house in a UK suburban street"
-                description="A post-war 1950s semi-detached house on a quiet suburban street in a northern English town. The property shows the transitional architecture of this era: a modest bay window at ground floor, cream pebbledash render, a hipped roof with weathered clay tiles, and a small front garden with privet hedging. Morning light reveals the solid construction of these homes that can be upgraded with either cavity or solid wall solutions depending on their specific build type."
+                prompt="A post-war 1950s semi-detached house on a quiet suburban street in a northern English town. The property shows the transitional architecture of this era: a modest bay window at ground floor, cream pebbledash render, a hipped roof with weathered clay tiles, and a small front garden with privet hedging. Morning light reveals the solid construction of these homes that can be upgraded with either cavity or solid wall solutions depending on their specific build type. Show a genuine UK 1950s semi with bay window, pebbledash, and hipped roof. Capture the transitional post-war architectural style. Morning light, typical suburban setting with modest front garden."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK 1950s semi with bay window, pebbledash, and hipped roof',
-                  'Capture the transitional post-war architectural style',
-                  'Morning light, typical suburban setting with modest front garden',
-                ]}
               />
 
               {/* Introduction */}
@@ -268,14 +263,9 @@ export default function FiftiesHousePage() {
                 <GeneratedImage
                   imageId="1950s-house-wall-comparison"
                   alt="Comparison diagram showing 1950s narrow cavity wall versus solid wall construction"
-                  description="A technical illustration comparing the two main wall construction types found in 1950s properties. On the left, an 11-inch cavity wall cross-section shows the narrow 2-inch (50mm) cavity between brick leaves, highlighting the challenge of insulating such a tight space. On the right, a 9-inch solid brick wall cross-section shows the traditional construction with no cavity. Clear labels indicate dimensions and the different insulation approaches required for each type."
+                  prompt="A technical illustration comparing the two main wall construction types found in 1950s properties. On the left, an 11-inch cavity wall cross-section shows the narrow 2-inch (50mm) cavity between brick leaves, highlighting the challenge of insulating such a tight space. On the right, a 9-inch solid brick wall cross-section shows the traditional construction with no cavity. Clear labels indicate dimensions and the different insulation approaches required for each type. Show side-by-side cross-sections of 11-inch cavity wall and 9-inch solid wall. Clearly label dimensions including the narrow 2-inch (50mm) cavity. Indicate the different insulation challenges for each wall type."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Show side-by-side cross-sections of 11-inch cavity wall and 9-inch solid wall',
-                    'Clearly label dimensions including the narrow 2-inch (50mm) cavity',
-                    'Indicate the different insulation challenges for each wall type',
-                  ]}
                   className="mt-8"
                 />
               </section>
@@ -655,14 +645,9 @@ export default function FiftiesHousePage() {
                 <GeneratedImage
                   imageId="1950s-house-wall-measurement"
                   alt="Diagram showing how to measure wall thickness at a window reveal"
-                  description="A clear technical illustration demonstrating how to measure wall thickness at a window reveal to determine wall type. The cross-section through a window opening shows measurement points from the internal face to external face, with annotations indicating that 225mm typically suggests solid construction while 280mm+ indicates cavity walls. A note reminds readers that professional borescope verification is recommended for definitive assessment."
+                  prompt="A clear technical illustration demonstrating how to measure wall thickness at a window reveal to determine wall type. The cross-section through a window opening shows measurement points from the internal face to external face, with annotations indicating that 225mm typically suggests solid construction while 280mm+ indicates cavity walls. A note reminds readers that professional borescope verification is recommended for definitive assessment. Show cross-section through a window opening with measurement points. Label typical measurements: 225mm = solid, 280mm+ = cavity. Include a note recommending professional verification."
                   width={800}
                   height={350}
-                  instructions={[
-                    'Show cross-section through a window opening with measurement points',
-                    'Label typical measurements: 225mm = solid, 280mm+ = cavity',
-                    'Include a note recommending professional verification',
-                  ]}
                   className="mt-8"
                 />
               </section>
@@ -783,14 +768,9 @@ export default function FiftiesHousePage() {
                 <GeneratedImage
                   imageId="1950s-house-epc-comparison"
                   alt="EPC certificate comparison showing improvement from E to C"
-                  description="A side-by-side comparison of two EPC certificates demonstrating the improvement journey for a 1950s house. The left certificate shows the original E rating with 48 points and an orange-red energy bar, while the right certificate displays the improved C rating with 77 points and a green energy bar. The visual transformation highlights the significant progress achievable through strategic upgrades to these post-war properties."
+                  prompt="A side-by-side comparison of two EPC certificates demonstrating the improvement journey for a 1950s house. The left certificate shows the original E rating with 48 points and an orange-red energy bar, while the right certificate displays the improved C rating with 77 points and a green energy bar. The visual transformation highlights the significant progress achievable through strategic upgrades to these post-war properties. Show official GOV.UK EPC certificate format side by side. Left: E rating (48 points) with orange/red bar; Right: C rating (77 points) with green bar. Highlight the improvement visually with clear before/after comparison."
                   width={800}
                   height={350}
-                  instructions={[
-                    'Show official GOV.UK EPC certificate format side by side',
-                    'Left: E rating (48 points) with orange/red bar; Right: C rating (77 points) with green bar',
-                    'Highlight the improvement visually with clear before/after comparison',
-                  ]}
                   className="mt-8"
                 />
               </section>

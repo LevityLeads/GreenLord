@@ -331,16 +331,9 @@ export default function HomePage() {
               <GeneratedImage
                 imageId="homepage-author-headshot"
                 alt="James Crawford - Property Compliance Specialist"
-                description="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context."
+                prompt="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context. Professional headshot style with shoulders and head visible. Neutral or office background. Smart casual or business attire. Warm, approachable expression. Good lighting, professional quality."
                 width={400}
                 height={400}
-                instructions={[
-                  'Professional headshot style, shoulders and head visible',
-                  'Neutral or office background',
-                  'Smart casual or business attire',
-                  'Warm, approachable expression',
-                  'Good lighting, professional quality',
-                ]}
               />
             </div>
 

@@ -146,14 +146,9 @@ export default function RegulationsPage() {
                 <GeneratedImage
                   imageId="regulations-overview-timeline"
                   alt="Timeline infographic showing key EPC regulation dates from 2018 to 2030"
-                  description="A documentary-style photograph of an open planning diary on a landlord's desk, showing important dates circled and highlighted. Beside it lies an EPC certificate and government policy documents, with a calendar visible in the background marking October 2030 as the critical deadline."
+                  prompt="A documentary-style photograph of an open planning diary on a landlord's desk, showing important dates circled and highlighted. Beside it lies an EPC certificate and government policy documents, with a calendar visible in the background marking October 2030 as the critical deadline. Focus on authentic paperwork and planning materials that landlords would actually use. Include subtle visual cues indicating progression of time and approaching deadlines. Maintain professional, serious tone appropriate for regulatory compliance content."
                   width={800}
                   height={300}
-                  instructions={[
-                    "Focus on authentic paperwork and planning materials that landlords would actually use",
-                    "Include subtle visual cues indicating progression of time and approaching deadlines",
-                    "Maintain professional, serious tone appropriate for regulatory compliance content"
-                  ]}
                 />
 
                 <div className="grid sm:grid-cols-2 gap-4 my-8">
@@ -541,14 +536,9 @@ export default function RegulationsPage() {
                 <GeneratedImage
                   imageId="regulations-rdsap-comparison"
                   alt="Comparison of RdSAP 9 versus RdSAP 10 ratings for a sample property"
-                  description="A close-up photograph of two EPC certificates placed side by side on a wooden desk, one older and one newer, showing how the same property can receive different ratings under different assessment methodologies. A magnifying glass hovers over the key differences."
+                  prompt="A close-up photograph of two EPC certificates placed side by side on a wooden desk, one older and one newer, showing how the same property can receive different ratings under different assessment methodologies. A magnifying glass hovers over the key differences. Show authentic-looking EPC documents with visible rating bands. Include subtle differences in the certificates to suggest methodology changes. Professional lighting emphasising the documentary comparison nature."
                   width={800}
                   height={400}
-                  instructions={[
-                    "Show authentic-looking EPC documents with visible rating bands",
-                    "Include subtle differences in the certificates to suggest methodology changes",
-                    "Professional lighting emphasising the documentary comparison nature"
-                  ]}
                 />
 
                 <TipBox title="Should You Wait for RdSAP 10?">

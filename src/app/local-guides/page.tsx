@@ -155,15 +155,10 @@ export default function LocalGuidesPage() {
           <GeneratedImage
             imageId="local-guides-uk-map"
             alt="Aerial view of UK cities representing regional landlord support networks"
-            description="An aerial or satellite-style view showing the UK landscape with major cities glowing softly to indicate coverage areas. The image conveys the nationwide scope of local landlord support, with urban centres connected across the country. The perspective emphasises the regional diversity of the UK rental market."
+            prompt="An aerial or satellite-style view showing the UK landscape with major cities glowing softly to indicate coverage areas. The image conveys the nationwide scope of local landlord support, with urban centres connected across the country. The perspective emphasises the regional diversity of the UK rental market. Show an atmospheric aerial or map-style view of the UK with visible city locations. Use warm lighting or highlights to mark major urban centres like Manchester, Birmingham, Leeds. Create a sense of geographic scope and regional coverage across England."
             width={1200}
             height={500}
             priority
-            instructions={[
-              'Show an atmospheric aerial or map-style view of the UK with visible city locations',
-              'Use warm lighting or highlights to mark major urban centres like Manchester, Birmingham, Leeds',
-              'Create a sense of geographic scope and regional coverage across England',
-            ]}
           />
         </Container>
       </Section>

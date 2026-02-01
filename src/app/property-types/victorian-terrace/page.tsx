@@ -88,17 +88,10 @@ export default function VictorianTerracePage() {
               <GeneratedImage
                 imageId="victorian-terrace-hero"
                 alt="Row of Victorian terrace houses in a typical UK street"
-                description="A photograph of a traditional Victorian terrace street showing the characteristic features: bay windows, tall sash windows, decorative brickwork, chimneys, and slate roofs. The image should show the uniform row of houses that typifies Victorian terrace development."
+                prompt="A photograph of a traditional Victorian terrace street showing the characteristic features: bay windows, tall sash windows, decorative brickwork, chimneys, and slate roofs. The image should show the uniform row of houses that typifies Victorian terrace development. Show a genuine UK Victorian terrace street, ideally in good condition. Capture characteristic features: bay windows, sash windows, decorative details. Daylight conditions, showing the full facade. Avoid showing house numbers or identifiable personal information. A mix of well-maintained properties demonstrates the housing stock."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK Victorian terrace street, ideally in good condition',
-                  'Capture characteristic features: bay windows, sash windows, decorative details',
-                  'Daylight conditions, showing the full facade',
-                  'Avoid showing house numbers or identifiable personal information',
-                  'A mix of well-maintained properties demonstrates the housing stock',
-                ]}
               />
 
               {/* Introduction */}
@@ -202,16 +195,9 @@ export default function VictorianTerracePage() {
                 <GeneratedImage
                   imageId="victorian-terrace-wall-cross-section"
                   alt="Cross-section diagram showing Victorian terrace solid wall construction"
-                  description="A technical illustration showing a cross-section of a typical Victorian terrace wall, clearly labelling the solid brick construction, internal plaster, and the absence of any cavity. Should also show the typical floor junction and how the suspended timber floor connects to the walls."
+                  prompt="A technical illustration showing a cross-section of a typical Victorian terrace wall, clearly labelling the solid brick construction, internal plaster, and the absence of any cavity. Should also show the typical floor junction and how the suspended timber floor connects to the walls. Use a clean, technical illustration style. Clearly label: solid brick, internal plaster, lime mortar, no cavity. Show the wall-floor junction with suspended timber floor. Include measurements where helpful (9\" wall thickness). Consider showing heat loss arrows to illustrate the problem."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Use a clean, technical illustration style',
-                    'Clearly label: solid brick, internal plaster, lime mortar, no cavity',
-                    'Show the wall-floor junction with suspended timber floor',
-                    'Include measurements where helpful (9" wall thickness)',
-                    'Consider showing heat loss arrows to illustrate the problem',
-                  ]}
                   className="mt-8"
                 />
               </section>
@@ -599,16 +585,9 @@ export default function VictorianTerracePage() {
                 <GeneratedImage
                   imageId="victorian-terrace-iwi-before-after"
                   alt="Before and after internal wall insulation installation in a Victorian terrace room"
-                  description="A side-by-side comparison showing a Victorian terrace room before and after internal wall insulation. The before image should show the bare brick or plaster wall, while the after shows the finished insulated wall with new plasterboard and skirting. Both should show how the room proportions are affected."
+                  prompt="A side-by-side comparison showing a Victorian terrace room before and after internal wall insulation. The before image should show the bare brick or plaster wall, while the after shows the finished insulated wall with new plasterboard and skirting. Both should show how the room proportions are affected. Show the same room angle in both images. Before: original walls, possibly with original features. After: smooth finished wall with new skirting boards. Include a reference object to show the 50-100mm depth lost. Show how original features like cornices are handled."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Show the same room angle in both images',
-                    'Before: original walls, possibly with original features',
-                    'After: smooth finished wall with new skirting boards',
-                    'Include a reference object to show the 50-100mm depth lost',
-                    'Show how original features like cornices are handled',
-                  ]}
                   className="mt-8"
                 />
 
@@ -738,16 +717,9 @@ export default function VictorianTerracePage() {
                 <GeneratedImage
                   imageId="victorian-terrace-epc-comparison"
                   alt="EPC certificate comparison showing before and after improvement"
-                  description="A mock-up or real example showing two EPC certificates side by side - the original E-rated certificate on the left and the improved C-rated certificate on the right. The comparison should highlight the score improvement from 42 to 71 points."
+                  prompt="A mock-up or real example showing two EPC certificates side by side - the original E-rated certificate on the left and the improved C-rated certificate on the right. The comparison should highlight the score improvement from 42 to 71 points. Show the official EPC certificate format. Left side: E rating, 42 points, red/orange energy bar. Right side: C rating, 71 points, green energy bar. Highlight the improvement visually with arrows or annotations. Ensure format matches current GOV.UK EPC certificate design."
                   width={800}
                   height={350}
-                  instructions={[
-                    'Show the official EPC certificate format',
-                    'Left side: E rating, 42 points, red/orange energy bar',
-                    'Right side: C rating, 71 points, green energy bar',
-                    'Highlight the improvement visually with arrows or annotations',
-                    'Ensure format matches current GOV.UK EPC certificate design',
-                  ]}
                 />
               </section>
 

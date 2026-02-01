@@ -140,15 +140,10 @@ export default function WarmHomesPlanPage() {
                 <GeneratedImage
                   imageId="warm-homes-plan-hero"
                   alt="Key highlights from the Warm Homes Plan policy document"
-                  description="A close-up photograph of the official Warm Homes Plan government policy document open on a desk, with key sections highlighted. Nearby sits a landlord's notebook with handwritten summary notes, a pen, and reading glasses, suggesting careful study of the new regulations."
+                  prompt="A close-up photograph of the official Warm Homes Plan government policy document open on a desk, with key sections highlighted. Nearby sits a landlord's notebook with handwritten summary notes, a pen, and reading glasses, suggesting careful study of the new regulations. Capture the official, governmental nature of the policy document. Include elements showing landlord engagement with the material. Professional documentary style emphasising importance of the legislation."
                   width={800}
                   height={400}
                   priority
-                  instructions={[
-                    "Capture the official, governmental nature of the policy document",
-                    "Include elements showing landlord engagement with the material",
-                    "Professional documentary style emphasising importance of the legislation"
-                  ]}
                 />
               </section>
 

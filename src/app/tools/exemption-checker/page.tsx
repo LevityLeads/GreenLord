@@ -107,14 +107,9 @@ export default function ExemptionCheckerPage() {
               <GeneratedImage
                 imageId="exemption-checker-hero"
                 alt="Landlord reviewing EPC exemption documents at a desk"
-                description="A landlord carefully reviews official exemption paperwork at a tidy desk, with a laptop open to a government portal in the background. The scene shows the careful documentation process, with printed forms and a pen ready for notes. The atmosphere is professional and methodical."
+                prompt="A landlord carefully reviews official exemption paperwork at a tidy desk, with a laptop open to a government portal in the background. The scene shows the careful documentation process, with printed forms and a pen ready for notes. The atmosphere is professional and methodical. Show a person reviewing official-looking documents with focused attention. Include a laptop or computer screen in the background suggesting online registration. Convey a sense of careful compliance and thorough documentation."
                 width={1200}
                 height={500}
-                instructions={[
-                  'Show a person reviewing official-looking documents with focused attention',
-                  'Include a laptop or computer screen in the background suggesting online registration',
-                  'Convey a sense of careful compliance and thorough documentation',
-                ]}
                 className="mb-8"
               />
 

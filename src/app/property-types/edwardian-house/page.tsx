@@ -89,15 +89,10 @@ export default function EdwardianHousePage() {
               <GeneratedImage
                 imageId="edwardian-house-exterior"
                 alt="Elegant Edwardian house with characteristic bay windows and decorative features"
-                description="An elegant Edwardian semi-detached house on a tree-lined residential street in suburban London. The property displays the era's signature features: generous double-height bay windows with decorative stained glass panels, ornate brickwork and terracotta detailing, tall chimneys, and a wide frontage suggesting spacious rooms within. Late morning light accentuates the architectural grandeur that makes these 1901-1914 homes so distinctive."
+                prompt="An elegant Edwardian semi-detached house on a tree-lined residential street in suburban London. The property displays the era's signature features: generous double-height bay windows with decorative stained glass panels, ornate brickwork and terracotta detailing, tall chimneys, and a wide frontage suggesting spacious rooms within. Late morning light accentuates the architectural grandeur that makes these 1901-1914 homes so distinctive. Show a genuine UK Edwardian semi-detached house with large bay windows and ornate details. Capture the wider proportions and grander scale compared to Victorian terraces. Late morning or afternoon light, emphasising decorative architectural features."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK Edwardian semi-detached house with large bay windows and ornate details',
-                  'Capture the wider proportions and grander scale compared to Victorian terraces',
-                  'Late morning or afternoon light, emphasising decorative architectural features',
-                ]}
               />
 
               {/* Introduction */}
@@ -202,14 +197,9 @@ export default function EdwardianHousePage() {
                 <GeneratedImage
                   imageId="edwardian-house-cross-section"
                   alt="Cross-section diagram showing Edwardian house construction with high ceilings"
-                  description="A technical cross-section illustration of a typical Edwardian house revealing the internal construction. The diagram clearly shows the 225-340mm solid brick walls, impressive 3-metre ceiling heights, the deep bay window structure spanning both floors, and suspended timber ground floor. Measurements annotate key dimensions, highlighting the generous room volumes that characterise these period properties."
+                  prompt="A technical cross-section illustration of a typical Edwardian house revealing the internal construction. The diagram clearly shows the 225-340mm solid brick walls, impressive 3-metre ceiling heights, the deep bay window structure spanning both floors, and suspended timber ground floor. Measurements annotate key dimensions, highlighting the generous room volumes that characterise these period properties. Clean technical illustration style with clear labels for walls, ceilings, and bay windows. Show measurements: 3m+ ceiling heights, solid brick wall thickness. Emphasise the larger room volumes that increase heating requirements."
                   width={800}
                   height={400}
-                  instructions={[
-                    'Clean technical illustration style with clear labels for walls, ceilings, and bay windows',
-                    'Show measurements: 3m+ ceiling heights, solid brick wall thickness',
-                    'Emphasise the larger room volumes that increase heating requirements',
-                  ]}
                   className="mt-8"
                 />
               </section>

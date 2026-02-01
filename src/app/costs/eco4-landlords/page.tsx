@@ -107,14 +107,9 @@ export default function ECO4LandlordsPage() {
               <GeneratedImage
                 imageId="eco4-landlords-hero"
                 alt="ECO4 installer fitting cavity wall insulation in a British rental property"
-                description="Two installers in high-visibility workwear operate cavity wall insulation injection equipment outside a 1960s British semi-detached house. One worker holds the injection lance while another monitors the pump equipment mounted in a branded van. Drilled holes in the brickwork are visible, showing the installation in progress. The scene captures the professional, government-backed nature of ECO4 funded work."
+                prompt="Two installers in high-visibility workwear operate cavity wall insulation injection equipment outside a 1960s British semi-detached house. One worker holds the injection lance while another monitors the pump equipment mounted in a branded van. Drilled holes in the brickwork are visible, showing the installation in progress. The scene captures the professional, government-backed nature of ECO4 funded work. Professional installers in branded hi-vis workwear. Cavity wall insulation injection equipment visible. Typical British residential property as backdrop."
                 width={1200}
                 height={630}
-                instructions={[
-                  'Professional installers in branded hi-vis workwear',
-                  'Cavity wall insulation injection equipment visible',
-                  'Typical British residential property as backdrop',
-                ]}
                 priority
               />
 

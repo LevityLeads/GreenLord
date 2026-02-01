@@ -91,15 +91,10 @@ export default function HMOPage() {
               <GeneratedImage
                 imageId="hmo-property-exterior"
                 alt="Large HMO property with multiple rooms and shared facilities"
-                description="A larger Victorian or Edwardian house converted for multiple occupancy on a residential street in a UK city. The property features multiple front-facing windows suggesting numerous bedrooms, a practical entrance area, and well-maintained exterior befitting professional landlord standards. Morning light illuminates the facade, showing the scale and character of this HMO property."
+                prompt="A larger Victorian or Edwardian house converted for multiple occupancy on a residential street in a UK city. The property features multiple front-facing windows suggesting numerous bedrooms, a practical entrance area, and well-maintained exterior befitting professional landlord standards. Morning light illuminates the facade, showing the scale and character of this HMO property. Show a genuine UK HMO-style property (larger Victorian or Edwardian house) with multiple windows. Capture the scale that suggests multiple occupancy without showing individuals. Morning or afternoon daylight, professional landlord standards evident."
                 width={800}
                 height={450}
                 priority
-                instructions={[
-                  'Show a genuine UK HMO-style property (larger Victorian or Edwardian house) with multiple windows',
-                  'Capture the scale that suggests multiple occupancy without showing individuals',
-                  'Morning or afternoon daylight, professional landlord standards evident',
-                ]}
               />
 
               {/* Introduction */}

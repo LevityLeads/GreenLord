@@ -111,14 +111,9 @@ export default function WarmHomesLocalGrantPage() {
               <GeneratedImage
                 imageId="warm-homes-local-grant-hero"
                 alt="Comprehensive energy efficiency work being carried out on a British terraced house"
-                description="A Victorian terraced house undergoing major energy efficiency upgrades funded by the Warm Homes Local Grant. Scaffolding covers the front facade where external wall insulation is being fitted, while a delivery van unloads an air source heat pump unit. Workers in safety gear coordinate the multiple improvement works happening simultaneously. The neighbouring properties show the before state, highlighting the transformation underway."
+                prompt="A Victorian terraced house undergoing major energy efficiency upgrades funded by the Warm Homes Local Grant. Scaffolding covers the front facade where external wall insulation is being fitted, while a delivery van unloads an air source heat pump unit. Workers in safety gear coordinate the multiple improvement works happening simultaneously. The neighbouring properties show the before state, highlighting the transformation underway. Major refurbishment work in progress on period property. Multiple trades visible - scaffolding, insulation, heating equipment. British terraced street setting with neighbouring homes visible."
                 width={1200}
                 height={630}
-                instructions={[
-                  'Major refurbishment work in progress on period property',
-                  'Multiple trades visible - scaffolding, insulation, heating equipment',
-                  'British terraced street setting with neighbouring homes visible',
-                ]}
                 priority
               />
 
