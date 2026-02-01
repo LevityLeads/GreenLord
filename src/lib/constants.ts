@@ -98,6 +98,7 @@ export const MAIN_NAVIGATION: NavItem[] = [
     href: '/resources',
     description: 'FAQs, glossary, and more',
     children: [
+      { label: 'EPC Compliance Research', href: '/research/epc-compliance' },
       { label: 'FAQ', href: '/resources/faq' },
       { label: 'Glossary', href: '/resources/glossary' },
     ],
@@ -238,6 +239,7 @@ export const FOOTER_LINKS = {
     { label: 'EPC Analyser', href: '/tools/epc-analyser' },
   ],
   resources: [
+    { label: 'EPC Compliance Research', href: '/research/epc-compliance' },
     { label: 'FAQ', href: '/resources/faq' },
     { label: 'Glossary', href: '/resources/glossary' },
   ],
