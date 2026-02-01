@@ -82,6 +82,7 @@ export default function HomePage() {
 
             <div className="hidden lg:block">
               <ImagePlaceholder
+                id="homepage-hero-landlord"
                 alt="Professional landlord reviewing property documents with EPC certificate visible"
                 description="Capture a candid, documentary-style photograph of a property investor at work. Frame a middle-aged professional seated at their kitchen table or home office, papers spread before them, with an EPC certificate prominently placed in the foreground. The scene should feel authentic and unposed - natural window light, lived-in surroundings, perhaps a mug of tea nearby. This is someone taking practical steps, not posing for a corporate shoot."
                 width={600}
@@ -335,6 +336,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <ImagePlaceholder
+                id="homepage-author-headshot"
                 alt="James Crawford - Property Compliance Specialist"
                 description="Professional headshot with personality. Capture a confident but approachable industry expert - someone you'd trust to give you straight answers. Slight smile, direct eye contact, shot against a clean but not sterile background. Think 'trusted advisor' rather than 'corporate executive'. Smart-casual attire suggests expertise without stuffiness."
                 width={400}
