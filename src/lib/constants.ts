@@ -7,9 +7,7 @@ export const SITE_CONFIG = {
   description:
     'The authoritative resource for UK private landlords navigating EPC compliance requirements. Clear guidance, interactive tools, and property-specific recommendations.',
   url: 'https://greenlord.co.uk',
-  author: 'James Crawford',
-  authorBio:
-    'James Crawford is a property compliance specialist with over 15 years of experience advising landlords on energy efficiency regulations. Former EPC assessor and NRLA member.',
+  author: 'GreenLord Team',
 };
 
 // Key dates
@@ -100,6 +98,7 @@ export const MAIN_NAVIGATION: NavItem[] = [
     href: '/resources',
     description: 'FAQs, glossary, and more',
     children: [
+      { label: 'EPC Compliance Research', href: '/research/epc-compliance' },
       { label: 'FAQ', href: '/resources/faq' },
       { label: 'Glossary', href: '/resources/glossary' },
     ],
@@ -240,6 +239,7 @@ export const FOOTER_LINKS = {
     { label: 'EPC Analyser', href: '/tools/epc-analyser' },
   ],
   resources: [
+    { label: 'EPC Compliance Research', href: '/research/epc-compliance' },
     { label: 'FAQ', href: '/resources/faq' },
     { label: 'Glossary', href: '/resources/glossary' },
   ],

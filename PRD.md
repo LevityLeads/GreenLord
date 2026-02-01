@@ -1271,7 +1271,7 @@ Core source documents to acquire and maintain:
 |----------|------------|
 | Brand name | GreenLord ✓ |
 | Domain | [production domain] ✓ |
-| Author persona | James Crawford ✓ |
+| Author persona | GreenLord Team ✓ |
 
 ---
 

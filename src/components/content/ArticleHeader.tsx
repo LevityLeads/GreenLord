@@ -28,7 +28,7 @@ export interface ArticleHeaderProps {
  *   title="EPC C 2030 Deadline: Complete Guide for Landlords"
  *   publishedDate="2024-06-15"
  *   lastUpdated="2025-01-20"
- *   author="James Crawford"
+ *   author="GreenLord Team"
  *   readingTime={15}
  *   subtitle="Everything you need to know about the upcoming EPC requirements for rental properties"
  * />

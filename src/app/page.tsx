@@ -326,51 +326,36 @@ export default function HomePage() {
       {/* Why Trust Us Section */}
       <Section background="muted" padding="lg">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <GeneratedImage
-                imageId="homepage-author-headshot"
-                alt="James Crawford - Property Compliance Specialist"
-                prompt="Professional headshot of James Crawford, the author and property compliance specialist behind GreenLord. Approachable, trustworthy appearance suitable for a professional services context. Professional headshot style with shoulders and head visible. Neutral or office background. Smart casual or business attire. Warm, approachable expression. Good lighting, professional quality."
-                width={400}
-                height={400}
-              />
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary-800 mb-4 text-center">
+              Written by Landlords, for Landlords
+            </h2>
+            <p className="text-lg text-neutral-600 mb-6 text-center">
+              We understand the commercial realities of being a landlord. Our guidance is practical,
+              not preachy. We focus on helping you make informed business decisions, not lecturing
+              about environmental policy.
+            </p>
 
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl font-bold text-primary-800 mb-4">
-                Written by Landlords, for Landlords
-              </h2>
-              <p className="text-lg text-neutral-600 mb-6">
-                GreenLord was created by {SITE_CONFIG.author}, {SITE_CONFIG.authorBio}
-              </p>
-              <p className="text-lg text-neutral-600 mb-6">
-                We understand the commercial realities of being a landlord. Our guidance is practical,
-                not preachy. We focus on helping you make informed business decisions, not lecturing
-                about environmental policy.
-              </p>
-
-              <div className="grid sm:grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-white rounded-lg border border-neutral-200">
-                  <div className="text-2xl font-bold text-primary-800">15+</div>
-                  <div className="text-sm text-neutral-600">Years experience</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-lg border border-neutral-200">
-                  <div className="text-2xl font-bold text-primary-800">1,000+</div>
-                  <div className="text-sm text-neutral-600">EPCs assessed</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-lg border border-neutral-200">
-                  <div className="text-2xl font-bold text-primary-800">48hr</div>
-                  <div className="text-sm text-neutral-600">Content updates</div>
-                </div>
+            <div className="grid sm:grid-cols-3 gap-4 mb-6">
+              <div className="text-center p-4 bg-white rounded-lg border border-neutral-200">
+                <div className="text-2xl font-bold text-primary-800">15+</div>
+                <div className="text-sm text-neutral-600">Years experience</div>
               </div>
-
-              <KeyFactBox title="Our Commitment to Accuracy" className="mt-6">
-                Every claim on this site is verified against primary government sources.
-                We cite our sources, show publication dates, and update content within 48 hours of any regulatory change.
-                If you spot an error, <Link href="/contact" className="text-primary-700 underline">let us know</Link>.
-              </KeyFactBox>
+              <div className="text-center p-4 bg-white rounded-lg border border-neutral-200">
+                <div className="text-2xl font-bold text-primary-800">1,000+</div>
+                <div className="text-sm text-neutral-600">EPCs assessed</div>
+              </div>
+              <div className="text-center p-4 bg-white rounded-lg border border-neutral-200">
+                <div className="text-2xl font-bold text-primary-800">48hr</div>
+                <div className="text-sm text-neutral-600">Content updates</div>
+              </div>
             </div>
+
+            <KeyFactBox title="Our Commitment to Accuracy">
+              Every claim on this site is verified against primary government sources.
+              We cite our sources, show publication dates, and update content within 48 hours of any regulatory change.
+              If you spot an error, <Link href="/contact" className="text-primary-700 underline">let us know</Link>.
+            </KeyFactBox>
           </div>
         </Container>
       </Section>
