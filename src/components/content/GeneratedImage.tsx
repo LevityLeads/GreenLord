@@ -54,6 +54,8 @@ export function GeneratedImage({
   const [error, setError] = useState<string | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
   const [statusMessage, setStatusMessage] = useState<string>('Creating task...');
+  // Track the actual loaded image dimensions for perfect fit
+  const [naturalDimensions, setNaturalDimensions] = useState<{ width: number; height: number } | null>(null);
   const pollRef = useRef<NodeJS.Timeout | null>(null);
   const startTimeRef = useRef<number>(0);
 
@@ -172,6 +174,7 @@ export function GeneratedImage({
     setImageUrl(null);
     setState('placeholder');
     setError(null);
+    setNaturalDimensions(null);
     if (pollRef.current) {
       clearTimeout(pollRef.current);
     }
@@ -179,6 +182,20 @@ export function GeneratedImage({
       localStorage.removeItem(`generated-image-${imageId}`);
     }
   }, [imageId]);
+
+  // Handler to capture actual image dimensions when loaded
+  const handleImageLoad = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    setNaturalDimensions({
+      width: img.naturalWidth,
+      height: img.naturalHeight,
+    });
+  }, []);
+
+  // Use natural aspect ratio when image is loaded, otherwise use specified dimensions
+  const displayAspectRatio = naturalDimensions
+    ? naturalDimensions.width / naturalDimensions.height
+    : aspectRatio;
 
   // The prompt is now a single, complete string
   const fullPrompt = prompt;
@@ -195,19 +212,20 @@ export function GeneratedImage({
       <div
         className="relative"
         style={{
-          aspectRatio: aspectRatio.toString(),
+          aspectRatio: displayAspectRatio.toString(),
           maxHeight: '500px',
         }}
       >
         {/* Loaded State - Show Image */}
         {/* Using regular img tag to avoid Next.js Image domain restrictions */}
-        {/* object-contain ensures full image is visible without cropping */}
+        {/* Container adapts to image's natural aspect ratio for perfect fit */}
         {state === 'loaded' && imageUrl && (
           <img
             src={imageUrl}
             alt={alt}
-            className="absolute inset-0 w-full h-full object-contain bg-neutral-100"
+            className="absolute inset-0 w-full h-full object-fill"
             loading={priority ? 'eager' : 'lazy'}
+            onLoad={handleImageLoad}
           />
         )}
 
