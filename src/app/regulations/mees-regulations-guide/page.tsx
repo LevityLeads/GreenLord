@@ -132,15 +132,15 @@ export default function MEESRegulationsGuidePage() {
 
                 <ImagePlaceholder
                   alt="MEES compliance flowchart showing decision process for landlords"
-                  description="A flowchart showing the MEES compliance process: Starting with 'Do you have an EPC?', branching to 'Does it meet minimum standard?', then either 'You can let the property' or 'Can you make improvements?', finally leading to either compliance or exemption registration."
+                  description="Decision-tree flowchart guiding landlords through MEES compliance. Start with 'Do you have a valid EPC?' - if no, get one first. If yes, branch to 'Does it meet minimum standard? (Currently E, from 2030: C)'. Compliant path leads to green 'You can let the property' endpoint. Non-compliant path asks 'Can improvements achieve the standard?'. If yes under cost cap, proceed to improve. If no (or too expensive), register exemption. Use distinct visual styling for each path: green for compliant, amber for exemption route, red for non-compliant without action."
                   width={800}
                   height={450}
                   instructions={[
-                    'Create a clear flowchart with yes/no decision points',
-                    'Use colour coding (green for compliant paths, amber for exemption paths)',
-                    'Include the key thresholds (currently E, from 2030 C)',
-                    'Make it scannable and easy to follow',
-                    'Include a clear starting point and end points',
+                    'Flowchart with diamond decision nodes and rectangular action/outcome boxes',
+                    'Clear START point and multiple END points (compliant, exempt, non-compliant)',
+                    'Green path: meets standard, can let legally',
+                    'Amber path: exemption route with required evidence',
+                    'Include current threshold (E) and 2030 threshold (C) in relevant decision box',
                   ]}
                   priority
                 />

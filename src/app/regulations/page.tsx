@@ -145,15 +145,15 @@ export default function RegulationsPage() {
 
                 <ImagePlaceholder
                   alt="Timeline infographic showing key EPC regulation dates from 2018 to 2030"
-                  description="A horizontal timeline showing: April 2018 (MEES begins for new tenancies), April 2020 (MEES extends to existing tenancies), June 2025 (RdSAP 10 launches), January 2026 (Warm Homes Plan published), October 2030 (EPC C deadline for all properties)."
+                  description="Historical timeline infographic tracing the evolution of MEES regulations. Horizontal format flowing left to right through time. Mark five key milestones: April 2018 (MEES begins - F/G ban for new tenancies), April 2020 (extended to all tenancies), June 2025 (RdSAP 10 methodology launches), January 2026 (Warm Homes Plan confirms EPC C), and October 2030 (compliance deadline). Past events shown in muted tones; the 2030 deadline should be visually prominent as the endpoint. Include a 'today' marker showing current position on the timeline."
                   width={800}
                   height={300}
                   instructions={[
-                    'Clean, modern timeline design with clear date markers',
-                    'Use GreenLord brand colours (deep blue primary, teal accent)',
-                    'Highlight the October 2030 deadline prominently',
-                    'Include brief description under each date',
-                    'Make it suitable for both light and dark backgrounds',
+                    'Horizontal timeline with clear chronological flow',
+                    'Past milestones in muted/greyed styling; future in full colour',
+                    'October 2030 as a bold, prominent endpoint - larger marker, warning colour',
+                    'Brief label under each date explaining significance',
+                    '"You are here" or "Today" indicator for February 2026 position',
                   ]}
                 />
 
@@ -541,15 +541,15 @@ export default function RegulationsPage() {
 
                 <ImagePlaceholder
                   alt="Comparison of RdSAP 9 versus RdSAP 10 ratings for a sample property"
-                  description="Split-screen comparison showing the same property rated under RdSAP 9 (old methodology) and RdSAP 10 (new methodology). Shows how the overall rating and specific improvement recommendations may differ."
+                  description="Technical comparison infographic showing the same 1930s semi-detached property assessed under both EPC methodologies. Left panel: RdSAP 9 result showing rating D (score 62), with breakdown of component scores. Right panel: RdSAP 10 result showing how scores shift - perhaps rating C (score 69) if electrically heated, or similar D if gas. Use annotation callouts to highlight what changed: updated carbon factors favour electricity, heat pump valuations improved, minor shifts in wall/window U-value calculations. The key message: same property, different methodology, potentially different result."
                   width={800}
                   height={400}
                   instructions={[
-                    'Show a clear before/after comparison layout',
-                    'Include example EPC ratings that might change (e.g., D to C or C to D)',
-                    'Highlight key differences in how improvements are valued',
-                    'Use realistic property example like a 1930s semi',
-                    'Make the comparison visually intuitive',
+                    'Side-by-side comparison layout: RdSAP 9 (left) vs RdSAP 10 (right)',
+                    'Same property shown in both: use a recognisable 1930s semi silhouette',
+                    'Show both overall score AND key component breakdowns for comparison',
+                    'Annotation callouts explaining why scores differ',
+                    'Colour-coded change indicators: green for improved, red for declined, grey for unchanged',
                   ]}
                 />
 

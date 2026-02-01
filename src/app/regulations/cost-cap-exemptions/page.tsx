@@ -190,16 +190,16 @@ export default function CostCapExemptionsPage() {
 
                 <ImagePlaceholder
                   alt="Decision tree showing cost cap exemption eligibility"
-                  description="A flowchart decision tree showing: Does EPC meet minimum? If no, can improvements achieve it? If yes, what is the cost? If under GBP 10,000, must proceed. If over GBP 10,000, can claim exemption after spending up to cap."
+                  description="Cost cap decision flowchart guiding landlords through exemption eligibility. Start: 'Does your property meet EPC C?'. If YES → green endpoint 'Compliant - no action needed'. If NO → 'Get quotes for recommended improvements'. Branch: 'Total cost under £10,000?' If YES → amber 'Must proceed with improvements' (no exemption available). If NO → 'Spend up to £10,000 on most cost-effective measures' → 'Still below C after £10k spend?' If YES → green 'Register cost cap exemption'. Include cost callout: the £10,000 figure should be prominently displayed."
                   width={800}
                   height={450}
                   priority
                   instructions={[
-                    'Create a clear decision tree flowchart',
-                    'Use colour coding (green = compliant, amber = exemption path, red = non-compliant)',
-                    'Include the key cost threshold clearly',
-                    'Show both pathways (compliance vs exemption)',
-                    'Make it easy to follow from start to end',
+                    'Decision flowchart with clear yes/no branches at each step',
+                    'The £10,000 threshold should be visually prominent - large, bold, highlighted',
+                    'Three endpoints: Compliant (green), Must improve (amber), Can exempt (green)',
+                    'Show that exemption requires spending UP TO the cap first',
+                    'Visual hierarchy guides reader through the logical flow',
                   ]}
                 />
               </section>

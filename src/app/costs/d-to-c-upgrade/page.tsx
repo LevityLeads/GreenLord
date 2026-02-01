@@ -94,15 +94,15 @@ export default function DToCUpgradePage() {
               {/* Hero Image */}
               <ImagePlaceholder
                 alt="EPC certificate showing D rating with pathway to C"
-                description="An EPC certificate clearly showing a D rating (around 60 points), with visual indication of the journey to C. Could show the EPC scale with D highlighted and an arrow pointing toward C, or a certificate alongside improvement planning documents."
+                description="Stylised document photography showing an EPC certificate with the rating scale prominently visible. The D band (yellow/amber) should be highlighted with the current score clearly readable. Overlay or adjacent graphic elements show the journey ahead: an arrow or pathway leading toward the C band (green zone). Consider including subtle planning elements in frame - a pencil, sticky notes with improvement ideas, or a calculator - suggesting active compliance planning rather than passive document viewing."
                 width={1200}
                 height={630}
                 instructions={[
-                  'Focus on the EPC rating scale/chart portion',
-                  'Show D rating clearly (yellow band)',
-                  'Indicate the goal of reaching C (green band)',
-                  'Professional, clean imagery',
-                  'Could include planning documents or calculator in frame',
+                  'Styled flat-lay or angled document photography of EPC certificate',
+                  'D rating clearly visible and highlighted on the rainbow scale',
+                  'Visual journey indicator: arrow, dotted line, or progress path toward C',
+                  'Planning props in frame: pen, sticky notes, calculator suggest action',
+                  'Warm, optimistic lighting - this is an achievable journey',
                 ]}
                 priority
               />
@@ -291,15 +291,15 @@ export default function DToCUpgradePage() {
               {/* Diagram Placeholder */}
               <ImagePlaceholder
                 alt="Visual diagram showing the D to C improvement journey"
-                description="A clear visual showing a typical D-rated property on the left (score 58) and a C-rated property on the right (score 72), with the improvements in between. Could show icons for each improvement type (insulation, controls, etc.) with their point contributions adding up to reach the target."
+                description="Journey-style infographic visualising the D-to-C upgrade path. Start at left with a stylised house icon showing D rating (score 58, amber/yellow). Progress rightward through 3-4 improvement milestones - each shown as a stepping stone or checkpoint with an icon (insulation, controls, lighting) and its contribution (+10 points, +5 points, etc.). End at right with the same house now showing C rating (score 72, green). Below or alongside, show the cumulative cost building up. The visual metaphor should feel like a roadmap or game board - achievable steps rather than overwhelming change."
                 width={1200}
                 height={600}
                 instructions={[
-                  'Show before (D, score 58) and after (C, score 72)',
-                  'Use the EPC colour bands as background',
-                  'Show 3-4 improvement icons with point values',
-                  'Indicate total cost (e.g., £1,800)',
-                  'Clean, infographic style',
+                  'Journey/roadmap visual metaphor - left to right progression',
+                  'Before state (D, 58 points) and after state (C, 72 points) as bookends',
+                  'Each improvement as a milestone: icon + points gained + cost',
+                  'Running total visible: cumulative points and cumulative cost',
+                  'Colour transition from amber (D) through to green (C) as progress increases',
                 ]}
               />
 
@@ -473,15 +473,15 @@ export default function DToCUpgradePage() {
               {/* Before/After Placeholder */}
               <ImagePlaceholder
                 alt="Before and after comparison of typical D to C improvements"
-                description="Split image or side-by-side comparison showing before (thin loft insulation, old thermostat) and after (thick insulation, smart controls). Should make the improvements tangible and relatable for landlords."
+                description="Side-by-side or slider-style comparison photography showing tangible improvements. Compose two matched shots: LEFT (Before): A loft space with thin, uneven insulation (100mm, gaps visible), an old round dial thermostat on a magnolia wall, and perhaps a bare bulb light fitting. RIGHT (After): The same loft now deep in fluffy insulation (300mm, professionally laid), a sleek smart thermostat with digital display, and an LED downlight. The contrast should be immediate and satisfying - the 'after' clearly represents a warmer, more efficient home."
                 width={1200}
                 height={500}
                 instructions={[
-                  'Split screen or side-by-side format',
-                  'Before: thin/patchy loft insulation, old dial thermostat',
-                  'After: thick neat insulation, modern smart thermostat',
-                  'Clear, high-quality images',
-                  'Avoid stock photo feel',
+                  'Matched photography pairs: identical framing, different subject state',
+                  'Loft comparison: thin patchy insulation (before) vs deep even coverage (after)',
+                  'Thermostat comparison: old dial type vs modern smart control with screen',
+                  'Lighting comparison: old bulb vs LED (optional third pair)',
+                  'Clean, well-lit shots - avoid stock photo aesthetic, aim for authenticity',
                 ]}
               />
 

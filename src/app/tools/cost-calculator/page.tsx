@@ -119,14 +119,15 @@ export default function CostCalculatorPage() {
               {/* Hero Image Placeholder */}
               <ImagePlaceholder
                 alt="Calculator and planning tools for EPC upgrades"
-                description="An inviting image showing calculator/planning elements - could include a laptop showing a calculator interface, printed estimate documents, a clipboard with cost breakdowns, or a property professional reviewing figures. Should convey the tool's purpose of helping landlords plan their upgrade investments."
+                description="Overhead flat-lay photography of EPC planning in progress. Arrange on a clean desk surface: a tablet or laptop showing a calculator interface with cost figures, printed EPC certificate with visible rating scale, a notepad with handwritten improvement notes, and perhaps a calculator or smartphone. Scattered but purposeful - this is active planning, not chaos. Include a coffee cup or plant for warmth. The composition should invite the user into the planning process: 'this could be you getting organised'."
                 width={1200}
                 height={500}
                 instructions={[
-                  'Show calculator or planning elements prominently',
-                  'Include some EPC-related visual cues (rating charts, property images)',
-                  'Professional but approachable tone',
-                  'Clean, modern setting',
+                  'Overhead/flat-lay composition on clean desk or table surface',
+                  'Digital device showing calculator UI - cost figures visible on screen',
+                  'EPC certificate partially visible with rating scale showing',
+                  'Analogue planning elements: notepad, pen, sticky notes with improvement ideas',
+                  'Lifestyle touches: coffee cup, plant, or glasses add warmth and authenticity',
                 ]}
                 className="mb-8"
               />
@@ -175,15 +176,15 @@ export default function CostCalculatorPage() {
               {/* Screenshot Placeholder */}
               <ImagePlaceholder
                 alt="Example calculator results showing cost breakdown"
-                description="A screenshot or mockup showing example calculator results - including the cost breakdown chart, recommended improvements list with costs and EPC points, and the progress toward EPC C. Should demonstrate the value and detail users will receive."
+                description="UI screenshot or high-fidelity mockup of calculator results page. Show a complete results view for a sample 1930s semi: cost range summary at top (£2,500-£4,200), EPC journey visualisation (D → C with progress bar), and a prioritised improvements table listing each measure with its cost range, expected points gain, and cost-effectiveness ranking. Include a 'likely within cost cap' indicator. The design should match GreenLord's UI style and demonstrate the genuine value of using the tool - detailed, actionable, trustworthy data."
                 width={1200}
                 height={700}
                 instructions={[
-                  'Show realistic sample results (not blank state)',
-                  'Include cost range visualization',
-                  'Show improvement recommendations list',
-                  'Display EPC rating progression',
-                  'Clean UI design matching the site style',
+                  'UI mockup or annotated screenshot - not a photograph of a screen',
+                  'Show complete results: summary stats, visualisation, and detailed table',
+                  'Include realistic data for a sample property (1930s semi, rating D)',
+                  'EPC progress visualisation: before rating → target rating with bar/journey',
+                  'Match GreenLord brand styling: colours, typography, component design',
                 ]}
                 className="mb-12"
               />

@@ -287,16 +287,16 @@ export default function RdSAP10ChangesPage() {
 
                 <ImagePlaceholder
                   alt="Comparison of property ratings under RdSAP 9 versus RdSAP 10"
-                  description="Side-by-side comparison showing the same property (1930s semi-detached house) assessed under both methodologies. Shows how the overall score and specific component scores differ, with highlighting on which factors improved or worsened."
+                  description="Detailed methodology comparison showing a 1930s semi-detached rated under both systems. Create a split or tabbed layout with the property silhouette centred between two assessment panels. LEFT (RdSAP 9): Overall score 62, rating D, with component breakdown (walls, roof, heating, etc.). RIGHT (RdSAP 10): Same property now scores 65, still D but closer to C. Use delta indicators (▲+3, ▼-1) beside each component to show what shifted. Highlight the biggest movers: carbon factors, heating system valuation, solar PV credit. The visual should educate: 'same bricks and mortar, different calculation, different result'."
                   width={800}
                   height={400}
                   priority
                   instructions={[
-                    'Create a clear before/after comparison layout',
-                    'Show both overall scores and key component breakdowns',
-                    'Use colour coding to show improvements (green) and declines (red)',
-                    'Include typical example property details',
-                    'Make it clear which methodology is which',
+                    'Central property illustration with two flanking assessment panels',
+                    'Each panel shows: overall score, rating band, component breakdown table',
+                    'Delta indicators (▲▼) showing change direction for each component',
+                    'Callout annotations explaining WHY key components changed',
+                    'Colour coding: green for improved scores, red for declined, grey for static',
                   ]}
                 />
 
