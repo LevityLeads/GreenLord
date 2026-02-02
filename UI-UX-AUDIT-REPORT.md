@@ -15,69 +15,60 @@ GreenLord is a well-structured, content-rich platform for UK landlords navigatin
 
 | Category | Current Score | Target | Priority |
 |----------|--------------|--------|----------|
-| SEO Technical | 4/10 | 9/10 | **CRITICAL** |
-| Navigation & IA | 7/10 | 9/10 | HIGH |
+| SEO Technical | 8/10 | 9/10 | IMPROVED |
+| Navigation & IA | 8/10 | 9/10 | IMPROVED |
 | Page Speed | 7/10 | 9/10 | MEDIUM |
 | Mobile UX | 7/10 | 9/10 | MEDIUM |
-| Accessibility | 8/10 | 9/10 | MEDIUM |
+| Accessibility | 9/10 | 9/10 | IMPROVED |
 | Content UX | 8/10 | 9/10 | LOW |
 
 ---
 
 ## CRITICAL PRIORITY: SEO Issues
 
-### 1. Missing sitemap.xml [CRITICAL]
+### 1. ~~Missing sitemap.xml~~ [COMPLETED]
 
-**Issue:** No `sitemap.xml` file exists. Search engines cannot efficiently discover all 45+ pages.
+**Status:** RESOLVED - Dynamic sitemap created at `src/app/sitemap.ts`
 
-**Impact:** Major negative impact on indexing. Google and Bing rely on sitemaps for efficient crawling, especially for content-heavy sites.
+- All 45+ pages included with proper priorities
+- Change frequencies set (weekly for time-sensitive content, monthly for guides)
+- Accessible at `/sitemap.xml`
 
-**Recommendation:**
-- Create a dynamic sitemap using Next.js `app/sitemap.ts` that automatically includes all pages
-- Include `lastmod` dates for priority pages
-- Submit to Google Search Console and Bing Webmaster Tools
+### 2. ~~Missing robots.txt~~ [COMPLETED]
 
-### 2. Missing robots.txt [CRITICAL]
+**Status:** RESOLVED - Created `public/robots.txt`
 
-**Issue:** No `robots.txt` file exists. While metadata has robots directives, the file itself provides additional control.
+- Allows all crawlers
+- Blocks `/api/` routes
+- References sitemap location
+- Includes crawl-delay directive
 
-**Recommendation:**
-- Create `public/robots.txt` with proper directives
-- Include sitemap reference: `Sitemap: https://greenlord.co.uk/sitemap.xml`
-- Consider blocking `/api/` routes from crawling
+### 3. ~~Missing Per-Page Canonical URLs~~ [COMPLETED]
 
-### 3. Missing Per-Page Canonical URLs [HIGH]
+**Status:** RESOLVED - Canonical URLs added to all 45 pages
 
-**Issue:** The layout.tsx sets a single canonical URL (`SITE_CONFIG.url`) for the entire site instead of page-specific canonicals.
+- Each page now has its own canonical URL in metadata
+- Removed incorrect global canonical from layout.tsx
+- Example: `/regulations` now has canonical `https://greenlord.co.uk/regulations`
 
-**Impact:** Can cause duplicate content issues and confuse search engines about which page version to rank.
+### 4. ~~Missing Structured Data~~ [COMPLETED]
 
-**Recommendation:**
-- Each page should specify its own canonical URL in metadata
-- Example: `/regulations` should have canonical `https://greenlord.co.uk/regulations`
+**Status:** RESOLVED - Organization and WebSite schemas added
 
-### 4. Missing Structured Data on Most Pages [HIGH]
+- `Organization` schema added to root layout (JSON-LD)
+- `WebSite` schema added to root layout (JSON-LD)
+- Schema helpers available for Article, FAQ, BreadcrumbList
 
-**Issue:** While utility functions exist for generating schema (`generateBreadcrumbSchema`, `generateArticleSchema`, `generateFAQSchema`), they're not consistently implemented across pages.
+**Remaining:** Add Article schema to content pages, FAQPage schema to FAQ page (future enhancement)
 
-**Current:** Schema helpers exist in `lib/utils.ts` but aren't used
-**Recommendation:**
-- Add `WebSite` schema to homepage
-- Add `Article` schema to all content pages (property guides, regulations, costs)
-- Add `FAQPage` schema to FAQ page
-- Add `BreadcrumbList` schema to all pages (via layout or individual pages)
-- Add `HowTo` schema to tools pages
-- Add `LocalBusiness` or `Organization` schema
+### 5. ~~Missing og-image.png~~ [COMPLETED]
 
-### 5. Missing og-image.png [MEDIUM]
+**Status:** RESOLVED - Dynamic OG images created
 
-**Issue:** The metadata references `/og-image.png` but this file doesn't exist in the `public/` folder.
-
-**Impact:** Social sharing will show broken or default images on Twitter, LinkedIn, Facebook.
-
-**Recommendation:**
-- Create a branded 1200x630px OG image
-- Consider dynamic OG images using Next.js `ImageResponse` for per-page images
+- `opengraph-image.tsx` generates branded 1200x630 OG image
+- `twitter-image.tsx` generates Twitter card image
+- Uses Next.js ImageResponse for dynamic generation
+- Includes branding, key stats (2030 deadline, 45+ guides, 4 tools)
 
 ### 6. No Page-Specific Meta Descriptions [MEDIUM]
 
@@ -100,23 +91,17 @@ GreenLord is a well-structured, content-rich platform for UK landlords navigatin
 
 ## HIGH PRIORITY: Navigation & Information Architecture
 
-### 8. Navigation Dropdown Accessibility Issues [HIGH]
+### 8. ~~Navigation Dropdown Accessibility Issues~~ [COMPLETED]
 
-**Issue:** Desktop navigation uses CSS-only hover states for dropdowns. This means:
-- Keyboard users cannot access dropdown items (only parent link is focusable)
-- `aria-expanded` is always "false" (line 54 in Navigation.tsx)
-- Touch devices on desktop viewports may have issues
+**Status:** RESOLVED - Full keyboard accessibility implemented
 
-**Current Code (Navigation.tsx:54):**
-```tsx
-aria-expanded="false"  // Always false - incorrect
-```
-
-**Recommendation:**
-- Implement JavaScript-controlled dropdowns with proper focus management
-- Update `aria-expanded` dynamically based on open state
-- Add keyboard navigation (arrow keys, escape to close)
-- Ensure dropdown stays open on focus-within
+- Converted to client component with React state management
+- `aria-expanded` now updates dynamically based on open state
+- Full keyboard navigation: Arrow keys, Escape, Enter/Space, Home/End
+- Focus management: first menu item focused on open, return to trigger on close
+- Click outside to close
+- Mouse hover still works for non-keyboard users
+- Proper ARIA roles and labeling throughout
 
 ### 9. Overly Deep Navigation Structure [MEDIUM]
 
