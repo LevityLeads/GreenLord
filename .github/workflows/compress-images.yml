@@ -19,7 +19,7 @@ jobs:
       - name: Install sharp
         run: npm install sharp
 
-      - name: Compress images
+      - name: Convert to WebP and compress
         run: |
           node << 'EOF'
           const sharp = require('sharp');
@@ -28,10 +28,13 @@ jobs:
 
           const INPUT_DIR = 'public/images/generated';
           const MAX_WIDTH = 1200;
-          const QUALITY = 80;
+          const QUALITY = 82;
 
-          async function compressImage(filepath) {
+          async function convertToWebP(filepath) {
             const filename = path.basename(filepath);
+            const nameWithoutExt = filename.replace(/\.(png|jpg|jpeg)$/i, '');
+            const outputPath = path.join(INPUT_DIR, `${nameWithoutExt}.webp`);
+
             const stats = fs.statSync(filepath);
             const originalSize = stats.size;
 
@@ -45,17 +48,20 @@ jobs:
                 pipeline = pipeline.resize(MAX_WIDTH, null, { withoutEnlargement: true });
               }
 
-              // Compress as PNG with optimization
+              // Convert to WebP
               const buffer = await pipeline
-                .png({ quality: QUALITY, compressionLevel: 9 })
+                .webp({ quality: QUALITY })
                 .toBuffer();
 
-              // Write back
-              fs.writeFileSync(filepath, buffer);
+              // Write WebP file
+              fs.writeFileSync(outputPath, buffer);
+
+              // Delete original PNG
+              fs.unlinkSync(filepath);
 
               const newSize = buffer.length;
               const savings = ((originalSize - newSize) / originalSize * 100).toFixed(1);
-              console.log(`✓ ${filename}: ${(originalSize/1024).toFixed(0)}KB → ${(newSize/1024).toFixed(0)}KB (${savings}% saved)`);
+              console.log(`✓ ${filename} → ${nameWithoutExt}.webp: ${(originalSize/1024).toFixed(0)}KB → ${(newSize/1024).toFixed(0)}KB (${savings}% saved)`);
 
               return { filename, originalSize, newSize };
             } catch (err) {
@@ -66,16 +72,16 @@ jobs:
 
           async function main() {
             const files = fs.readdirSync(INPUT_DIR)
-              .filter(f => f.endsWith('.png'))
+              .filter(f => f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg'))
               .map(f => path.join(INPUT_DIR, f));
 
-            console.log(`Compressing ${files.length} images...\n`);
+            console.log(`Converting ${files.length} images to WebP...\n`);
 
             let totalOriginal = 0;
             let totalNew = 0;
 
             for (const file of files) {
-              const result = await compressImage(file);
+              const result = await convertToWebP(file);
               if (!result.error) {
                 totalOriginal += result.originalSize;
                 totalNew += result.newSize;
@@ -90,10 +96,15 @@ jobs:
           main().catch(console.error);
           EOF
 
-      - name: Commit compressed images
+      - name: Update default-images.ts to use WebP
+        run: |
+          sed -i 's/\.png/.webp/g' src/lib/default-images.ts
+          echo "Updated default-images.ts to use .webp extensions"
+
+      - name: Commit WebP images
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/images/generated/
-          git commit -m "chore: Compress images for web (via GitHub Action)" || echo "No changes to commit"
+          git add public/images/generated/ src/lib/default-images.ts
+          git commit -m "chore: Convert images to WebP for smaller file sizes" || echo "No changes to commit"
           git push
