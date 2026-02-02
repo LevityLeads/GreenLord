@@ -81,6 +81,34 @@ src/
 - **Tailwind CSS** for styling
 - **Lucide React** for icons
 
+## Images
+
+All AI-generated images are stored in `public/images/generated/` as WebP files for optimal performance.
+
+### Image Configuration
+
+Image paths are defined in `src/lib/default-images.ts`. The `GeneratedImage` component uses these defaults.
+
+### Adding New Images
+
+1. **Generate** a new image using KIE AI (or similar)
+2. **Save** the image to your computer
+3. **Upload** to GitHub: Go to `public/images/generated/` → "Add file" → "Upload files"
+4. **Run compression**: Go to Actions → "Compress Images" → "Run workflow" (converts to WebP)
+5. **Update config**: Add the image ID to `src/lib/default-images.ts`:
+   ```typescript
+   'my-new-image': '/images/generated/my-new-image.webp',
+   ```
+
+### GitHub Actions
+
+| Action | Purpose |
+|--------|---------|
+| **Download AI Images** | Bulk download images from temporary URLs |
+| **Compress Images** | Convert PNG/JPG to WebP, resize to max 1200px |
+
+Both actions commit changes automatically after running.
+
 ## Key Features
 
 - Mobile-first responsive design
