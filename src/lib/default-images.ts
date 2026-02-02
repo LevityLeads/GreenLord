@@ -1,96 +1,94 @@
 /**
- * Default images for the site - AI-generated images from KIE AI
- * These are used when no generated image exists in localStorage
- * Note: These are from tempfile.aiquickdraw.com - images expire after 14 days
- * TODO: Download and migrate to permanent storage (Vercel Blob, Cloudflare R2, etc.)
+ * Default images for the site - locally stored AI-generated images
+ * Copy this file to src/lib/default-images.ts after downloading images
  */
 
 export const DEFAULT_IMAGES: Record<string, string> = {
   // ============================================
   // HOMEPAGE
   // ============================================
-  'homepage-hero-landlord': 'https://tempfile.aiquickdraw.com/images/1769942554802-5d2i0o98mo.png',
-  'homepage-author-headshot': 'https://tempfile.aiquickdraw.com/images/1769942961546-j0bwssimda.png',
+  'homepage-hero-landlord': '/images/generated/homepage-hero-landlord.png',
+  'homepage-author-headshot': '/images/generated/homepage-author-headshot.png',
 
   // ============================================
   // PROPERTY TYPES
   // ============================================
 
   // Victorian Terrace
-  'victorian-terrace-hero': 'https://tempfile.aiquickdraw.com/images/1769944122029-p06bvmyl29i.png',
-  'victorian-terrace-wall-cross-section': 'https://tempfile.aiquickdraw.com/images/1769944216679-a3py4vbht1v.png',
-  'victorian-terrace-epc-comparison': 'https://tempfile.aiquickdraw.com/images/1769944271283-wa2f971qojq.png',
+  'victorian-terrace-hero': '/images/generated/victorian-terrace-hero.png',
+  'victorian-terrace-wall-cross-section': '/images/generated/victorian-terrace-wall-cross-section.png',
+  'victorian-terrace-epc-comparison': '/images/generated/victorian-terrace-epc-comparison.png',
 
   // 1930s Semi
-  '1930s-semi-exterior': 'https://tempfile.aiquickdraw.com/images/1769944346395-ibpefqhvfoi.png',
-  '1930s-semi-cavity-wall-insulation': 'https://tempfile.aiquickdraw.com/images/1769944344996-lt4i7w42w1.png',
-  '1930s-semi-epc-journey-infographic': 'https://tempfile.aiquickdraw.com/images/1769944343582-3yulef0r65q.png',
+  '1930s-semi-exterior': '/images/generated/1930s-semi-exterior.png',
+  '1930s-semi-cavity-wall-insulation': '/images/generated/1930s-semi-cavity-wall-insulation.png',
+  '1930s-semi-epc-journey-infographic': '/images/generated/1930s-semi-epc-journey-infographic.png',
 
   // 1950s House
-  '1950s-house-exterior': 'https://tempfile.aiquickdraw.com/images/1769944599959-ciooudwnfks.png',
-  '1950s-house-wall-measurement': 'https://tempfile.aiquickdraw.com/images/1769944609611-gs0n1illbo4.png',
-  '1950s-house-wall-comparison': 'https://tempfile.aiquickdraw.com/images/1769944634147-05ryol0u2637.png',
-  '1950s-house-epc-comparison': 'https://tempfile.aiquickdraw.com/images/1769944611791-6kpluzvj78.png',
+  '1950s-house-exterior': '/images/generated/1950s-house-exterior.png',
+  '1950s-house-wall-measurement': '/images/generated/1950s-house-wall-measurement.png',
+  '1950s-house-wall-comparison': '/images/generated/1950s-house-wall-comparison.png',
+  '1950s-house-epc-comparison': '/images/generated/1950s-house-epc-comparison.png',
 
   // 1960s-1970s House
-  '1960s-1970s-house-exterior': 'https://tempfile.aiquickdraw.com/images/1769944514815-8tx6xsubia.png',
-  '1960s-1970s-house-cavity-wall-cross-section': 'https://tempfile.aiquickdraw.com/images/1769944522238-1gvq0rz8l8f.png',
-  '1960s-1970s-house-epc-comparison': 'https://tempfile.aiquickdraw.com/workers/nano/image_1769944522151_rr7qdn.png',
+  '1960s-1970s-house-exterior': '/images/generated/1960s-1970s-house-exterior.png',
+  '1960s-1970s-house-cavity-wall-cross-section': '/images/generated/1960s-1970s-house-cavity-wall-cross-section.png',
+  '1960s-1970s-house-epc-comparison': '/images/generated/1960s-1970s-house-epc-comparison.png',
 
   // 1980s-1990s House
-  '1980s-1990s-house-exterior': 'https://tempfile.aiquickdraw.com/images/1769945043609-serf76irk1g.png',
+  '1980s-1990s-house-exterior': '/images/generated/1980s-1990s-house-exterior.png',
 
   // Purpose-Built Flat
-  'purpose-built-flat-exterior': 'https://tempfile.aiquickdraw.com/images/1769944403098-h34keghqu8e.png',
-  'purpose-built-flat-secondary-glazing': 'https://tempfile.aiquickdraw.com/images/1769944434617-w3xx1y4c2zl.png',
-  'purpose-built-flat-improvement-options': 'https://tempfile.aiquickdraw.com/images/1769944429692-4vqn0icbwpu.png',
+  'purpose-built-flat-exterior': '/images/generated/purpose-built-flat-exterior.png',
+  'purpose-built-flat-secondary-glazing': '/images/generated/purpose-built-flat-secondary-glazing.png',
+  'purpose-built-flat-improvement-options': '/images/generated/purpose-built-flat-improvement-options.png',
 
   // Converted Flat
-  'converted-flat-exterior': 'https://tempfile.aiquickdraw.com/images/1769944820192-5idt42p20sx.png',
-  'converted-flat-cross-section': 'https://tempfile.aiquickdraw.com/images/1769944828309-52za3sowogj.png',
-  'converted-flat-epc-comparison': 'https://tempfile.aiquickdraw.com/workers/nano/image_1769944828985_xbcu5p.png',
+  'converted-flat-exterior': '/images/generated/converted-flat-exterior.png',
+  'converted-flat-cross-section': '/images/generated/converted-flat-cross-section.png',
+  'converted-flat-epc-comparison': '/images/generated/converted-flat-epc-comparison.png',
 
   // Edwardian House
-  'edwardian-house-exterior': 'https://tempfile.aiquickdraw.com/images/1769944905515-omr2pzy222.png',
-  'edwardian-house-cross-section': 'https://tempfile.aiquickdraw.com/images/1769944910099-7j6u1sk8fb.png',
+  'edwardian-house-exterior': '/images/generated/edwardian-house-exterior.png',
+  'edwardian-house-cross-section': '/images/generated/edwardian-house-cross-section.png',
 
   // HMO
-  'hmo-property-exterior': 'https://tempfile.aiquickdraw.com/images/1769945101139-ynzg67jcypc.png',
+  'hmo-property-exterior': '/images/generated/hmo-property-exterior.png',
 
   // Pre-1919 Semi
-  'pre-1919-semi-exterior': 'https://tempfile.aiquickdraw.com/images/1769945246620-gsx8bxp4wn5.png',
-  'pre-1919-semi-heat-loss-comparison': 'https://tempfile.aiquickdraw.com/images/1769946700667-0ki7j51rniy.png',
+  'pre-1919-semi-exterior': '/images/generated/pre-1919-semi-exterior.png',
+  'pre-1919-semi-heat-loss-comparison': '/images/generated/pre-1919-semi-heat-loss-comparison.png',
 
   // ============================================
   // REGULATIONS
   // ============================================
-  'epc-c-2030-deadline-hero': 'https://tempfile.aiquickdraw.com/images/1769891326570-tj86ghplq88.png',
-  'mees-guide-hero': 'https://tempfile.aiquickdraw.com/images/1769943507149-rqvdvnex33a.png',
-  'cost-cap-exemptions-hero': 'https://tempfile.aiquickdraw.com/images/1769943593623-6zfju3dhq9h.png',
-  'rdsap-10-changes-hero': 'https://tempfile.aiquickdraw.com/images/1769943974277-aqhy63hxxaw.png',
-  'warm-homes-plan-hero': 'https://tempfile.aiquickdraw.com/images/1769944042610-2hqitht3fad.png',
+  'epc-c-2030-deadline-hero': '/images/generated/epc-c-2030-deadline-hero.png',
+  'mees-guide-hero': '/images/generated/mees-guide-hero.png',
+  'cost-cap-exemptions-hero': '/images/generated/cost-cap-exemptions-hero.png',
+  'rdsap-10-changes-hero': '/images/generated/rdsap-10-changes-hero.png',
+  'warm-homes-plan-hero': '/images/generated/warm-homes-plan-hero.png',
 
   // ============================================
   // COSTS & FUNDING
   // ============================================
-  'costs-overview-hero': 'https://tempfile.aiquickdraw.com/images/1769945057843-6eb0e53nw1.png',
-  'costs-property-types-comparison': 'https://tempfile.aiquickdraw.com/workers/nano/image_1769945022284_11lylx.png',
-  'costs-effective-improvements': 'https://tempfile.aiquickdraw.com/images/1769945058732-uv3yruswqte.png',
-  'cheapest-improvements-hero': 'https://tempfile.aiquickdraw.com/images/1769941580751-jinvre718g.png',
-  'd-to-c-upgrade-hero': 'https://tempfile.aiquickdraw.com/images/1769945139806-k66k9qxcwkd.png',
-  'd-to-c-upgrade-journey': 'https://tempfile.aiquickdraw.com/images/1769945038061-0zchfar01xo8.png',
-  'd-to-c-upgrade-loft-insulation': 'https://tempfile.aiquickdraw.com/workers/nano/image_1769945032728_t01rd2.png',
-  'e-to-c-upgrade-hero': 'https://tempfile.aiquickdraw.com/images/1769945059511-qw92rrnkmi.png',
-  'eco4-landlords-hero': 'https://tempfile.aiquickdraw.com/images/1769945059750-ou3eno9v2qk.png',
-  'boiler-upgrade-scheme-hero': 'https://tempfile.aiquickdraw.com/images/1769945079381-xbz6u4hjpt.png',
-  'warm-homes-local-grant-hero': 'https://tempfile.aiquickdraw.com/images/1769945079136-xaikysr0td.png',
+  'costs-overview-hero': '/images/generated/costs-overview-hero.png',
+  'costs-property-types-comparison': '/images/generated/costs-property-types-comparison.png',
+  'costs-effective-improvements': '/images/generated/costs-effective-improvements.png',
+  'cheapest-improvements-hero': '/images/generated/cheapest-improvements-hero.png',
+  'd-to-c-upgrade-hero': '/images/generated/d-to-c-upgrade-hero.png',
+  'd-to-c-upgrade-journey': '/images/generated/d-to-c-upgrade-journey.png',
+  'd-to-c-upgrade-loft-insulation': '/images/generated/d-to-c-upgrade-loft-insulation.png',
+  'e-to-c-upgrade-hero': '/images/generated/e-to-c-upgrade-hero.png',
+  'eco4-landlords-hero': '/images/generated/eco4-landlords-hero.png',
+  'boiler-upgrade-scheme-hero': '/images/generated/boiler-upgrade-scheme-hero.png',
+  'warm-homes-local-grant-hero': '/images/generated/warm-homes-local-grant-hero.png',
 
   // ============================================
   // TOOLS
   // ============================================
-  'cost-calculator-hero': 'https://tempfile.aiquickdraw.com/images/1769946907582-w69g69uc95j.png',
-  'cost-calculator-planning': 'https://tempfile.aiquickdraw.com/images/1769946909780-rxty2pvcoei.png',
-  'exemption-checker-hero': 'https://tempfile.aiquickdraw.com/workers/nano/image_1769946911277_6rx9hf.png',
+  'cost-calculator-hero': '/images/generated/cost-calculator-hero.png',
+  'cost-calculator-planning': '/images/generated/cost-calculator-planning.png',
+  'exemption-checker-hero': '/images/generated/exemption-checker-hero.png',
 
   // ============================================
   // FALLBACK IMAGES (Unsplash) - for images not yet generated
