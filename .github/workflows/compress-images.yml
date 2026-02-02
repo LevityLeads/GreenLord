@@ -1,0 +1,99 @@
+name: Compress Images
+
+on:
+  workflow_dispatch:  # Manual trigger from GitHub UI
+
+jobs:
+  compress-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install sharp
+        run: npm install sharp
+
+      - name: Compress images
+        run: |
+          node << 'EOF'
+          const sharp = require('sharp');
+          const fs = require('fs');
+          const path = require('path');
+
+          const INPUT_DIR = 'public/images/generated';
+          const MAX_WIDTH = 1200;
+          const QUALITY = 80;
+
+          async function compressImage(filepath) {
+            const filename = path.basename(filepath);
+            const stats = fs.statSync(filepath);
+            const originalSize = stats.size;
+
+            try {
+              const image = sharp(filepath);
+              const metadata = await image.metadata();
+
+              // Resize if wider than MAX_WIDTH, maintain aspect ratio
+              let pipeline = image;
+              if (metadata.width > MAX_WIDTH) {
+                pipeline = pipeline.resize(MAX_WIDTH, null, { withoutEnlargement: true });
+              }
+
+              // Compress as PNG with optimization
+              const buffer = await pipeline
+                .png({ quality: QUALITY, compressionLevel: 9 })
+                .toBuffer();
+
+              // Write back
+              fs.writeFileSync(filepath, buffer);
+
+              const newSize = buffer.length;
+              const savings = ((originalSize - newSize) / originalSize * 100).toFixed(1);
+              console.log(`✓ ${filename}: ${(originalSize/1024).toFixed(0)}KB → ${(newSize/1024).toFixed(0)}KB (${savings}% saved)`);
+
+              return { filename, originalSize, newSize };
+            } catch (err) {
+              console.error(`✗ ${filename}: ${err.message}`);
+              return { filename, error: err.message };
+            }
+          }
+
+          async function main() {
+            const files = fs.readdirSync(INPUT_DIR)
+              .filter(f => f.endsWith('.png'))
+              .map(f => path.join(INPUT_DIR, f));
+
+            console.log(`Compressing ${files.length} images...\n`);
+
+            let totalOriginal = 0;
+            let totalNew = 0;
+
+            for (const file of files) {
+              const result = await compressImage(file);
+              if (!result.error) {
+                totalOriginal += result.originalSize;
+                totalNew += result.newSize;
+              }
+            }
+
+            console.log(`\n--- Summary ---`);
+            console.log(`Total: ${(totalOriginal/1024/1024).toFixed(1)}MB → ${(totalNew/1024/1024).toFixed(1)}MB`);
+            console.log(`Saved: ${((totalOriginal - totalNew)/1024/1024).toFixed(1)}MB (${((totalOriginal - totalNew) / totalOriginal * 100).toFixed(0)}%)`);
+          }
+
+          main().catch(console.error);
+          EOF
+
+      - name: Commit compressed images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/images/generated/
+          git commit -m "chore: Compress images for web (via GitHub Action)" || echo "No changes to commit"
+          git push
