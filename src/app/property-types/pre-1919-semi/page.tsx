@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   title: 'Pre-1919 Semi-Detached EPC Guide | Solid Wall Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in pre-1919 semi-detached houses. More exposed walls than terraces means higher costs but same solid wall challenges. Realistic costs and upgrade pathways.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/pre-1919-semi',
+  },
   openGraph: {
     title: 'Pre-1919 Semi-Detached EPC Guide | GreenLord',
     description:

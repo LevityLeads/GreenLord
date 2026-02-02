@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: 'ECO4 Scheme for Landlords | Free Insulation & Heating Grants | GreenLord',
   description:
     'Complete guide to the ECO4 scheme for UK landlords. Free or heavily subsidised insulation and heating upgrades. Eligibility requirements, tenant benefits, and how to apply.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs/eco4-landlords',
+  },
   openGraph: {
     title: 'ECO4 Scheme for Landlords: Free Insulation and Heating',
     description:

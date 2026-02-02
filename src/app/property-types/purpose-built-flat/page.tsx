@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   title: 'Purpose-Built Flat EPC Guide | Leasehold Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in purpose-built flats. Navigate leasehold restrictions, freeholder consent, and practical upgrades for flat owners and landlords.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/purpose-built-flat',
+  },
   openGraph: {
     title: 'Purpose-Built Flat EPC Guide | GreenLord',
     description:

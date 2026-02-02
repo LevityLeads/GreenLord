@@ -36,6 +36,9 @@ import { formatCurrency, formatDate, daysUntilDeadline } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'EPC Regulations for Landlords - Complete Guide | GreenLord',
   description: 'Comprehensive guide to EPC requirements for UK landlords. Understand MEES regulations, the 2030 deadline, cost caps, exemptions, and penalties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/regulations',
+  },
 };
 
 const tocItems = [

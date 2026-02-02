@@ -36,6 +36,9 @@ import { formatCurrency, formatDate, daysUntilDeadline, formatNumber } from '@/l
 export const metadata: Metadata = {
   title: 'EPC C 2030 Deadline for Landlords - Complete Guide | GreenLord',
   description: 'Everything UK landlords need to know about the October 2030 EPC C deadline. Which properties are affected, what to do now, and penalties for non-compliance.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/regulations/epc-c-2030-deadline',
+  },
 };
 
 const breadcrumbs = [

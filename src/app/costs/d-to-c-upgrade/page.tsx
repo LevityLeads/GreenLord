@@ -22,6 +22,9 @@ import { formatCurrency } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'D to C EPC Upgrade Costs: Complete Guide for Landlords | GreenLord',
   description: 'How much does it cost to upgrade from EPC D to C? Realistic costs, typical scenarios, and the most cost-effective improvements for D-rated rental properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs/d-to-c-upgrade',
+  },
   openGraph: {
     title: 'D to C EPC Upgrade Costs for Landlords',
     description: 'Complete guide to upgrading from EPC D to C. Realistic costs, scenarios, and recommended improvements.',

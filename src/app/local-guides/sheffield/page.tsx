@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: 'Sheffield EPC Compliance Guide for Landlords | Local Support & Costs | GreenLord',
   description:
     'Complete Sheffield landlord guide to EPC compliance. Local authority support, ECO4 schemes, regional cost benchmarks, and property-specific advice for Sheffield rental properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/sheffield',
+  },
   openGraph: {
     title: 'Sheffield EPC Compliance Guide | GreenLord',
     description:

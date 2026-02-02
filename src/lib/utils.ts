@@ -203,3 +203,75 @@ export function daysUntilDeadline(): number {
 export function formatNumber(num: number): string {
   return new Intl.NumberFormat('en-GB').format(num);
 }
+
+// Generate Organization schema for structured data
+export function generateOrganizationSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'GreenLord',
+    url: 'https://greenlord.co.uk',
+    logo: 'https://greenlord.co.uk/logo.png',
+    description: 'UK Landlord EPC Compliance Made Simple - Expert guidance on energy efficiency requirements, costs, and deadlines for rental properties.',
+    sameAs: [],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      url: 'https://greenlord.co.uk/resources/faq',
+    },
+  };
+}
+
+// Generate WebSite schema for structured data
+export function generateWebSiteSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'GreenLord',
+    url: 'https://greenlord.co.uk',
+    description: 'UK Landlord EPC Compliance Made Simple',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://greenlord.co.uk/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+// Generate page metadata with proper canonical URL
+export function generatePageMetadata({
+  title,
+  description,
+  path,
+  ogImage,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  ogImage?: string;
+}) {
+  const baseUrl = 'https://greenlord.co.uk';
+  const canonicalUrl = path === '/' ? baseUrl : `${baseUrl}${path}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      ...(ogImage && { images: [ogImage] }),
+    },
+    twitter: {
+      title,
+      description,
+      ...(ogImage && { images: [ogImage] }),
+    },
+  };
+}

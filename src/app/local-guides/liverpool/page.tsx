@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: 'Liverpool Landlord EPC Guide | Local Grants & Support | GreenLord',
   description:
     'Complete EPC compliance guide for Liverpool landlords. Cosy Homes Liverpool, ECO4 Flex eligibility, local contractor resources, and regional cost benchmarks for Merseyside properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/liverpool',
+  },
   openGraph: {
     title: 'Liverpool Landlord EPC Guide | GreenLord',
     description:

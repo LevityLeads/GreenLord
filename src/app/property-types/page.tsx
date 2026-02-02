@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: 'Property Type EPC Guides | Upgrade Strategies by Property Type | GreenLord',
   description:
     'Comprehensive EPC upgrade guides for UK landlords by property type. Victorian terraces, 1930s semis, purpose-built flats and more. Find tailored improvement strategies and realistic costs for your property.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types',
+  },
   openGraph: {
     title: 'Property Type EPC Guides | GreenLord',
     description:

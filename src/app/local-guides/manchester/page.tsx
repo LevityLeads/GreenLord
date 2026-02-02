@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: 'Manchester Landlord EPC Guide | Local Grants & Support | GreenLord',
   description:
     'Complete EPC compliance guide for Manchester landlords. Home Energy Loan Plan, ECO4 Flex eligibility, local contractor resources, and regional cost benchmarks for Greater Manchester properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/manchester',
+  },
   openGraph: {
     title: 'Manchester Landlord EPC Guide | GreenLord',
     description:

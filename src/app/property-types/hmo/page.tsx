@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   title: 'HMO EPC Guide | House in Multiple Occupation Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in HMO properties. Covers whole-building vs room-by-room EPC requirements, HMO licensing considerations, fire safety conflicts, and realistic upgrade costs.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/hmo',
+  },
   openGraph: {
     title: 'HMO EPC Guide | GreenLord',
     description:

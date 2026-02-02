@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   title: '1960s-1970s House EPC Guide | Cavity Wall Properties | GreenLord',
   description:
     'Complete guide to improving EPC ratings in 1960s and 1970s houses. Covers cavity wall insulation, failed insulation replacement, boiler upgrades, and realistic costs for reaching EPC C.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/1960s-1970s-house',
+  },
   openGraph: {
     title: '1960s-1970s House EPC Guide | GreenLord',
     description:

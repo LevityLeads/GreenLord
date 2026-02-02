@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   title: '1980s-1990s House EPC Guide | Modern Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in 1980s and 1990s houses. Already have cavity walls and double glazing - often just need boiler upgrades and insulation top-ups to reach EPC C.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/1980s-1990s-house',
+  },
   openGraph: {
     title: '1980s-1990s House EPC Guide | GreenLord',
     description:

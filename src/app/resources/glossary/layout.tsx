@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     'insulation types',
     'EPC assessment terms',
   ],
+  alternates: {
+    canonical: 'https://greenlord.co.uk/resources/glossary',
+  },
   openGraph: {
     title: 'Glossary of EPC and Energy Efficiency Terms | GreenLord',
     description:

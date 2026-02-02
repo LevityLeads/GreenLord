@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: 'Boiler Upgrade Scheme for Landlords | Heat Pump Grants £7,500 | GreenLord',
   description:
     'Complete guide to the Boiler Upgrade Scheme (BUS) for UK landlords. Get up to £7,500 towards heat pump installation. Eligibility, property requirements, and how to apply.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs/boiler-upgrade-scheme',
+  },
   openGraph: {
     title: 'Boiler Upgrade Scheme for Landlords: Heat Pump Grants',
     description:

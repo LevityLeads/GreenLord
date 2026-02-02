@@ -23,6 +23,9 @@ import { cn } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Free EPC Compliance Tools for Landlords | GreenLord',
   description: 'Free interactive tools to help UK landlords plan their EPC compliance. Cost calculator, grant eligibility checker, exemption pathway tool, and more.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/tools',
+  },
   openGraph: {
     title: 'Free EPC Compliance Tools for Landlords',
     description: 'Interactive tools to help UK landlords plan EPC upgrades, check grant eligibility, and navigate compliance requirements.',

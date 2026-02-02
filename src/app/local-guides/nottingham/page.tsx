@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'Nottingham EPC Compliance Guide for Landlords | Local Support & Costs | GreenLord',
   description:
     'Complete Nottingham landlord guide to EPC compliance. Student rental market considerations, council energy advice, regional cost benchmarks, and property-specific advice.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/nottingham',
+  },
   openGraph: {
     title: 'Nottingham EPC Compliance Guide | GreenLord',
     description:

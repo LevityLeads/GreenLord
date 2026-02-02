@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   title: 'Edwardian House EPC Guide | 1901-1914 Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in Edwardian houses (1901-1914). Covers solid wall insulation, high ceiling challenges, large window solutions, and realistic costs for period properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/edwardian-house',
+  },
   openGraph: {
     title: 'Edwardian House EPC Guide | GreenLord',
     description:

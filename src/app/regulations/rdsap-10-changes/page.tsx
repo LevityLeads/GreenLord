@@ -38,6 +38,9 @@ import { formatDate } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'RdSAP 10 Changes Explained for Landlords | GreenLord',
   description: 'How the new RdSAP 10 EPC methodology affects landlord properties. Understand what changed, how ratings may shift, and whether to wait or act now.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/regulations/rdsap-10-changes',
+  },
 };
 
 const breadcrumbs = [

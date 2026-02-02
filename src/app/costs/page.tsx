@@ -21,6 +21,9 @@ import { formatCurrency } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Complete EPC Upgrade Cost Guide for Landlords 2026 | GreenLord',
   description: 'Comprehensive guide to EPC upgrade costs for UK landlords. Realistic prices for insulation, heating, glazing and more. Costs by property type and region.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs',
+  },
   openGraph: {
     title: 'Complete EPC Upgrade Cost Guide for Landlords 2026',
     description: 'Comprehensive guide to EPC upgrade costs for UK landlords. Realistic prices by improvement type, property type, and region.',

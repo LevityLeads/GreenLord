@@ -26,6 +26,9 @@ import { daysUntilDeadline, formatCurrency, formatNumber } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'GreenLord - UK Landlord EPC Compliance Guide',
   description: 'Navigate EPC C 2030 requirements with confidence. Expert guidance, cost calculators, and property-specific advice for UK landlords.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk',
+  },
 };
 
 export default function HomePage() {

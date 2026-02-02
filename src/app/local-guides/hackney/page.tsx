@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   title: 'Hackney EPC Compliance Guide for Landlords | London Borough | GreenLord',
   description:
     'Complete Hackney landlord guide to EPC compliance. Conservation area considerations, London cost premiums, converted flat challenges, and local authority support.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/hackney',
+  },
   openGraph: {
     title: 'Hackney EPC Compliance Guide | GreenLord',
     description:

@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   title: 'Converted Flat EPC Guide | Leasehold Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in converted flats. Covers leasehold restrictions, freeholder consent, communal areas, and creative solutions for reaching EPC C.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/converted-flat',
+  },
   openGraph: {
     title: 'Converted Flat EPC Guide | GreenLord',
     description:

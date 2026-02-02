@@ -38,6 +38,9 @@ import { formatCurrency, formatDate } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'EPC Cost Cap and Exemptions Guide for Landlords | GreenLord',
   description: 'Complete guide to the GBP 10,000 cost cap exemption and all exemption types for UK landlords. Learn when you qualify and how to register.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/regulations/cost-cap-exemptions',
+  },
 };
 
 const breadcrumbs = [

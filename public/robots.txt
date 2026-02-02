@@ -1,0 +1,18 @@
+# GreenLord - UK Landlord EPC Compliance Platform
+# https://greenlord.co.uk
+
+User-agent: *
+Allow: /
+
+# Block API routes from indexing
+Disallow: /api/
+
+# Block internal/admin paths if any
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://greenlord.co.uk/sitemap.xml
+
+# Crawl delay (optional, be polite to server)
+Crawl-delay: 1

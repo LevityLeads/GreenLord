@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: 'Local Landlord EPC Guides | City-Specific Grants & Support | GreenLord',
   description:
     'Find local EPC upgrade support, grants, and council schemes for landlords in major UK cities. Manchester, Birmingham, Leeds, Liverpool, and Bristol guides with local authority contacts and regional cost benchmarks.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides',
+  },
   openGraph: {
     title: 'Local Landlord EPC Guides | GreenLord',
     description:

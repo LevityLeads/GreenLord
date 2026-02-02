@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'Newcastle EPC Compliance Guide for Landlords | Local Support & Costs | GreenLord',
   description:
     'Complete Newcastle landlord guide to EPC compliance. High fuel poverty support, ECO4 schemes, lowest regional costs, and property-specific advice for Tyneside rental properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/newcastle',
+  },
   openGraph: {
     title: 'Newcastle EPC Compliance Guide | GreenLord',
     description:

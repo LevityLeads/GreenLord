@@ -37,6 +37,9 @@ import { formatCurrency, formatDate } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Warm Homes Plan Summary for Landlords | GreenLord',
   description: 'Key takeaways from the January 2026 Warm Homes Plan for UK landlords. What is confirmed, what funding is available, and what remains uncertain.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/regulations/warm-homes-plan',
+  },
 };
 
 const breadcrumbs = [

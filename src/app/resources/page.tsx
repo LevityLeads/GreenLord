@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Resources | GreenLord - UK Landlord EPC Compliance',
   description:
     'Access our comprehensive resources for UK landlords including FAQs about EPC requirements, glossary of energy efficiency terms, and compliance guidance.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/resources',
+  },
   openGraph: {
     title: 'Resources for UK Landlords | GreenLord',
     description:

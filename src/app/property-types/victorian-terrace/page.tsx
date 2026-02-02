@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   title: 'Victorian Terrace EPC Guide | Pre-1919 Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in Victorian terraced properties. Covers solid wall insulation, listed building restrictions, realistic costs, and proven upgrade pathways for pre-1919 homes.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/victorian-terrace',
+  },
   openGraph: {
     title: 'Victorian Terrace EPC Guide | GreenLord',
     description:

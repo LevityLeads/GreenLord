@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'E to C EPC Upgrade Costs for Landlords | Complete Guide | GreenLord',
   description:
     'Comprehensive guide to upgrading rental properties from EPC E to C. Realistic costs by property type, cost-effective improvement pathways, and when cost cap exemptions apply.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs/e-to-c-upgrade',
+  },
   openGraph: {
     title: 'E to C EPC Upgrade Costs for Landlords',
     description:

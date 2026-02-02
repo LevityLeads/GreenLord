@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   title: 'Cheapest EPC Improvements for Landlords | £ Per Point | GreenLord',
   description:
     'Complete ranking of EPC improvements by cost-effectiveness. Find the best value upgrades measured in pounds per EPC point gained. Quick wins under £500 and strategic investments.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs/cheapest-improvements',
+  },
   openGraph: {
     title: 'Cheapest EPC Improvements Ranked by Cost Per Point',
     description:

@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   title: '1950s House EPC Guide | Post-War Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in 1950s houses. Covers mixed construction challenges, narrow cavity walls, pre-Building Regulations issues, and realistic costs for reaching EPC C.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/1950s-house',
+  },
   openGraph: {
     title: '1950s House EPC Guide | GreenLord',
     description:

@@ -39,6 +39,9 @@ import { formatCurrency, formatDate } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'MEES Regulations Guide for Landlords | GreenLord',
   description: 'Complete guide to Minimum Energy Efficiency Standards for UK landlords. Understand the law, which tenancies apply, enforcement, and how to comply.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/regulations/mees-regulations-guide',
+  },
 };
 
 const breadcrumbs = [

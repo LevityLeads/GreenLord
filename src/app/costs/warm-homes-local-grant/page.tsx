@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'Warm Homes Local Grant for Landlords | Up to £30,000 | GreenLord',
   description:
     'Complete guide to the new Warm Homes Local Grant for UK landlords. Up to £30,000 funding for first property, 50% contribution for additional properties. Eligibility, application process, and landlord obligations.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/costs/warm-homes-local-grant',
+  },
   openGraph: {
     title: 'Warm Homes Local Grant for Landlords: Up to £30,000',
     description:

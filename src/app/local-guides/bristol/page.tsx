@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   title: 'Bristol Landlord EPC Guide | Local Grants & Support | GreenLord',
   description:
     'Complete EPC compliance guide for Bristol landlords. Bristol Energy Network, ECO4 Flex eligibility, local contractor resources, and regional cost benchmarks for South West properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/bristol',
+  },
   openGraph: {
     title: 'Bristol Landlord EPC Guide | GreenLord',
     description:

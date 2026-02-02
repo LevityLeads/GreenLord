@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: '1930s Semi-Detached EPC Guide | Cavity Wall Property Upgrades | GreenLord',
   description:
     'Complete guide to improving EPC ratings in 1930s semi-detached homes. Cavity wall insulation, bay window solutions, and cost-effective upgrades for inter-war properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/property-types/1930s-semi',
+  },
   openGraph: {
     title: '1930s Semi-Detached EPC Guide | GreenLord',
     description:

@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: 'Leeds Landlord EPC Guide | Local Grants & Support | GreenLord',
   description:
     'Complete EPC compliance guide for Leeds landlords. Better Homes Leeds, ECO4 Flex eligibility, local contractor resources, and regional cost benchmarks for West Yorkshire properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/leeds',
+  },
   openGraph: {
     title: 'Leeds Landlord EPC Guide | GreenLord',
     description:

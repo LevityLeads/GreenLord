@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'cost cap exemption',
     'EPC compliance help',
   ],
+  alternates: {
+    canonical: 'https://greenlord.co.uk/resources/faq',
+  },
   openGraph: {
     title: 'FAQ - EPC Compliance Questions Answered | GreenLord',
     description:

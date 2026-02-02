@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'Leicester EPC Compliance Guide for Landlords | Local Support & Costs | GreenLord',
   description:
     'Complete Leicester landlord guide to EPC compliance. Warm Homes Local Grant, multi-generational housing considerations, regional cost benchmarks, and property-specific advice.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/leicester',
+  },
   openGraph: {
     title: 'Leicester EPC Compliance Guide | GreenLord',
     description:

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Header, Footer } from '@/components/layout';
 import { SITE_CONFIG } from '@/lib/constants';
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/utils';
 import './globals.css';
 
 // Site metadata with template for page titles
@@ -64,9 +65,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: SITE_CONFIG.url,
-  },
+  // Note: canonical URLs should be set per-page, not globally
+  // Each page should set its own canonical via metadata.alternates.canonical
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
@@ -88,8 +88,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Generate structured data for the site
+  const organizationSchema = generateOrganizationSchema();
+  const webSiteSchema = generateWebSiteSchema();
+
   return (
     <html lang="en-GB">
+      <head>
+        {/* Organization structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        {/* WebSite structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteSchema),
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-white text-neutral-900 font-sans antialiased">
         {/* Skip to main content link for accessibility */}
         <a

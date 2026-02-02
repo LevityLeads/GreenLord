@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: 'Birmingham Landlord EPC Guide | Local Grants & Support | GreenLord',
   description:
     'Complete EPC compliance guide for Birmingham landlords. Warm Homes Birmingham scheme, ECO4 Flex eligibility, local contractor resources, and regional cost benchmarks for West Midlands properties.',
+  alternates: {
+    canonical: 'https://greenlord.co.uk/local-guides/birmingham',
+  },
   openGraph: {
     title: 'Birmingham Landlord EPC Guide | GreenLord',
     description:
