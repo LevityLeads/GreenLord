@@ -17,7 +17,7 @@ GreenLord is a well-structured, content-rich platform for UK landlords navigatin
 |----------|--------------|--------|----------|
 | SEO Technical | 4/10 | 9/10 | **CRITICAL** |
 | Navigation & IA | 7/10 | 9/10 | HIGH |
-| Page Speed | 6/10 | 9/10 | HIGH |
+| Page Speed | 7/10 | 9/10 | MEDIUM |
 | Mobile UX | 7/10 | 9/10 | MEDIUM |
 | Accessibility | 8/10 | 9/10 | MEDIUM |
 | Content UX | 8/10 | 9/10 | LOW |
@@ -172,20 +172,22 @@ aria-expanded="false"  // Always false - incorrect
 
 ---
 
-## HIGH PRIORITY: Performance
+## MEDIUM PRIORITY: Performance
 
-### 13. Large Image Files [HIGH]
+### 13. ~~Large Image Files~~ [COMPLETED]
 
-**Issue:** The `/public/images/generated/` folder contains 47 PNG files totaling 16MB. These are AI-generated images that may be larger than necessary.
+**Status:** RESOLVED - Images converted to WebP format.
 
-**Current:** 16MB for 47 images = ~340KB average per image
+| Metric | Before (PNG) | After (WebP) | Improvement |
+|--------|-------------|--------------|-------------|
+| Total Size | 15.6 MB | 5.4 MB | **65% smaller** |
+| Average | 347 KB | 121 KB | **65% smaller** |
+| Format | PNG | WebP | Modern format |
 
-**Recommendation:**
-- Convert PNGs to WebP format (typically 30-50% smaller)
-- Implement responsive images with multiple sizes
-- Use Next.js Image component's built-in optimization
-- Consider lazy loading for below-fold images
-- Set explicit `width` and `height` on all images to prevent CLS
+**Remaining considerations:**
+- Consider generating multiple sizes for responsive images
+- Ensure all images have explicit `width` and `height` to prevent CLS
+- Continue using Next.js Image component for automatic optimization
 
 ### 14. No Image Priority Strategy [MEDIUM]
 
@@ -383,7 +385,7 @@ aria-expanded="false"  // Always false - incorrect
 3. **Add og-image.png** - 15 minutes (use a design template)
 4. **Fix aria-expanded in Navigation** - 15 minutes
 5. **Add canonical URLs to pages** - 1-2 hours
-6. **Convert images to WebP** - Run a script, 30 minutes
+6. ~~**Convert images to WebP**~~ - DONE (65% size reduction achieved)
 7. **Add priority prop to above-fold images** - 30 minutes
 
 ---
@@ -400,7 +402,7 @@ aria-expanded="false"  // Always false - incorrect
 ### Phase 2: Navigation & Performance (Week 2-3)
 6. Fix navigation accessibility (keyboard support, aria)
 7. Add global search functionality
-8. Optimize images (WebP, responsive sizes)
+8. ~~Optimize images (WebP, responsive sizes)~~ - DONE
 9. Audit and fix mobile touch targets
 
 ### Phase 3: Enhanced UX (Week 4)
