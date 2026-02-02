@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { RefreshCw, Loader2, AlertCircle, ImageIcon, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
+import { getDefaultImage } from '@/lib/default-images';
 import type { GenerateImageRequest, GenerateImageResponse } from '@/app/api/generate-image/route';
 import type { CheckImageStatusResponse } from '@/app/api/check-image-status/route';
 
@@ -70,13 +71,20 @@ export function GeneratedImage({
     };
   }, []);
 
-  // Load image from localStorage on mount (for persistence during dev)
+  // Load image from localStorage on mount, or fall back to default image
   useEffect(() => {
     if (!existingImageUrl && typeof window !== 'undefined') {
       const stored = localStorage.getItem(`generated-image-${imageId}`);
       if (stored) {
         setImageUrl(stored);
         setState('loaded');
+      } else {
+        // Check for default stock image
+        const defaultImg = getDefaultImage(imageId);
+        if (defaultImg) {
+          setImageUrl(defaultImg);
+          setState('loaded');
+        }
       }
     }
   }, [imageId, existingImageUrl]);
